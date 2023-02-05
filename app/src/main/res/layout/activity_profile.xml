@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#06090E"
+    android:background="#191919"
     tools:context=".profileActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -17,6 +17,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="501dp"
+        android:layout_height="126dp"
+        android:background="@drawable/_619790314_14_phonoteka_org_p_belaya_polosa_bez_fona_18_transformed"
+        tools:layout_editor_absoluteX="-40dp"
+        tools:layout_editor_absoluteY="-3dp"
+        tools:ignore="MissingConstraints" />
+
 
     <LinearLayout
         android:layout_width="192dp"
@@ -34,7 +43,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="70dp"
             android:layout_marginStart="110dp"
-            android:background="@drawable/button_profile_settings"
+            android:background="@drawable/button_oval"
             android:drawableStart="@drawable/ic_save"
             android:padding="15dp"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -58,9 +67,9 @@
             android:layout_height="match_parent"
             android:hint="Имя"
             android:textColorHint="@color/white"
-            app:boxBackgroundColor="#121212"
-            app:boxStrokeColor="@color/white"
-            app:hintTextColor="@color/white"
+            app:boxBackgroundColor="#161616"
+            app:boxStrokeColor="#A55FFF"
+            app:hintTextColor="#A55FFF"
             app:endIconMode="clear_text"
             app:endIconTint="@color/white"
             app:startIconDrawable="@drawable/ic_baseline_person_24"
@@ -95,9 +104,9 @@
             android:layout_height="match_parent"
             android:hint="Никнейм"
             android:textColorHint="@color/white"
-            app:boxBackgroundColor="#121212"
-            app:boxStrokeColor="@color/white"
-            app:hintTextColor="@color/white"
+            app:boxBackgroundColor="#161616"
+            app:boxStrokeColor="#A55FFF"
+            app:hintTextColor="#A55FFF"
             app:endIconMode="clear_text"
             app:endIconTint="@color/white"
             app:startIconDrawable="@drawable/ic_baseline_person_24"
@@ -132,11 +141,11 @@
             android:layout_height="match_parent"
             android:hint="Новый пароль"
             android:textColorHint="@color/white"
-            app:boxBackgroundColor="#121212"
-            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="#161616"
+            app:boxStrokeColor="#A55FFF"
             app:endIconMode="password_toggle"
             app:endIconTint="@color/white"
-            app:hintTextColor="@color/white"
+            app:hintTextColor="#A55FFF"
             app:startIconDrawable="@drawable/ic_password"
             app:startIconTint="@color/white">
 
@@ -209,7 +218,7 @@
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#121212"
+        android:background="#161616"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -219,13 +228,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/backButton1"
-            android:layout_width="38dp"
-            android:layout_height="36dp"
+            android:layout_width="33dp"
+            android:layout_height="31dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="13dp"
-            android:background="@drawable/button_profile_settings"
-            android:drawableStart="@drawable/ic_back"
-            android:padding="6dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_back"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         <TextView
@@ -254,7 +261,7 @@
             android:layout_marginStart="105dp"
             android:layout_marginTop="12dp"
             android:text="Профиль"
-            android:textColor="#FFFFFF"
+            android:textColor="#D6D6D6"
             android:textSize="14sp" />
     </RelativeLayout>
 

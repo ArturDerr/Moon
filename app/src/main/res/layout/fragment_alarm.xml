@@ -1,19 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#06090E"
-    tools:context=".AlarmFragment">
+    android:background="#191919"
+    tools:context=".AlarmFragment"
+    tools:ignore="SpeakableTextPresentCheck">
 
-    <TextView
-        android:layout_width="111dp"
-        android:layout_height="27dp"
-        android:text="Будильник"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="410dp" />
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="357dp"
+        android:layout_height="638dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout19"
+        android:layout_width="408dp"
+        android:layout_height="638dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/round_back_while"
+            android:orientation="vertical"
+            android:padding="15dp"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="323dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="0dp">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout20"
+        android:layout_width="414dp"
+        android:layout_height="457dp"
+        android:layout_marginTop="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSave"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="370dp"
+            android:background="@drawable/button_oval"
+            android:drawableStart="@drawable/ic_alarm_add"
+            android:padding="16dp"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

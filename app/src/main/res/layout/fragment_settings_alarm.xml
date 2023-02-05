@@ -4,26 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#06090E"
+    android:background="#191919"
     tools:context=".fragments.settings.SettingsAlarmFragment">
+
+    <ImageView
+        android:layout_width="501dp"
+        android:layout_height="126dp"
+        android:background="@drawable/_619790314_14_phonoteka_org_p_belaya_polosa_bez_fona_18_transformed"
+        tools:layout_editor_absoluteX="-40dp"
+        tools:layout_editor_absoluteY="-3dp"
+        tools:ignore="MissingConstraints" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#121212"
+        android:background="#161616"
         android:orientation="horizontal"
         tools:ignore="MissingConstraints">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/backButton2"
-            android:layout_width="38dp"
-            android:layout_height="36dp"
+            android:layout_width="33dp"
+            android:layout_height="31dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="13dp"
-            android:background="@drawable/button_profile_settings"
-            android:drawableStart="@drawable/ic_back"
-            android:padding="6dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_back"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         <TextView
@@ -52,7 +59,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="12dp"
             android:text="Будильник"
-            android:textColor="#FFFFFF"
+            android:textColor="#D6D6D6"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -107,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:thumbTint="#2E52A6"
+                    android:thumbTint="#7149A3"
                     android:trackTint="@color/white"
                     tools:ignore="TouchTargetSizeCheck" />
 
