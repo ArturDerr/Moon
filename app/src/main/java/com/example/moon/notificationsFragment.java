@@ -1,4 +1,4 @@
-package com.example.moon.fragments.settings;
+package com.example.moon;
 
 import android.os.Bundle;
 

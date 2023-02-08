@@ -16,7 +16,7 @@ import com.example.moon.R;
 public class avatarFragment extends Fragment {
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         Button backButton2 = view.findViewById(R.id.backButton2);
@@ -24,7 +24,6 @@ public class avatarFragment extends Fragment {
         backButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().onBackPressed();
             }
         });
     }

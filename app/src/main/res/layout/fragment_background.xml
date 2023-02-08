@@ -4,17 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#191919"
-    tools:context=".fragments.settings.BackgroundFragment">
-
-    <ImageView
-        android:layout_width="501dp"
-        android:layout_height="126dp"
-        android:background="@drawable/_619790314_14_phonoteka_org_p_belaya_polosa_bez_fona_18_transformed"
-        tools:layout_editor_absoluteX="-40dp"
-        tools:layout_editor_absoluteY="-3dp"
-        tools:ignore="MissingConstraints" />
-
+    android:background="#121212"
+    tools:context=".BackgroundFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -26,10 +17,10 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/backButton3"
-            android:layout_width="33dp"
-            android:layout_height="31dp"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="17dp"
             android:background="@drawable/ic_back"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 

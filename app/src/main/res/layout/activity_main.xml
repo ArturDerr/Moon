@@ -6,53 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#191919"
+        android:background="#121212"
         android:layout_above="@+id/bottomBar"
         android:layout_marginBottom="-2dp" />
-
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="175dp"
-        android:layout_above="@+id/bottomBar"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="380dp"
-        android:background="@drawable/round_back_while"
-        android:orientation="vertical"
-        android:padding="15dp"
-        tools:ignore="MissingConstraints">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="175dp"
-        android:layout_above="@+id/bottomBar"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="175dp"
-        android:background="@drawable/round_back_while"
-        android:orientation="vertical"
-        android:padding="15dp"
-        tools:ignore="MissingConstraints">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="85dp"
-        android:layout_above="@+id/bottomBar"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="585dp"
-        android:background="@drawable/round_back_while"
-        android:orientation="vertical"
-        android:padding="15dp"
-        tools:ignore="MissingConstraints">
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,8 +23,8 @@
             android:id="@+id/settingsButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="350dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_profile_settings"
             android:drawableStart="@drawable/ic_settings"
             android:padding="7dp"
@@ -110,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textColor="#A55FFF"
+                android:textColor="#9575CD"
                 android:text="Меню"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"/>
@@ -140,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textColor="#A55FFF"
+                android:textColor="#9575CD"
                 android:text="Музыка"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"/>
@@ -170,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textColor="#A55FFF"
+                android:textColor="#9575CD"
                 android:text="Будильник"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"/>
@@ -200,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textColor="#A55FFF"
+                android:textColor="#9575CD"
                 android:text="Заметки"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"/>

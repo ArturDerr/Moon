@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 public class AlarmFragment extends Fragment {
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
     }

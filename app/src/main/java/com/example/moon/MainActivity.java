@@ -13,16 +13,23 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     private int selectedTab = 1;
+    private String DateString;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button settingsButton = findViewById(R.id.settingsButton);
-        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        Button settingsButton = findViewById(R.id.settingsButton);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -196,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
 
 

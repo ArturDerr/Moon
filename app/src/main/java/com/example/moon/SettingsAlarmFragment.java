@@ -1,4 +1,4 @@
-package com.example.moon.fragments.settings;
+package com.example.moon;
 
 import android.os.Bundle;
 
@@ -21,7 +21,6 @@ public class SettingsAlarmFragment extends Fragment {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().onBackPressed();
             }
         });
 

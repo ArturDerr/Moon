@@ -1,20 +1,15 @@
 package com.example.moon;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -25,16 +20,13 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        SpannableStringBuilder builder = new SpannableStringBuilder();
-        SpannableString blackSpannable = null;
-        blackSpannable = new SpannableString(null);
-        blackSpannable.setSpan(new ForegroundColorSpan(Color.BLACK), 0, blackSpannable.length(), 0);
-        builder.append(blackSpannable);
+        Button alarmButtonSettings = findViewById(R.id.alarmButtonSettings);
 
-        final Button backButton = findViewById(R.id.backButton);
-        final Button profileButton = findViewById(R.id.profileButton);
-        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
-        final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        Button backButton = findViewById(R.id.backButton);
+        Button buttonAvatar = findViewById(R.id.buttonAvatar);
+        Button profileButton = findViewById(R.id.profileButton);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
         Spinner spinner = findViewById(R.id.spinner);
 
@@ -47,6 +39,22 @@ public class MainActivity2 extends AppCompatActivity {
             startActivity(intent);
             profileButton.startAnimation(animation1);
 
+        });
+        buttonAvatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerSettings, avatarFragment.class, null)
+                        .commit();
+            }
+        });
+        alarmButtonSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerSettings, SettingsAlarmFragment.class, null)
+                        .commit();
+            }
         });
         ArrayAdapter<String> languagesAdapter = new ArrayAdapter<String>(this,
                                              android.R.layout.simple_spinner_item, languages);
