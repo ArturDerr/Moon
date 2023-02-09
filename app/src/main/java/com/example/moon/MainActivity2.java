@@ -43,9 +43,10 @@ public class MainActivity2 extends AppCompatActivity {
         buttonAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerSettings, avatarFragment.class, null)
-                        .commit();
+                buttonAvatar.setText("уыатгылур");
+               // getSupportFragmentManager().beginTransaction()
+                     //   .replace(R.id.fragmentContainerSettings, avatarFragment.class, null)
+                       // .commit();
             }
         });
         alarmButtonSettings.setOnClickListener(new View.OnClickListener() {

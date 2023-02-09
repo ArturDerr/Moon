@@ -23,7 +23,7 @@
             android:id="@+id/settingsButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="330dp"
+            android:layout_marginStart="350dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_profile_settings"
             android:drawableStart="@drawable/ic_settings"

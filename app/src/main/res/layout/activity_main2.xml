@@ -43,13 +43,6 @@
                 android:layout_height="89dp">
 
                 <Button
-                    android:id="@+id/buttonAvatar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="82dp"
-                    android:background="@color/non_background"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <Button
                     android:id="@+id/profileButton"
                     android:layout_width="222dp"
                     android:layout_height="71dp"
