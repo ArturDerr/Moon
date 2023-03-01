@@ -3,9 +3,14 @@
 
     <style name="AppBaseTheme" parent="android:Theme.Light"></style>
 
-    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
-        <item name="android:textColor">@color/spinner_text_color</item>
-    </style>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#7A59C5</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">@drawable/background_dialog</item>
+        <item name="android:textColorAlertDialogListItem">#FFFFFF</item>
+
+    </style>
 </resources>

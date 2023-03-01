@@ -31,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button avatarButton = findViewById(R.id.avatarButton);
         Button settingsButton = findViewById(R.id.settingsButton);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -204,6 +206,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 settingsButton.startAnimation(animation);
 
+            }
+        });
+        avatarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, profileActivity.class);
+                startActivity(intent);
+                avatarButton.startAnimation(animation1);
             }
         });
 

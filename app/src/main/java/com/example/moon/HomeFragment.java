@@ -1,64 +1,47 @@
 package com.example.moon;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.fragment.app.Fragment;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 public class HomeFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment NotesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, null);
+
+        TextView tvDateNow = view.findViewById(R.id.tvDateNow);
+        TextView tvPastDate = view.findViewById(R.id.tvPastDate);
+        TextView tvPresentDate = view.findViewById(R.id.tvPresentDate);
+
+        Date now = Calendar.getInstance().getTime();
+        String formattedDate = DateFormat.getDateInstance(DateFormat.FULL).format(now);
+        tvDateNow.setText(formattedDate);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE, -1);
+        DateFormat dateFormat = new SimpleDateFormat("MM", Locale.getDefault());
+        String formattedDatePast = dateFormat.format(calendar.getTime());
+        tvPastDate.setText(formattedDatePast);
+
+        Calendar calendar1 = Calendar.getInstance();
+        calendar1.add(Calendar.DATE, +1);
+        DateFormat dateFormat1 = new SimpleDateFormat("MM", Locale.getDefault());
+        String formattedDatePresent = dateFormat1.format(calendar.getTime());
+        tvPresentDate.setText(formattedDatePresent);
+
+        return view;
     }
 }
+
