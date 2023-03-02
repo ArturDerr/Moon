@@ -10,9 +10,12 @@ import androidx.fragment.app.Fragment;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class HomeFragment extends Fragment {
 
@@ -21,27 +24,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, null);
 
-        TextView tvDateNow = view.findViewById(R.id.tvDateNow);
-        TextView tvPastDate = view.findViewById(R.id.tvPastDate);
-        TextView tvPresentDate = view.findViewById(R.id.tvPresentDate);
-
-        Date now = Calendar.getInstance().getTime();
-        String formattedDate = DateFormat.getDateInstance(DateFormat.FULL).format(now);
-        tvDateNow.setText(formattedDate);
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DATE, -1);
-        DateFormat dateFormat = new SimpleDateFormat("MM", Locale.getDefault());
-        String formattedDatePast = dateFormat.format(calendar.getTime());
-        tvPastDate.setText(formattedDatePast);
-
-        Calendar calendar1 = Calendar.getInstance();
-        calendar1.add(Calendar.DATE, +1);
-        DateFormat dateFormat1 = new SimpleDateFormat("MM", Locale.getDefault());
-        String formattedDatePresent = dateFormat1.format(calendar.getTime());
-        tvPresentDate.setText(formattedDatePresent);
-
         return view;
     }
+
 }
 

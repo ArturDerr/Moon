@@ -31,7 +31,7 @@
                 android:layout_marginStart="0dp"
                 android:background="@drawable/round_back_settings"
                 android:drawableStart="@drawable/ic_name"
-                android:padding="12dp"
+                android:padding="11dp"
                 tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
