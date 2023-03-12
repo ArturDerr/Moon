@@ -1,55 +1,28 @@
 package com.example.moon;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class NotesActivity extends AppCompatActivity {
 
-import com.google.android.material.timepicker.MaterialTimePicker;
-import com.google.android.material.timepicker.TimeFormat;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
-
-public class MainActivity extends AppCompatActivity {
-
-    private int selectedTab = 1;
-
-    private TextView hour;
-    private Button setAlarm;
-    Context context;
-
-    SharedPreferences sPref;
-
-    final String SAVED_HOURS = "saved_hours";
+    private int selectedTab = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        setAlarm = findViewById(R.id.setAlarm);
+        setContentView(R.layout.activity_notes);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
-
-        hour = findViewById(R.id.hour);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -66,15 +39,35 @@ public class MainActivity extends AppCompatActivity {
         final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
+        homeTxt.setVisibility(View.GONE);
+        musicTxt.setVisibility(View.GONE);
+        settingsTxt.setVisibility(View.GONE);
 
-        loadText();
+        homeImage.setImageResource(R.drawable.ic_home);
+        musicImage.setImageResource(R.drawable.ic_music);
+        settingsImage.setImageResource(R.drawable.ic_settings);
+
+        homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+        musicLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+        settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+
+        notesTxt.setVisibility(View.VISIBLE);
+        notesImage.setImageResource(R.drawable.ic_notes_selected);
+        notesLayout.setBackgroundResource(R.drawable.round_back_notes);
+
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+        scaleAnimation.setDuration(200);
+        scaleAnimation.setFillAfter(true);
+        notesLayout.startAnimation(scaleAnimation);
 
         homeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (selectedTab != 1) {
+
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    overridePendingTransition(0, 0);
 
                     musicTxt.setVisibility(View.GONE);
                     settingsTxt.setVisibility(View.GONE);
@@ -96,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     homeLayout.startAnimation(scaleAnimation);
+
+                    finish();
 
                     selectedTab = 1;
                 }
@@ -144,9 +139,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (selectedTab != 3) {
 
-                    startActivity(new Intent(getApplicationContext(), NotesActivity.class));
-                    overridePendingTransition(0, 0);
-
                     homeTxt.setVisibility(View.GONE);
                     musicTxt.setVisibility(View.GONE);
                     settingsTxt.setVisibility(View.GONE);
@@ -167,8 +159,6 @@ public class MainActivity extends AppCompatActivity {
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     notesLayout.startAnimation(scaleAnimation);
-
-                    finish();
 
                     selectedTab = 3;
                 }
@@ -211,78 +201,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        setAlarm.setOnClickListener(v -> {
-            MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
-                    .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(12)
-                    .setMinute(0)
-                    .setTitleText("Выберите время")
-                    .build();
-
-            DateFormat.is24HourFormat(context);
-
-            materialTimePicker.addOnPositiveButtonClickListener(view1 -> {
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.SECOND, 0);
-                calendar.set(Calendar.MILLISECOND, 0);
-                calendar.set(Calendar.MINUTE, materialTimePicker.getMinute());
-                calendar.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
-
-                if (calendar.getTimeInMillis() <= System.currentTimeMillis()){
-                    calendar.add(Calendar.DAY_OF_YEAR, 1);
-                }
-
-                AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-
-                AlarmManager.AlarmClockInfo alarmClockInfo = new AlarmManager.AlarmClockInfo(calendar.getTimeInMillis(), getAlarmInfoPendingIntent());
-
-                alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent());
-
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24*60*60*1000, getAlarmActionPendingIntent());
-
-                Toast.makeText(this, "Будильник установлен на " + simpleDateFormat.format(calendar.getTime()), Toast.LENGTH_SHORT).show();
-
-                hour.setText(simpleDateFormat.format(calendar.getTime()) + "");
-
-            });
-            materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
-        });
-
-    }
-
-    public PendingIntent getAlarmInfoPendingIntent(){
-        Intent alarmInfoIntent = new Intent(this, MainActivity.class);
-        alarmInfoIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        return PendingIntent.getActivity(this, 0, alarmInfoIntent, PendingIntent.FLAG_IMMUTABLE);
-    }
-    public PendingIntent getAlarmActionPendingIntent(){
-        // потом отправим данные в броадкаст ресиевер
-        Intent intent = new Intent(this, AlarmActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        // тут FLAG_IMMUTABLE
-        return PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_IMMUTABLE);
-
-    }
-    void saveText() {
-        sPref = getPreferences(MODE_PRIVATE);
-        Editor ed = sPref.edit();
-        ed.putString(SAVED_HOURS, hour.getText().toString());
-        ed.apply();
-        // чисто для проверки
-        Toast.makeText(this, "Сохранено", Toast.LENGTH_SHORT).show();
-    }
-    void loadText() {
-        sPref = getPreferences(MODE_PRIVATE);
-        String savedText = sPref.getString(SAVED_HOURS, "");
-        hour.setText(savedText);
-        // проверка
-        Toast.makeText(this, "Загружено", Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        saveText();
     }
 }

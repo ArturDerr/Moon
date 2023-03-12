@@ -70,7 +70,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="135dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="75dp"
             android:background="@drawable/round_back_while2"
             android:orientation="vertical"
             android:padding="15dp"
@@ -138,7 +138,7 @@
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="135dp"
+                android:layout_marginTop="137dp"
                 app:dividerColor="#3C3C3C" />
 
         </RelativeLayout>

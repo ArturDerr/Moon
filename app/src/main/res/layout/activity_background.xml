@@ -47,7 +47,8 @@
                 android:layout_width="28dp"
                 android:layout_height="26dp"
                 android:layout_marginTop="17dp"
-                android:background="@drawable/ic_back"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableStart="@drawable/ic_back"
                 tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         </RelativeLayout>

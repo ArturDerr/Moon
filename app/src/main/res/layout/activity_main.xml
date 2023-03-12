@@ -3,16 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#121212"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainer1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#121212"
-        android:layout_above="@+id/bottomBar"
-        android:layout_marginBottom="-2dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,26 +16,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/avatarButton"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="0dp"
-                android:background="@drawable/round_back_settings"
-                android:drawableStart="@drawable/ic_name"
-                android:padding="11dp"
-                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/settingsButton"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="305dp"
-                android:background="@drawable/round_back_settings"
-                android:drawableStart="@drawable/ic_settings"
-                android:padding="11dp"
-                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </RelativeLayout>
 
@@ -123,36 +96,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/alarmLayout"
-            android:background="@android:color/transparent"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:gravity="center"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/alarmImage"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ic_alarm"/>
-
-            <TextView
-                android:id="@+id/alarmTxt"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="#9575CD"
-                android:text="Будильник"
-                android:layout_marginStart="10dp"
-                android:textSize="16sp"/>
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/notesLayout"
             android:background="@android:color/transparent"
             android:layout_width="wrap_content"
@@ -177,12 +120,349 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="#9575CD"
-                android:text="Заметки"
+                android:text="Сновидения"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settingsLayout"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/settingsImage"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_settings"/>
+
+            <TextView
+                android:id="@+id/settingsTxt"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#9575CD"
+                android:text="Настройки"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"/>
         </LinearLayout>
 
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="649dp"
+        android:layout_above="@+id/bottomBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout12"
+                android:layout_width="340dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/round_back_while"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <TextView
+                    android:id="@+id/greetings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="0dp"
+                    android:text="text"
+                    android:textColor="#CD8C4EDA"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout13"
+                android:layout_width="340dp"
+                android:layout_height="295dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:paddingStart="16dp"
+                    android:paddingTop="9dp"
+                    android:text="Будильник"
+                    android:textColor="#CDE8E6E6"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_alarm_settings"
+                    android:padding="8dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/setAlarm"
+                    android:layout_width="166dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="65dp"
+                    android:background="@color/non_background"
+                    android:padding="8dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/setAlarmSleep"
+                    android:layout_width="166dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="140dp"
+                    android:background="@color/non_background"
+                    android:padding="8dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="220dp"
+                    android:background="@drawable/round_back_while_settings"
+                    android:paddingStart="16dp"
+                    android:paddingTop="9dp"
+                    android:text="Описание: "
+                    android:textColor="#48FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="230dp"
+                    android:text="Текст"
+                    android:textColor="#27FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="65dp"
+                    android:background="@drawable/background_watch" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginTop="65dp"
+                    android:background="@drawable/background_watch" />
+
+                <TextView
+                    android:id="@+id/hour"
+                    android:layout_width="147dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="65dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="12dp"
+                    android:textStyle=""
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="140dp"
+                    android:background="@drawable/background_watch"
+                    android:paddingStart="20dp"
+                    android:paddingTop="12dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/minuteSleep"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginTop="140dp"
+                    android:background="@drawable/background_watch"
+                    android:paddingStart="20dp"
+                    android:paddingTop="12dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="85dp"
+                    android:src="@drawable/ic_sun" />
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="160dp"
+                    android:src="@drawable/ic_night" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout11"
+                android:layout_width="340dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="85dp"
+                    android:src="@drawable/ic_night" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="145dp"
+                    android:background="@drawable/round_back_while_settings"
+                    android:paddingStart="16dp"
+                    android:paddingTop="9dp"
+                    android:text="Описание: "
+                    android:textColor="#48FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="155dp"
+                    android:text="Текст"
+                    android:textColor="#27FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/setNotification"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_notifications"
+                    android:padding="8dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:paddingStart="16dp"
+                    android:paddingTop="9dp"
+                    android:text="Напоминание"
+                    android:textColor="#CDE8E6E6"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hourNotification"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="65dp"
+                    android:background="@drawable/background_watch"
+                    android:paddingStart="20dp"
+                    android:paddingTop="12dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="155dp"
+                    android:layout_marginTop="80dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/minuteNotification"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginTop="65dp"
+                    android:background="@drawable/background_watch"
+                    android:paddingStart="20dp"
+                    android:paddingTop="12dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout10"
+                android:layout_width="340dp"
+                android:layout_height="175dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
 
