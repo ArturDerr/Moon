@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView hour;
     private Button setAlarm;
     Context context;
+    Editor ed;
 
     SharedPreferences sPref;
 
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                     homeImage.setImageResource(R.drawable.ic_home_selected);
                     homeLayout.setBackgroundResource(R.drawable.round_back_home);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     homeLayout.startAnimation(scaleAnimation);
@@ -127,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                     musicImage.setImageResource(R.drawable.ic_music_selected);
                     musicLayout.setBackgroundResource(R.drawable.round_back_music);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     musicLayout.startAnimation(scaleAnimation);
@@ -163,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
                     notesImage.setImageResource(R.drawable.ic_notes_selected);
                     notesLayout.setBackgroundResource(R.drawable.round_back_notes);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     notesLayout.startAnimation(scaleAnimation);
@@ -199,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                     settingsImage.setImageResource(R.drawable.ic_settings_selected);
                     settingsLayout.setBackgroundResource(R.drawable.round_back_alarm);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     settingsLayout.startAnimation(scaleAnimation);
@@ -219,8 +220,6 @@ public class MainActivity extends AppCompatActivity {
                     .setTitleText("Выберите время")
                     .build();
 
-            DateFormat.is24HourFormat(context);
-
             materialTimePicker.addOnPositiveButtonClickListener(view1 -> {
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(Calendar.SECOND, 0);
@@ -228,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
                 calendar.set(Calendar.MINUTE, materialTimePicker.getMinute());
                 calendar.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
 
-                if (calendar.getTimeInMillis() <= System.currentTimeMillis()){
+                if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
                     calendar.add(Calendar.DAY_OF_YEAR, 1);
                 }
 
@@ -238,11 +237,11 @@ public class MainActivity extends AppCompatActivity {
 
                 alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent());
 
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24*60*60*1000, getAlarmActionPendingIntent());
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24 * 60 * 60 * 1000, getAlarmActionPendingIntent());
 
                 Toast.makeText(this, "Будильник установлен на " + simpleDateFormat.format(calendar.getTime()), Toast.LENGTH_SHORT).show();
 
-                hour.setText(simpleDateFormat.format(calendar.getTime()) + "");
+                hour.setText("     " + simpleDateFormat.format(calendar.getTime()) + "        ");
 
             });
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
@@ -250,12 +249,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public PendingIntent getAlarmInfoPendingIntent(){
+    public PendingIntent getAlarmInfoPendingIntent() {
         Intent alarmInfoIntent = new Intent(this, MainActivity.class);
         alarmInfoIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         return PendingIntent.getActivity(this, 0, alarmInfoIntent, PendingIntent.FLAG_IMMUTABLE);
     }
-    public PendingIntent getAlarmActionPendingIntent(){
+
+    public PendingIntent getAlarmActionPendingIntent() {
         // потом отправим данные в броадкаст ресиевер
         Intent intent = new Intent(this, AlarmActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);

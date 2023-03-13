@@ -110,7 +110,7 @@ public class MainActivity2 extends AppCompatActivity {
         notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         settingsTxt.setVisibility(View.VISIBLE);
-        settingsImage.setImageResource(R.drawable.ic_alarm_selected);
+        settingsImage.setImageResource(R.drawable.ic_settings_selected);
         settingsLayout.setBackgroundResource(R.drawable.round_back_alarm);
 
         ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
