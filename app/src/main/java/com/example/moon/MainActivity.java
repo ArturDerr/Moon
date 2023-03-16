@@ -13,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView hour;
     private Button setAlarm;
-    Context context;
-    Editor ed;
+    Calendar calendar;
+    SimpleDateFormat simpleDateFormat;
 
     SharedPreferences sPref;
 
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         setAlarm = findViewById(R.id.setAlarm);
+
+        sPref = getPreferences(MODE_PRIVATE);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
@@ -67,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
+        simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
         loadText();
 
@@ -221,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
                     .build();
 
             materialTimePicker.addOnPositiveButtonClickListener(view1 -> {
-                Calendar calendar = Calendar.getInstance();
+                calendar = Calendar.getInstance();
                 calendar.set(Calendar.SECOND, 0);
                 calendar.set(Calendar.MILLISECOND, 0);
                 calendar.set(Calendar.MINUTE, materialTimePicker.getMinute());
@@ -241,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(this, "Будильник установлен на " + simpleDateFormat.format(calendar.getTime()), Toast.LENGTH_SHORT).show();
 
-                hour.setText("     " + simpleDateFormat.format(calendar.getTime()) + "        ");
+                hour.setText("     " + simpleDateFormat.format(calendar.getTime()));
 
             });
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
@@ -263,26 +266,24 @@ public class MainActivity extends AppCompatActivity {
         return PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_IMMUTABLE);
 
     }
-    void saveText() {
-        sPref = getPreferences(MODE_PRIVATE);
-        Editor ed = sPref.edit();
-        ed.putString(SAVED_HOURS, hour.getText().toString());
-        ed.apply();
-        // чисто для проверки
+    public void saveText() {
+        String text = hour.getText().toString();
+        // сохраняем его в настройках
+        SharedPreferences.Editor prefEditor = sPref.edit();
+        prefEditor.putString(SAVED_HOURS, text);
+        prefEditor.apply();
         Toast.makeText(this, "Сохранено", Toast.LENGTH_SHORT).show();
     }
-    void loadText() {
-        sPref = getPreferences(MODE_PRIVATE);
-        String savedText = sPref.getString(SAVED_HOURS, "");
-        hour.setText(savedText);
-        // проверка
+    public void loadText() {
+        String text = sPref.getString(SAVED_HOURS,"");
+        hour.setText(text);
         Toast.makeText(this, "Загружено", Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onPause() {
+        super.onPause();
         saveText();
     }
 }
