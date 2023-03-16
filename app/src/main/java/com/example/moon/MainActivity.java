@@ -32,28 +32,33 @@ public class MainActivity extends AppCompatActivity {
 
     private int selectedTab = 1;
 
-    private TextView hour;
-    private Button setAlarm;
-    Calendar calendar;
+    private TextView hour, hourSleep;
+    private Button setAlarm, setAlarmSleep;
+    Calendar calendar, calendar2;
     SimpleDateFormat simpleDateFormat;
 
     SharedPreferences sPref;
 
     final String SAVED_HOURS = "saved_hours";
+    final String SAVED_HOURS_SLEEP = "saved_hours_sleep";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setAlarmSleep = findViewById(R.id.setAlarmSleep);
+
         setAlarm = findViewById(R.id.setAlarm);
 
         sPref = getPreferences(MODE_PRIVATE);
 
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
-        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
         hour = findViewById(R.id.hour);
+
+        hourSleep = findViewById(R.id.hourSleep);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -215,6 +220,42 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        setAlarmSleep.setOnClickListener(v -> {
+            MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
+                    .setTimeFormat(TimeFormat.CLOCK_24H)
+                    .setHour(12)
+                    .setMinute(0)
+                    .setTitleText("Выберите время")
+                    .build();
+            setAlarmSleep.startAnimation(animation1);
+
+            materialTimePicker.addOnPositiveButtonClickListener(view1 -> {
+                calendar2 = Calendar.getInstance();
+                calendar2.set(Calendar.SECOND, 0);
+                calendar2.set(Calendar.MILLISECOND, 0);
+                calendar2.set(Calendar.MINUTE, materialTimePicker.getMinute());
+                calendar2.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
+
+                if (calendar2.getTimeInMillis() <= System.currentTimeMillis()) {
+                    calendar2.add(Calendar.DAY_OF_YEAR, 1);
+                }
+
+                AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+                AlarmManager.AlarmClockInfo alarmClockInfo = new AlarmManager.AlarmClockInfo(calendar2.getTimeInMillis(), getAlarmSleepInfoPendingIntent());
+
+                alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent());
+
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar2.getTimeInMillis(), 24 * 60 * 60 * 1000, getAlarmSleepActionPendingIntent());
+
+                Toast.makeText(this, "Будильник установлен на " + simpleDateFormat.format(calendar2.getTime()), Toast.LENGTH_SHORT).show();
+
+                hourSleep.setText("     " + simpleDateFormat.format(calendar2.getTime()));
+
+            });
+            materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
+
+        });
         setAlarm.setOnClickListener(v -> {
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
@@ -222,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
                     .setMinute(0)
                     .setTitleText("Выберите время")
                     .build();
+            setAlarm.startAnimation(animation);
 
             materialTimePicker.addOnPositiveButtonClickListener(view1 -> {
                 calendar = Calendar.getInstance();
@@ -266,17 +308,34 @@ public class MainActivity extends AppCompatActivity {
         return PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_IMMUTABLE);
 
     }
+    // Будильник ночь //
+    public PendingIntent getAlarmSleepInfoPendingIntent() {
+        Intent alarmInfoIntent = new Intent(this, MainActivity.class);
+        alarmInfoIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        return PendingIntent.getActivity(this, 2, alarmInfoIntent, PendingIntent.FLAG_IMMUTABLE);
+    }
+    public PendingIntent getAlarmSleepActionPendingIntent() {
+        // потом отправим данные в броадкаст ресиевер
+        Intent intent = new Intent(this, AlarmSleepActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        // тут FLAG_IMMUTABLE
+        return PendingIntent.getActivity(this, 3, intent, PendingIntent.FLAG_IMMUTABLE);
+    }
     public void saveText() {
         String text = hour.getText().toString();
+        String textSleep = hourSleep.getText().toString();
         // сохраняем его в настройках
         SharedPreferences.Editor prefEditor = sPref.edit();
         prefEditor.putString(SAVED_HOURS, text);
+        prefEditor.putString(SAVED_HOURS_SLEEP, textSleep);
         prefEditor.apply();
         Toast.makeText(this, "Сохранено", Toast.LENGTH_SHORT).show();
     }
     public void loadText() {
-        String text = sPref.getString(SAVED_HOURS,"");
+        String text = sPref.getString(SAVED_HOURS, "");
+        String textSleep = sPref.getString(SAVED_HOURS_SLEEP, "");
         hour.setText(text);
+        hourSleep.setText(textSleep);
         Toast.makeText(this, "Загружено", Toast.LENGTH_SHORT).show();
 
     }

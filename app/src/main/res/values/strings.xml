@@ -15,12 +15,14 @@
 
 
     </style>
+
     <style name="Theme.App" parent="Theme.MaterialComponents">
         <item name="colorPrimary">#161616</item>
         <item name="colorOnPrimary">#161616</item>
         <item name="colorOnSurface">#161616</item>
         <item name="chipStyle">@style/Widget.App.Chip</item>
     </style>
+
     <style name="Widget.App.Chip" parent="Widget.MaterialComponents.TimePicker.Display">
         <item name="android:textColor">#FFFFFF</item>
     </style>
