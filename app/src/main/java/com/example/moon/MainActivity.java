@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.view.animation.Animation;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     final String SAVED_HOURS = "saved_hours";
     final String SAVED_HOURS_SLEEP = "saved_hours_sleep";
+    final static String BUTTON_PRESSED = "button_pressed";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -223,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
         setAlarmSleep.setOnClickListener(v -> {
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(12)
+                    .setHour(23)
                     .setMinute(0)
                     .setTitleText("Выберите время")
                     .build();
@@ -259,8 +261,8 @@ public class MainActivity extends AppCompatActivity {
         setAlarm.setOnClickListener(v -> {
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(12)
-                    .setMinute(0)
+                    .setHour(8)
+                    .setMinute(3)
                     .setTitleText("Выберите время")
                     .build();
             setAlarm.startAnimation(animation);

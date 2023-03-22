@@ -4,57 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="@drawable/zvezdnoe_nebo2"
     tools:context=".AlarmSleepActivity">
 
-    <TextView
-        android:layout_width="190dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="113dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="493dp"
-        android:text="Пора спать!!!"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="30dp"
+            android:gravity="center">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/avatarButton"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
                 android:layout_marginStart="0dp"
-                android:background="@drawable/round_back_settings"
-                android:drawableStart="@drawable/ic_close"
-                android:padding="9dp"
-                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                android:background="@drawable/round_back_while_settings"
+                android:padding="12dp"
+                android:paddingStart="14dp"
+                android:src="@drawable/ic_night_sleep" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/settingsButton"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="305dp"
-                android:background="@drawable/round_back_settings"
-                android:drawableStart="@drawable/ic_save"
-                android:padding="9dp"
-                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                android:id="@+id/setNewAlarm"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="300dp"
+                android:background="@drawable/round_back_while_settings"
+                android:drawableStart="@drawable/ic_close"
+                android:paddingStart="13dp"
+                android:src="@drawable/ic_night_sleep"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="72dp"
+                android:background="@drawable/round_back_while_settings"
+                android:paddingStart="17dp"
+                android:paddingTop="15dp"
+                android:text="Пора ложиться спать"
+                android:textColor="#9575CD"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout13"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/alarm_sleep_background_while"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_back_while"
+                android:paddingStart="16dp"
+                android:paddingTop="9dp"
+                android:text="Рекомендации перед сном"
+                android:textColor="#9575CD"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="65dp"
+                android:background="@drawable/round_back_while"
+                android:drawableRight="@drawable/ic_chevron_back_sleep"
+                android:paddingStart="16dp"
+                android:paddingTop="9dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:text="Рекомендации перед сном"
+                android:textColor="#CDE8E6E6"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="265dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_oval"
+                android:padding="8dp"
+                android:src="@drawable/ic_sleep_recomendation"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout17"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/alarm_sleep_background_while"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="225dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_back_while"
+                android:paddingStart="16dp"
+                android:paddingTop="9dp"
+                android:text="Музыка для сна"
+                android:textColor="#9575CD"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="65dp"
+                android:background="@drawable/round_back_while"
+                android:drawableRight="@drawable/ic_chevron_back_sleep"
+                android:paddingStart="16dp"
+                android:paddingTop="9dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:text="Не выбрано"
+                android:textColor="#CDE8E6E6"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="265dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_oval"
+                android:padding="8dp"
+                android:src="@drawable/ic_music_note"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </RelativeLayout>
 

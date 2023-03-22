@@ -3,12 +3,14 @@ package com.example.moon;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,14 +18,17 @@ import android.widget.TextView;
 public class MusicActivity extends AppCompatActivity {
 
     private int selectedTab = 2;
+    Button natureMusic;
+    ImageButton stop, pause;
+    MediaPlayer music1, music2, music3, music4, music5, music6,  music7, music8, music9, music10, music11, music12, music13, music14, music15, music16, music17, music18, music19, music20, music21, music22;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
 
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
-        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -39,6 +44,13 @@ public class MusicActivity extends AppCompatActivity {
         final ImageView musicImage = findViewById(R.id.musicImage);
         final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
+
+        MediaPlayer mediaPlayer = new MediaPlayer();
+
+        music1 = MediaPlayer.create(this, R.raw.nature);
+        natureMusic = findViewById(R.id.natureMusic);
+        pause = findViewById(R.id.pause);
+        stop = findViewById(R.id.stop);
 
         homeTxt.setVisibility(View.GONE);
         settingsTxt.setVisibility(View.GONE);
@@ -202,5 +214,32 @@ public class MusicActivity extends AppCompatActivity {
 
             }
         });
+        natureMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                music1.start();
+            }
+        });
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mediaPlayer.isPlaying()){
+                    music1.pause();
+                    pause.setImageResource(R.drawable.ic_play);
+                }
+                else {
+                    music1.start();
+                    pause.setImageResource(R.drawable.ic_pause);
+                }
+
+            }
+        });
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                music1.stop();
+            }
+        });
+
     }
 }

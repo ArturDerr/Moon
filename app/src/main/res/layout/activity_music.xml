@@ -7,6 +7,32 @@
     android:background="#121212"
     tools:context=".MusicActivity">
 
+    <RelativeLayout
+        android:layout_width="122dp"
+        android:layout_height="65dp"
+        android:background="@drawable/background_media_player"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/pause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/ic_pause"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/ic_close_grey"/>
+
+
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
@@ -142,5 +168,371 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="683dp"
+        android:layout_above="@+id/bottomBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/musicList1"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/natureMusic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/non_background"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList2"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList3"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList4"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music11"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music12"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList5"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music13"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music14"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music15"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList6"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music16"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music17"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music18"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList7"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music19"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music20"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music21"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
