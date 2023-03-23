@@ -8,27 +8,28 @@
     tools:context=".MusicActivity">
 
     <RelativeLayout
+        android:id="@+id/musicBox"
         android:layout_width="122dp"
         android:layout_height="65dp"
         android:background="@drawable/background_media_player"
         android:layout_marginStart="33dp"
         android:layout_marginTop="10dp">
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/pause"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="13dp"
             android:layout_marginStart="15dp"
             android:background="@drawable/ic_pause"/>
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/stop"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginTop="13dp"
             android:layout_marginStart="60dp"
-            android:background="@drawable/ic_close_grey"/>
+            android:layout_marginTop="13dp"
+            android:background="@drawable/ic_close_grey"
+            tools:ignore="TouchTargetSizeCheck" />
 
 
     </RelativeLayout>

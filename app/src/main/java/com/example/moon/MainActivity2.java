@@ -161,6 +161,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 if (selectedTab != 2) {
 
+                    startActivity(new Intent(getApplicationContext(), MusicActivity.class));
+                    overridePendingTransition(0, 0);
+
                     homeTxt.setVisibility(View.GONE);
                     settingsTxt.setVisibility(View.GONE);
                     notesTxt.setVisibility(View.GONE);

@@ -331,14 +331,12 @@ public class MainActivity extends AppCompatActivity {
         prefEditor.putString(SAVED_HOURS, text);
         prefEditor.putString(SAVED_HOURS_SLEEP, textSleep);
         prefEditor.apply();
-        Toast.makeText(this, "Сохранено", Toast.LENGTH_SHORT).show();
     }
     public void loadText() {
         String text = sPref.getString(SAVED_HOURS, "");
         String textSleep = sPref.getString(SAVED_HOURS_SLEEP, "");
         hour.setText(text);
         hourSleep.setText(textSleep);
-        Toast.makeText(this, "Загружено", Toast.LENGTH_SHORT).show();
 
     }
 

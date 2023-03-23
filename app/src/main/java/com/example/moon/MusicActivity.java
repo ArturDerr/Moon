@@ -13,19 +13,24 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MusicActivity extends AppCompatActivity {
 
     private int selectedTab = 2;
-    Button natureMusic;
-    ImageButton stop, pause;
+    Button natureMusic, stop, pause;
+    RelativeLayout musicBox;
     MediaPlayer music1, music2, music3, music4, music5, music6,  music7, music8, music9, music10, music11, music12, music13, music14, music15, music16, music17, music18, music19, music20, music21, music22;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
+
+        musicBox = findViewById(R.id.musicBox);
+
+        musicBox.setVisibility(View.INVISIBLE);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
@@ -45,9 +50,29 @@ public class MusicActivity extends AppCompatActivity {
         final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
 
-        MediaPlayer mediaPlayer = new MediaPlayer();
-
         music1 = MediaPlayer.create(this, R.raw.nature);
+        music2 = MediaPlayer.create(this, R.raw.nature);
+        music3 = MediaPlayer.create(this, R.raw.nature);
+        music4 = MediaPlayer.create(this, R.raw.nature);
+        music5 = MediaPlayer.create(this, R.raw.nature);
+        music6 = MediaPlayer.create(this, R.raw.nature);
+        music7 = MediaPlayer.create(this, R.raw.nature);
+        music8 = MediaPlayer.create(this, R.raw.nature);
+        music9 = MediaPlayer.create(this, R.raw.nature);
+        music10 = MediaPlayer.create(this, R.raw.nature);
+        music11 = MediaPlayer.create(this, R.raw.nature);
+        music12 = MediaPlayer.create(this, R.raw.nature);
+        music13 = MediaPlayer.create(this, R.raw.nature);
+        music14 = MediaPlayer.create(this, R.raw.nature);
+        music15 = MediaPlayer.create(this, R.raw.nature);
+        music16 = MediaPlayer.create(this, R.raw.nature);
+        music16 = MediaPlayer.create(this, R.raw.nature);
+        music17 = MediaPlayer.create(this, R.raw.nature);
+        music18 = MediaPlayer.create(this, R.raw.nature);
+        music19 = MediaPlayer.create(this, R.raw.nature);
+        music20 = MediaPlayer.create(this, R.raw.nature);
+        music21 = MediaPlayer.create(this, R.raw.nature);
+
         natureMusic = findViewById(R.id.natureMusic);
         pause = findViewById(R.id.pause);
         stop = findViewById(R.id.stop);
@@ -218,19 +243,204 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 music1.start();
+                musicBox.setVisibility(View.VISIBLE);
             }
         });
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mediaPlayer.isPlaying()){
+                // 1
+                if (music1.isPlaying()){
                     music1.pause();
-                    pause.setImageResource(R.drawable.ic_play);
+                    pause.setBackgroundResource(R.drawable.ic_play);
                 }
                 else {
                     music1.start();
-                    pause.setImageResource(R.drawable.ic_pause);
+                    pause.setBackgroundResource(R.drawable.ic_pause);
                 }
+                // 2
+                if (music2.isPlaying()) {
+                    music2.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music2.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 3
+                if (music3.isPlaying()){
+                    music3.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music3.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 4
+                if (music4.isPlaying()){
+                    music4.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music4.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 5
+                if (music5.isPlaying()){
+                    music5.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music5.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 6
+                if (music6.isPlaying()){
+                    music6.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music6.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 7
+                if (music7.isPlaying()) {
+                    music7.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music7.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 8
+                if (music8.isPlaying()){
+                    music8.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music8.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 9
+                if (music9.isPlaying()){
+                    music9.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music9.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 10
+                if (music10.isPlaying()){
+                    music10.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music10.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 11
+                if (music11.isPlaying()){
+                    music11.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music11.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 12
+                if (music12.isPlaying()){
+                    music12.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music12.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 13
+                if (music13.isPlaying()){
+                    music13.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music13.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 14
+                if (music14.isPlaying()){
+                    music14.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music14.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 15
+                if (music15.isPlaying()){
+                    music15.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music15.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 16
+                if (music16.isPlaying()){
+                    music16.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music16.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 17
+                if (music17.isPlaying()){
+                    music17.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music17.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 18
+                if (music18.isPlaying()){
+                    music18.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music18.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 19
+                if (music19.isPlaying()){
+                    music19.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music19.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 20
+                if (music20.isPlaying()){
+                    music20.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music20.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+                // 21
+                if (music21.isPlaying()){
+                    music21.pause();
+                    pause.setBackgroundResource(R.drawable.ic_play);
+                }
+                else {
+                    music21.start();
+                    pause.setBackgroundResource(R.drawable.ic_pause);
+                }
+
+
+                pause.startAnimation(animation);
 
             }
         });
@@ -238,6 +448,8 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 music1.stop();
+                musicBox.setVisibility(View.INVISIBLE);
+                stop.startAnimation(animation1);
             }
         });
 
