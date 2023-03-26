@@ -274,12 +274,12 @@
                     android:layout_width="134dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="88dp"
-                    android:layout_marginTop="63dp"
+                    android:layout_marginTop="66dp"
                     android:paddingStart="5dp"
                     android:paddingTop="12dp"
                     android:text=""
                     android:textColor="@color/white"
-                    android:textSize="27sp"
+                    android:textSize="21sp"
                     android:textStyle="" />
 
                 <TextView
@@ -287,12 +287,12 @@
                     android:layout_width="134dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="88dp"
-                    android:layout_marginTop="144dp"
+                    android:layout_marginTop="147dp"
                     android:paddingStart="5dp"
                     android:paddingTop="12dp"
                     android:text=""
                     android:textColor="@color/white"
-                    android:textSize="27sp" />
+                    android:textSize="21sp" />
 
                 <ImageView
                     android:layout_width="37dp"
@@ -398,12 +398,12 @@
                     android:layout_width="134dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="88dp"
-                    android:layout_marginTop="63dp"
+                    android:layout_marginTop="66dp"
                     android:paddingStart="15dp"
                     android:paddingTop="12dp"
                     android:text=""
                     android:textColor="@color/white"
-                    android:textSize="27sp"
+                    android:textSize="21sp"
                     android:textStyle="" />
 
                 <EditText

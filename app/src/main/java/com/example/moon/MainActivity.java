@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
         setAlarmSleep.setOnClickListener(v -> {
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(23)
+                    .setHour(12)
                     .setMinute(0)
                     .setTitleText("Выберите время")
                     .build();
@@ -261,8 +261,8 @@ public class MainActivity extends AppCompatActivity {
         setAlarm.setOnClickListener(v -> {
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(8)
-                    .setMinute(3)
+                    .setHour(12)
+                    .setMinute(0)
                     .setTitleText("Выберите время")
                     .build();
             setAlarm.startAnimation(animation);
