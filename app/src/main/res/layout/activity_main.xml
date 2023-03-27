@@ -271,25 +271,21 @@
 
                 <TextView
                     android:id="@+id/hour"
-                    android:layout_width="134dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="88dp"
-                    android:layout_marginTop="66dp"
-                    android:paddingStart="5dp"
-                    android:paddingTop="12dp"
-                    android:text=""
+                    android:layout_marginStart="108dp"
+                    android:layout_marginTop="84dp"
+                    android:text="12:00"
                     android:textColor="@color/white"
                     android:textSize="21sp"
                     android:textStyle="" />
 
                 <TextView
                     android:id="@+id/hourSleep"
-                    android:layout_width="134dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="88dp"
-                    android:layout_marginTop="147dp"
-                    android:paddingStart="5dp"
-                    android:paddingTop="12dp"
+                    android:layout_marginStart="108dp"
+                    android:layout_marginTop="165dp"
                     android:text=""
                     android:textColor="@color/white"
                     android:textSize="21sp" />
@@ -395,12 +391,10 @@
 
                 <TextView
                     android:id="@+id/notification"
-                    android:layout_width="134dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="88dp"
-                    android:layout_marginTop="66dp"
-                    android:paddingStart="15dp"
-                    android:paddingTop="12dp"
+                    android:layout_marginStart="108dp"
+                    android:layout_marginTop="84dp"
                     android:text=""
                     android:textColor="@color/white"
                     android:textSize="21sp"

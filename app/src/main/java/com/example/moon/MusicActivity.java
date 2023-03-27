@@ -22,6 +22,7 @@ public class MusicActivity extends AppCompatActivity {
 
     private int selectedTab = 2;
     final static String BUTTON_PRESSED = "button_pressed";
+    SharedPreferences sharedPref;
     TextView textNameMusic;
     ImageView natureImage, murmurImage, rainImage;
     Button natureMusic, murmurMusic, rainMusic, pause, pause2, pause3, pause4, pause5, pause6, pause7,pause8, pause9, pause10, pause11, pause12, pause13, pause14, pause15, pause16, pause17, pause18, pause19, pause20, pause21;
@@ -54,6 +55,28 @@ public class MusicActivity extends AppCompatActivity {
         musicBox19 = findViewById(R.id.musicBox19);
         musicBox20 = findViewById(R.id.musicBox20);
         musicBox21 = findViewById(R.id.musicBox21);
+
+        pause = findViewById(R.id.pause);
+        pause2 = findViewById(R.id.pause2);
+        pause3 = findViewById(R.id.pause3);
+        pause4 = findViewById(R.id.pause4);
+        pause5 = findViewById(R.id.pause5);
+        pause6 = findViewById(R.id.pause6);
+        pause7 = findViewById(R.id.pause7);
+        pause8 = findViewById(R.id.pause8);
+        pause9 = findViewById(R.id.pause9);
+        pause10 = findViewById(R.id.pause10);
+        pause11 = findViewById(R.id.pause11);
+        pause12 = findViewById(R.id.pause12);
+        pause13 = findViewById(R.id.pause13);
+        pause14 = findViewById(R.id.pause14);
+        pause15 = findViewById(R.id.pause15);
+        pause16 = findViewById(R.id.pause16);
+        pause17 = findViewById(R.id.pause17);
+        pause18 = findViewById(R.id.pause18);
+        pause19 = findViewById(R.id.pause19);
+        pause20 = findViewById(R.id.pause20);
+        pause21 =  findViewById(R.id.pause21);
 
         musicBox1.setVisibility(View.INVISIBLE);
         musicBox2.setVisibility(View.INVISIBLE);
@@ -111,41 +134,41 @@ public class MusicActivity extends AppCompatActivity {
         // дождь
         music3 = MediaPlayer.create(this, R.raw.rain);
         //
-        music4 = MediaPlayer.create(this, R.raw.);
+        music4 = MediaPlayer.create(this, R.raw.rain);
         //
-        music5 = MediaPlayer.create(this, R.raw.);
+        music5 = MediaPlayer.create(this, R.raw.rain);
         //
-        music6 = MediaPlayer.create(this, R.raw.);
+        music6 = MediaPlayer.create(this, R.raw.rain);
         //
-        music7 = MediaPlayer.create(this, R.raw.);
+        music7 = MediaPlayer.create(this, R.raw.rain);
         //
-        music8 = MediaPlayer.create(this, R.raw.);
+        music8 = MediaPlayer.create(this, R.raw.rain);
         //
-        music9 = MediaPlayer.create(this, R.raw.);
+        music9 = MediaPlayer.create(this, R.raw.rain);
         //
-        music10 = MediaPlayer.create(this, R.raw.);
+        music10 = MediaPlayer.create(this, R.raw.rain);
         //
-        music11 = MediaPlayer.create(this, R.raw.);
+        music11 = MediaPlayer.create(this, R.raw.rain);
         //
-        music12 = MediaPlayer.create(this, R.raw.);
+        music12 = MediaPlayer.create(this, R.raw.rain);
         //
-        music13 = MediaPlayer.create(this, R.raw.);
+        music13 = MediaPlayer.create(this, R.raw.rain);
         //
-        music14 = MediaPlayer.create(this, R.raw.);
+        music14 = MediaPlayer.create(this, R.raw.rain);
         //
-        music15 = MediaPlayer.create(this, R.raw.);
+        music15 = MediaPlayer.create(this, R.raw.rain);
         //
-        music16 = MediaPlayer.create(this, R.raw.);
+        music16 = MediaPlayer.create(this, R.raw.rain);
         //
-        music17 = MediaPlayer.create(this, R.raw.);
+        music17 = MediaPlayer.create(this, R.raw.rain);
         //
-        music18 = MediaPlayer.create(this, R.raw.);
+        music18 = MediaPlayer.create(this, R.raw.rain);
         //
-        music19 = MediaPlayer.create(this, R.raw.);
+        music19 = MediaPlayer.create(this, R.raw.rain);
         //
-        music20 = MediaPlayer.create(this, R.raw.);
+        music20 = MediaPlayer.create(this, R.raw.rain);
         //
-        music21 = MediaPlayer.create(this, R.raw.);
+        music21 = MediaPlayer.create(this, R.raw.rain);
 
         natureMusic = findViewById(R.id.natureMusic);
         murmurMusic = findViewById(R.id.murmurMusic);
@@ -168,7 +191,7 @@ public class MusicActivity extends AppCompatActivity {
         musicImage.setImageResource(R.drawable.ic_music_selected);
         musicLayout.setBackgroundResource(R.drawable.round_back_music);
 
-        ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
         scaleAnimation.setDuration(200);
         scaleAnimation.setFillAfter(true);
         musicLayout.startAnimation(scaleAnimation);
@@ -198,7 +221,7 @@ public class MusicActivity extends AppCompatActivity {
                     homeImage.setImageResource(R.drawable.ic_home_selected);
                     homeLayout.setBackgroundResource(R.drawable.round_back_home);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     homeLayout.startAnimation(scaleAnimation);
@@ -232,7 +255,7 @@ public class MusicActivity extends AppCompatActivity {
                     musicImage.setImageResource(R.drawable.ic_music_selected);
                     musicLayout.setBackgroundResource(R.drawable.round_back_music);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     musicLayout.startAnimation(scaleAnimation);
@@ -266,7 +289,7 @@ public class MusicActivity extends AppCompatActivity {
                     notesImage.setImageResource(R.drawable.ic_notes_selected);
                     notesLayout.setBackgroundResource(R.drawable.round_back_notes);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     notesLayout.startAnimation(scaleAnimation);
@@ -302,7 +325,7 @@ public class MusicActivity extends AppCompatActivity {
                     settingsImage.setImageResource(R.drawable.ic_settings_selected);
                     settingsLayout.setBackgroundResource(R.drawable.round_back_alarm);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
                     settingsLayout.startAnimation(scaleAnimation);
@@ -328,6 +351,8 @@ public class MusicActivity extends AppCompatActivity {
                 music1.start();
                 musicBox1.setVisibility(View.VISIBLE);
                 natureImage.setVisibility(View.INVISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
                 natureMusic.setClickable(false);
                 murmurMusic.setClickable(true);
                 rainMusic.setClickable(true);
@@ -390,30 +415,11 @@ public class MusicActivity extends AppCompatActivity {
                 music2.start();
                 musicBox2.setVisibility(View.VISIBLE);
                 murmurImage.setVisibility(View.INVISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
                 natureMusic.setClickable(true);
                 murmurMusic.setClickable(false);
                 rainMusic.setClickable(true);
-
-                music1.stop();
-                music3.stop();
-                music4.stop();
-                music5.stop();
-                music6.stop();
-                music7.stop();
-                music8.stop();
-                music9.stop();
-                music10.stop();
-                music11.stop();
-                music12.stop();
-                music13.stop();
-                music14.stop();
-                music15.stop();
-                music16.stop();
-                music17.stop();
-                music18.stop();
-                music19.stop();
-                music20.stop();
-                music21.stop();
 
                 musicBox1.setVisibility(View.INVISIBLE);
                 musicBox3.setVisibility(View.INVISIBLE);
@@ -451,6 +457,8 @@ public class MusicActivity extends AppCompatActivity {
                 music3.start();
                 musicBox3.setVisibility(View.VISIBLE);
                 rainImage.setVisibility(View.INVISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
                 natureMusic.setClickable(true);
                 murmurMusic.setClickable(true);
                 rainMusic.setClickable(false);
@@ -502,7 +510,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -523,7 +531,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -543,7 +551,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -563,7 +571,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -582,7 +590,7 @@ public class MusicActivity extends AppCompatActivity {
         pause5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -600,7 +608,7 @@ public class MusicActivity extends AppCompatActivity {
         pause6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -618,7 +626,7 @@ public class MusicActivity extends AppCompatActivity {
         pause7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -636,7 +644,7 @@ public class MusicActivity extends AppCompatActivity {
         pause8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -654,7 +662,7 @@ public class MusicActivity extends AppCompatActivity {
         pause9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -672,7 +680,7 @@ public class MusicActivity extends AppCompatActivity {
         pause10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -690,7 +698,7 @@ public class MusicActivity extends AppCompatActivity {
         pause11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -708,7 +716,7 @@ public class MusicActivity extends AppCompatActivity {
         pause12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -726,7 +734,7 @@ public class MusicActivity extends AppCompatActivity {
         pause13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -744,7 +752,7 @@ public class MusicActivity extends AppCompatActivity {
         pause14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -762,7 +770,7 @@ public class MusicActivity extends AppCompatActivity {
         pause15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -780,7 +788,7 @@ public class MusicActivity extends AppCompatActivity {
         pause16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -798,7 +806,7 @@ public class MusicActivity extends AppCompatActivity {
         pause17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -816,7 +824,7 @@ public class MusicActivity extends AppCompatActivity {
         pause18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -834,7 +842,7 @@ public class MusicActivity extends AppCompatActivity {
         pause19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -852,7 +860,7 @@ public class MusicActivity extends AppCompatActivity {
         pause20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -870,7 +878,7 @@ public class MusicActivity extends AppCompatActivity {
         pause21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                sharedPref = getPreferences(Context.MODE_PRIVATE);
                 sharedPref.edit()
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
@@ -888,7 +896,8 @@ public class MusicActivity extends AppCompatActivity {
 
     }
     public void loadClickButton() {
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        sharedPref = getPreferences(Context.MODE_PRIVATE);
         boolean isButtonPressed = sharedPref.getBoolean(BUTTON_PRESSED, false);
     }
+
 }
