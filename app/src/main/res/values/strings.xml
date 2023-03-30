@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Moon</string>
+    <string name="app_name">Luna</string>
 
-    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+    <style name="AppBaseTheme" parent="android:Theme.Light" />
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -25,5 +25,9 @@
 
     <style name="Widget.App.Chip" parent="Widget.MaterialComponents.TimePicker.Display">
         <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
 </resources>

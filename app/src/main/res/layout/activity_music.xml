@@ -182,16 +182,16 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <ImageView
-                        android:id="@+id/natureImage"
+                        android:id="@+id/forestImage"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:elevation="1dp"
-                        android:src="@drawable/nature" />
+                        android:src="@drawable/forest" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic"
+                        android:id="@+id/forestMusic"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -332,11 +332,20 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic4"
+                        android:id="@+id/natureMusic"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
                         tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/natureImage"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/nature" />
 
                     <RelativeLayout
                         android:id="@+id/musicBox4"
@@ -369,11 +378,20 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic5"
+                        android:id="@+id/nightNatureMusic"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
                         tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/nightNatureImage"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/nature_night" />
 
                     <RelativeLayout
                         android:id="@+id/musicBox5"
@@ -407,11 +425,20 @@
 
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic6"
+                        android:id="@+id/fireMusic"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
                         tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/fireImage"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/fire" />
 
                     <RelativeLayout
                         android:id="@+id/musicBox6"
@@ -1039,16 +1066,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textNameMusic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="25dp"
-            android:textColor="#9575CD"
-            android:textStyle="bold"
-            android:text=""
-            android:textSize="22sp"/>
+        <ImageView
+            android:layout_width="129dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_name_luna" />
 
     </RelativeLayout>
 

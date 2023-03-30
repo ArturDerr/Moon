@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="129dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_name_luna" />
+
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
@@ -151,7 +164,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
         tools:ignore="SpeakableTextPresentCheck">
@@ -163,33 +176,10 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/relativeLayout12"
-                android:layout_width="340dp"
-                android:layout_height="58dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/round_back_while"
-                android:orientation="horizontal"
-                android:padding="15dp"
-                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
-
-                <TextView
-                    android:id="@+id/greetings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginTop="0dp"
-                    android:text="text"
-                    android:textColor="#CD8C4EDA"
-                    android:textSize="20sp" />
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:id="@+id/relativeLayout13"
                 android:layout_width="340dp"
                 android:layout_height="245dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/round_back_while"
                 android:orientation="horizontal"
                 android:padding="15dp"
@@ -275,7 +265,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="108dp"
                     android:layout_marginTop="84dp"
-                    android:text="12:00"
+                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="21sp"
                     android:textStyle="" />
@@ -408,12 +398,7 @@
                     android:layout_marginTop="155dp"
                     android:background="@null"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Текст"
-                    android:textColor="#27FFFFFF"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             </RelativeLayout>
 
