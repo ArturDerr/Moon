@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
-        android:drawable="#121212"/>
+        android:drawable="@color/background"/>
 
     <item>
+
         <bitmap
             android:gravity="center"
             android:src="@drawable/ic_name_luna"/>
     </item>
-
 
 </layer-list>

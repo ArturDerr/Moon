@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
     final String SAVED_HOURS = "saved_hours";
     final String SAVED_HOURS_SLEEP = "saved_hours_sleep";
-    final static String BUTTON_PRESSED = "button_pressed";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -295,20 +294,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
     public PendingIntent getAlarmInfoPendingIntent() {
         Intent alarmInfoIntent = new Intent(this, MainActivity.class);
         alarmInfoIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         return PendingIntent.getActivity(this, 0, alarmInfoIntent, PendingIntent.FLAG_IMMUTABLE);
     }
-
     public PendingIntent getAlarmActionPendingIntent() {
         // потом отправим данные в броадкаст ресиевер
         Intent intent = new Intent(this, AlarmActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         // тут FLAG_IMMUTABLE
         return PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_IMMUTABLE);
-
     }
     // Будильник ночь //
     public PendingIntent getAlarmSleepInfoPendingIntent() {
@@ -337,9 +333,7 @@ public class MainActivity extends AppCompatActivity {
         String textSleep = sPref.getString(SAVED_HOURS_SLEEP, "");
         hour.setText(text);
         hourSleep.setText(textSleep);
-
     }
-
     @Override
     protected void onPause() {
         super.onPause();

@@ -27,9 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Button alarmButtonSettings = findViewById(R.id.alarmButtonSettings);
-        Button languagesButton = findViewById(R.id.languagesButton);
         Button backgroundButtonSettings = findViewById(R.id.backgroundButtonSettings);
-        Button notificationsButtonSettings = findViewById(R.id.notificationsButtonSettings);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
@@ -60,41 +58,6 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, BackgroundActivity.class);
                 startActivity(intent);
-            }
-        });
-        notificationsButtonSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, ActivityNotifications.class);
-                startActivity(intent);
-            }
-        });
-        languagesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String[] singleChoiceItems = getResources().getStringArray(R.array.dialog_single_choice_array);
-                int itemSelected = 0; // Важно! Дает цифру выбора, если Русский то 0, английский 1
-                new AlertDialog.Builder(MainActivity2.this);
-                AlertDialog dialog = new AlertDialog.Builder(MainActivity2.this, R.style.CustomDialogTheme)
-                        .setTitle("Выберите язык")
-                        .setSingleChoiceItems(singleChoiceItems, itemSelected, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int selectedIndex) {
-                            }
-                        })
-                        .setPositiveButton("Ок", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        })
-                        .setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        })
-                        .show();
             }
         });
         homeTxt.setVisibility(View.GONE);

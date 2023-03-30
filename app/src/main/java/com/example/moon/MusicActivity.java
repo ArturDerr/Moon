@@ -116,6 +116,14 @@ public class MusicActivity extends AppCompatActivity {
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation4 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation5 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation6 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation7 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation8 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -341,13 +349,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
-                music1.start();
-                musicBox1.setVisibility(View.VISIBLE);
+                forestMusic.startAnimation(animation);
 
                 forestImage.setVisibility(View.INVISIBLE);
                 murmurImage.setVisibility(View.VISIBLE);
@@ -401,59 +403,50 @@ public class MusicActivity extends AppCompatActivity {
                 }
                 if (music11.isPlaying()) {
                     music11.stop();
-                    music11.reset();
                     music11.release();
                 }
                 if (music12.isPlaying()) {
                     music12.stop();
-                    music12.reset();
                     music12.release();
                 }
                 if (music13.isPlaying()) {
                     music13.stop();
-                    music13.reset();
                     music13.release();
                 }
                 if (music14.isPlaying()) {
                     music14.stop();
-                    music14.reset();
                     music14.release();
                 }
                 if (music15.isPlaying()) {
                     music15.stop();
-                    music15.reset();
                     music15.release();
                 }
                 if (music16.isPlaying()) {
                     music16.stop();
-                    music16.reset();
                     music16.release();
                 }
                 if (music17.isPlaying()) {
                     music17.stop();
-                    music17.reset();
                     music17.release();
                 }
                 if (music18.isPlaying()) {
                     music18.stop();
-                    music18.reset();
                     music18.release();
                 }
                 if (music19.isPlaying()) {
                     music19.stop();
-                    music19.reset();
                     music19.release();
                 }
                 if (music20.isPlaying()) {
                     music20.stop();
-                    music20.reset();
                     music20.release();
                 }
                 if (music21.isPlaying()) {
                     music21.stop();
-                    music21.reset();
                     music21.release();
                 }
+                music1.start();
+                musicBox1.setVisibility(View.VISIBLE);
 
                 musicBox2.setVisibility(View.INVISIBLE);
                 musicBox3.setVisibility(View.INVISIBLE);
@@ -481,13 +474,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
-                music2.start();
-                musicBox2.setVisibility(View.VISIBLE);
+                murmurMusic.startAnimation(animation1);
 
                 murmurImage.setVisibility(View.INVISIBLE);
                 forestImage.setVisibility(View.VISIBLE);
@@ -533,69 +520,58 @@ public class MusicActivity extends AppCompatActivity {
                 }
                 if (music9.isPlaying()) {
                     music9.stop();
-                    music9.reset();
                     music9.release();
                 }
                 if (music10.isPlaying()) {
                     music10.stop();
-                    music10.reset();
                     music10.release();
                 }
                 if (music11.isPlaying()) {
                     music11.stop();
-                    music11.reset();
                     music11.release();
                 }
                 if (music12.isPlaying()) {
                     music12.stop();
-                    music12.reset();
                     music12.release();
                 }
                 if (music13.isPlaying()) {
                     music13.stop();
-                    music13.reset();
                     music13.release();
                 }
                 if (music14.isPlaying()) {
                     music14.stop();
-                    music14.reset();
                     music14.release();
                 }
                 if (music15.isPlaying()) {
                     music15.stop();
-                    music15.reset();
                     music15.release();
                 }
                 if (music16.isPlaying()) {
                     music16.stop();
-                    music16.reset();
                     music16.release();
                 }
                 if (music17.isPlaying()) {
                     music17.stop();
-                    music17.reset();
                     music17.release();
                 }
                 if (music18.isPlaying()) {
                     music18.stop();
-                    music18.reset();
                     music18.release();
                 }
                 if (music19.isPlaying()) {
                     music19.stop();
-                    music19.reset();
                     music19.release();
                 }
                 if (music20.isPlaying()) {
                     music20.stop();
-                    music20.reset();
                     music20.release();
                 }
                 if (music21.isPlaying()) {
                     music21.stop();
-                    music21.reset();
                     music21.release();
                 }
+                music2.start();
+                musicBox2.setVisibility(View.VISIBLE);
 
                 musicBox1.setVisibility(View.INVISIBLE);
                 musicBox3.setVisibility(View.INVISIBLE);
@@ -623,13 +599,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
-                music3.start();
-                musicBox3.setVisibility(View.VISIBLE);
+                rainMusic.startAnimation(animation3);
 
                 rainImage.setVisibility(View.INVISIBLE);
                 forestImage.setVisibility(View.VISIBLE);
@@ -726,6 +696,9 @@ public class MusicActivity extends AppCompatActivity {
                     music21.release();
                 }
 
+                music3.start();
+                musicBox3.setVisibility(View.VISIBLE);
+
                 musicBox1.setVisibility(View.INVISIBLE);
                 musicBox2.setVisibility(View.INVISIBLE);
                 musicBox4.setVisibility(View.INVISIBLE);
@@ -752,13 +725,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
-                music4.start();
-                musicBox4.setVisibility(View.VISIBLE);
+                natureMusic.startAnimation(animation4);
 
                 natureImage.setVisibility(View.INVISIBLE);
                 murmurImage.setVisibility(View.VISIBLE);
@@ -855,6 +822,9 @@ public class MusicActivity extends AppCompatActivity {
                     music21.release();
                 }
 
+                music4.start();
+                musicBox4.setVisibility(View.VISIBLE);
+
                 musicBox1.setVisibility(View.INVISIBLE);
                 musicBox2.setVisibility(View.INVISIBLE);
                 musicBox3.setVisibility(View.INVISIBLE);
@@ -875,19 +845,14 @@ public class MusicActivity extends AppCompatActivity {
                 musicBox19.setVisibility(View.INVISIBLE);
                 musicBox20.setVisibility(View.INVISIBLE);
                 musicBox21.setVisibility(View.INVISIBLE);
+
             }
         });
         nightNatureMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
-                music5.start();
-                musicBox5.setVisibility(View.VISIBLE);
+                nightNatureMusic.startAnimation(animation5);
 
                 natureImage.setVisibility(View.VISIBLE);
                 murmurImage.setVisibility(View.VISIBLE);
@@ -937,64 +902,55 @@ public class MusicActivity extends AppCompatActivity {
                 }
                 if (music10.isPlaying()) {
                     music10.stop();
-                    music10.reset();
                     music10.release();
                 }
                 if (music11.isPlaying()) {
                     music11.stop();
-                    music11.reset();
                     music11.release();
                 }
                 if (music12.isPlaying()) {
                     music12.stop();
-                    music12.reset();
                     music12.release();
                 }
                 if (music13.isPlaying()) {
                     music13.stop();
-                    music13.reset();
                     music13.release();
                 }
                 if (music14.isPlaying()) {
                     music14.stop();
-                    music14.reset();
                     music14.release();
                 }
                 if (music15.isPlaying()) {
                     music15.stop();
-                    music15.reset();
                     music15.release();
                 }
                 if (music16.isPlaying()) {
                     music16.stop();
-                    music16.reset();
                     music16.release();
                 }
                 if (music17.isPlaying()) {
                     music17.stop();
-                    music17.reset();
                     music17.release();
                 }
                 if (music18.isPlaying()) {
                     music18.stop();
-                    music18.reset();
                     music18.release();
                 }
                 if (music19.isPlaying()) {
                     music19.stop();
-                    music19.reset();
                     music19.release();
                 }
                 if (music20.isPlaying()) {
                     music20.stop();
-                    music20.reset();
                     music20.release();
                 }
                 if (music21.isPlaying()) {
                     music21.stop();
-                    music21.reset();
                     music21.release();
                 }
+
+                music5.start();
+                musicBox5.setVisibility(View.VISIBLE);
 
                 musicBox1.setVisibility(View.INVISIBLE);
                 musicBox2.setVisibility(View.INVISIBLE);
@@ -1022,13 +978,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
-                music6.start();
-                musicBox6.setVisibility(View.VISIBLE);
+                fireMusic.startAnimation(animation6);
 
                 natureImage.setVisibility(View.VISIBLE);
                 murmurImage.setVisibility(View.VISIBLE);
@@ -1125,6 +1075,9 @@ public class MusicActivity extends AppCompatActivity {
                     music21.release();
                 }
 
+                music6.start();
+                musicBox6.setVisibility(View.VISIBLE);
+
                 musicBox1.setVisibility(View.INVISIBLE);
                 musicBox2.setVisibility(View.INVISIBLE);
                 musicBox3.setVisibility(View.INVISIBLE);
@@ -1151,10 +1104,6 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
 
                 if (music1.isPlaying()) {
                     music1.pause();
@@ -1171,11 +1120,6 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
                 // 2
                 if (music2.isPlaying()) {
                     music2.pause();
@@ -1189,11 +1133,6 @@ public class MusicActivity extends AppCompatActivity {
         pause3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
 
                 // 3
                 if (music3.isPlaying()) {
@@ -1209,11 +1148,6 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
-
                 // 4
                 if (music4.isPlaying()) {
                     music4.pause();
@@ -1227,10 +1161,7 @@ public class MusicActivity extends AppCompatActivity {
         pause5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
+
                 // 5
                 if (music5.isPlaying()) {
                     music5.pause();
@@ -1244,10 +1175,7 @@ public class MusicActivity extends AppCompatActivity {
         pause6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
+
                 // 6
                 if (music6.isPlaying()) {
                     music6.pause();
@@ -1261,10 +1189,7 @@ public class MusicActivity extends AppCompatActivity {
         pause7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sharedPref = getPreferences(Context.MODE_PRIVATE);
-                sharedPref.edit()
-                        .putBoolean(BUTTON_PRESSED, true)
-                        .apply();
+
                 // 7
                 if (music7.isPlaying()) {
                     music7.pause();
