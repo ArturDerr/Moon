@@ -20,11 +20,20 @@ import android.widget.TextView;
 public class MusicActivity extends AppCompatActivity {
 
     private int selectedTab = 2;
+
     final static String BUTTON_PRESSED = "button_pressed";
+
     SharedPreferences sharedPref;
-    ImageView forestImage, murmurImage, rainImage, natureImage, nightNatureImage, fireImage;
-    Button forestMusic, murmurMusic, rainMusic, natureMusic, nightNatureMusic, fireMusic, pause, pause2, pause3, pause4, pause5, pause6, pause7, pause8, pause9, pause10, pause11, pause12, pause13, pause14, pause15, pause16, pause17, pause18, pause19, pause20, pause21;
+
+    ImageView forestImage, murmurImage, rainImage, natureImage, nightNatureImage, fireImage, birdImage, autumnImage;
+    Button forestMusic, murmurMusic, rainMusic, natureMusic, nightNatureMusic, fireMusic, birdMusic, autumnMusic;
+
+    Button pause, pause2, pause3, pause4, pause5, pause6, pause7, pause8, pause9, pause10, pause11, pause12, pause13, pause14, pause15, pause16, pause17, pause18, pause19, pause20, pause21;
+
+    ImageView selected1, selected2, selected3, selected4, selected5, selected6, selected7, selected8, selected9, selected10, selected11, selected12, selected13, selected14, selected15, selected16, selected17, selected18, selected19, selected20, selected21;
+
     RelativeLayout background, musicBox1, musicBox2, musicBox3, musicBox4, musicBox5, musicBox6, musicBox7, musicBox8, musicBox9, musicBox10, musicBox11, musicBox12, musicBox13, musicBox14, musicBox15, musicBox16, musicBox17, musicBox18, musicBox19, musicBox20, musicBox21;
+
     MediaPlayer music1, music2, music3, music4, music5, music6, music7, music8, music9, music10, music11, music12, music13, music14, music15, music16, music17, music18, music19, music20, music21;
 
     @Override
@@ -98,12 +107,59 @@ public class MusicActivity extends AppCompatActivity {
         musicBox20.setVisibility(View.INVISIBLE);
         musicBox21.setVisibility(View.INVISIBLE);
 
+        selected1.setVisibility(View.INVISIBLE);
+        selected2.setVisibility(View.INVISIBLE);
+        selected3.setVisibility(View.INVISIBLE);
+        selected4.setVisibility(View.INVISIBLE);
+        selected5.setVisibility(View.INVISIBLE);
+        selected6.setVisibility(View.INVISIBLE);
+        selected7.setVisibility(View.INVISIBLE);
+        selected8.setVisibility(View.INVISIBLE);
+        selected9.setVisibility(View.INVISIBLE);
+        selected10.setVisibility(View.INVISIBLE);
+        selected11.setVisibility(View.INVISIBLE);
+        selected12.setVisibility(View.INVISIBLE);
+        selected13.setVisibility(View.INVISIBLE);
+        selected14.setVisibility(View.INVISIBLE);
+        selected15.setVisibility(View.INVISIBLE);
+        selected16.setVisibility(View.INVISIBLE);
+        selected17.setVisibility(View.INVISIBLE);
+        selected18.setVisibility(View.INVISIBLE);
+        selected19.setVisibility(View.INVISIBLE);
+        selected20.setVisibility(View.INVISIBLE);
+        selected21.setVisibility(View.INVISIBLE);
+
+        selected1 = findViewById(R.id.selected1);
+        selected2 = findViewById(R.id.selected2);
+        selected3 = findViewById(R.id.selected3);
+        selected4 = findViewById(R.id.selected4);
+        selected5 = findViewById(R.id.selected5);
+        selected6 = findViewById(R.id.selected6);
+        selected7 = findViewById(R.id.selected7);
+        selected8 = findViewById(R.id.selected8);
+        selected9 = findViewById(R.id.selected9);
+        selected10 = findViewById(R.id.selected10);
+        selected11 = findViewById(R.id.selected11);
+        selected12 = findViewById(R.id.selected12);
+        selected13 = findViewById(R.id.selected13);
+        selected14 = findViewById(R.id.selected14);
+        selected15 = findViewById(R.id.selected15);
+        selected16 = findViewById(R.id.selected16);
+        selected17 = findViewById(R.id.selected17);
+        selected18 = findViewById(R.id.selected18);
+        selected19 = findViewById(R.id.selected19);
+        selected20 = findViewById(R.id.selected20);
+        selected21 = findViewById(R.id.selected21);
+
+
         murmurImage = findViewById(R.id.murmurImage);
         forestImage = findViewById(R.id.forestImage);
         rainImage = findViewById(R.id.rainImage);
         natureImage = findViewById(R.id.natureImage);
         nightNatureImage = findViewById(R.id.nightNatureImage);
         fireImage = findViewById(R.id.fireImage);
+        birdImage = findViewById(R.id.birdImage);
+        autumnImage = findViewById(R.id.autumnImage);
 
         rainMusic = findViewById(R.id.rainMusic);
         forestMusic = findViewById(R.id.forestMusic);
@@ -111,6 +167,8 @@ public class MusicActivity extends AppCompatActivity {
         natureMusic = findViewById(R.id.natureMusic);
         nightNatureMusic = findViewById(R.id.nightNatureMusic);
         fireMusic = findViewById(R.id.fireMusic);
+        birdMusic = findViewById(R.id.birdMusic);
+        autumnMusic = findViewById(R.id.autumnMusic);
 
         background = findViewById(R.id.background);
 
@@ -152,10 +210,10 @@ public class MusicActivity extends AppCompatActivity {
         music5 = MediaPlayer.create(this, R.raw.night_nature);
         // звуки костра
         music6 = MediaPlayer.create(this, R.raw.fire);
-        //
-        music7 = MediaPlayer.create(this, R.raw.rain);
-        //
-        music8 = MediaPlayer.create(this, R.raw.rain);
+        // пение птиц
+        music7 = MediaPlayer.create(this, R.raw.bird);
+        // осень природа
+        music8 = MediaPlayer.create(this, R.raw.autumn);
         //
         music9 = MediaPlayer.create(this, R.raw.rain);
         //
@@ -351,20 +409,6 @@ public class MusicActivity extends AppCompatActivity {
 
                 forestMusic.startAnimation(animation);
 
-                forestImage.setVisibility(View.INVISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                natureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-
-                forestMusic.setClickable(false);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
-
                 if (music2.isPlaying()) {
                     music2.stop();
                     music2.release();
@@ -446,28 +490,46 @@ public class MusicActivity extends AppCompatActivity {
                     music21.release();
                 }
                 music1.start();
-                musicBox1.setVisibility(View.VISIBLE);
 
-                musicBox2.setVisibility(View.INVISIBLE);
-                musicBox3.setVisibility(View.INVISIBLE);
-                musicBox4.setVisibility(View.INVISIBLE);
-                musicBox5.setVisibility(View.INVISIBLE);
-                musicBox6.setVisibility(View.INVISIBLE);
-                musicBox7.setVisibility(View.INVISIBLE);
-                musicBox8.setVisibility(View.INVISIBLE);
-                musicBox9.setVisibility(View.INVISIBLE);
-                musicBox10.setVisibility(View.INVISIBLE);
-                musicBox11.setVisibility(View.INVISIBLE);
-                musicBox12.setVisibility(View.INVISIBLE);
-                musicBox13.setVisibility(View.INVISIBLE);
-                musicBox14.setVisibility(View.INVISIBLE);
-                musicBox15.setVisibility(View.INVISIBLE);
-                musicBox16.setVisibility(View.INVISIBLE);
-                musicBox17.setVisibility(View.INVISIBLE);
-                musicBox18.setVisibility(View.INVISIBLE);
-                musicBox19.setVisibility(View.INVISIBLE);
-                musicBox20.setVisibility(View.INVISIBLE);
-                musicBox21.setVisibility(View.INVISIBLE);
+                forestImage.setVisibility(View.INVISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.VISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                fireImage.setVisibility(View.VISIBLE);
+                birdImage.setVisibility(View.VISIBLE);
+                autumnImage.setVisibility(View.VISIBLE);
+
+                forestMusic.setClickable(false);
+                murmurMusic.setClickable(true);
+                rainMusic.setClickable(true);
+                natureMusic.setClickable(true);
+                nightNatureMusic.setClickable(true);
+                fireMusic.setClickable(true);
+                birdMusic.setClickable(true);
+                autumnMusic.setClickable(true);
+
+                selected1.setVisibility(View.VISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.INVISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
             }
         });
         murmurMusic.setOnClickListener(new View.OnClickListener() {
@@ -475,20 +537,6 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 murmurMusic.startAnimation(animation1);
-
-                murmurImage.setVisibility(View.INVISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                natureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(false);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -571,49 +619,53 @@ public class MusicActivity extends AppCompatActivity {
                     music21.release();
                 }
                 music2.start();
-                musicBox2.setVisibility(View.VISIBLE);
 
-                musicBox1.setVisibility(View.INVISIBLE);
-                musicBox3.setVisibility(View.INVISIBLE);
-                musicBox4.setVisibility(View.INVISIBLE);
-                musicBox5.setVisibility(View.INVISIBLE);
-                musicBox6.setVisibility(View.INVISIBLE);
-                musicBox7.setVisibility(View.INVISIBLE);
-                musicBox8.setVisibility(View.INVISIBLE);
-                musicBox9.setVisibility(View.INVISIBLE);
-                musicBox10.setVisibility(View.INVISIBLE);
-                musicBox11.setVisibility(View.INVISIBLE);
-                musicBox12.setVisibility(View.INVISIBLE);
-                musicBox13.setVisibility(View.INVISIBLE);
-                musicBox14.setVisibility(View.INVISIBLE);
-                musicBox15.setVisibility(View.INVISIBLE);
-                musicBox16.setVisibility(View.INVISIBLE);
-                musicBox17.setVisibility(View.INVISIBLE);
-                musicBox18.setVisibility(View.INVISIBLE);
-                musicBox19.setVisibility(View.INVISIBLE);
-                musicBox20.setVisibility(View.INVISIBLE);
-                musicBox21.setVisibility(View.INVISIBLE);
+                murmurImage.setVisibility(View.INVISIBLE);
+                forestImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.VISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                fireImage.setVisibility(View.VISIBLE);
+                birdImage.setVisibility(View.VISIBLE);
+                autumnImage.setVisibility(View.VISIBLE);
+
+                forestMusic.setClickable(true);
+                murmurMusic.setClickable(false);
+                rainMusic.setClickable(true);
+                natureMusic.setClickable(true);
+                nightNatureMusic.setClickable(true);
+                fireMusic.setClickable(true);
+                birdMusic.setClickable(true);
+                autumnMusic.setClickable(true);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.VISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.INVISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
             }
         });
         rainMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                rainMusic.startAnimation(animation3);
-
-                rainImage.setVisibility(View.INVISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                natureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(false);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
+                rainMusic.startAnimation(animation2);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -697,49 +749,53 @@ public class MusicActivity extends AppCompatActivity {
                 }
 
                 music3.start();
-                musicBox3.setVisibility(View.VISIBLE);
 
-                musicBox1.setVisibility(View.INVISIBLE);
-                musicBox2.setVisibility(View.INVISIBLE);
-                musicBox4.setVisibility(View.INVISIBLE);
-                musicBox5.setVisibility(View.INVISIBLE);
-                musicBox6.setVisibility(View.INVISIBLE);
-                musicBox7.setVisibility(View.INVISIBLE);
-                musicBox8.setVisibility(View.INVISIBLE);
-                musicBox9.setVisibility(View.INVISIBLE);
-                musicBox10.setVisibility(View.INVISIBLE);
-                musicBox11.setVisibility(View.INVISIBLE);
-                musicBox12.setVisibility(View.INVISIBLE);
-                musicBox13.setVisibility(View.INVISIBLE);
-                musicBox14.setVisibility(View.INVISIBLE);
-                musicBox15.setVisibility(View.INVISIBLE);
-                musicBox16.setVisibility(View.INVISIBLE);
-                musicBox17.setVisibility(View.INVISIBLE);
-                musicBox18.setVisibility(View.INVISIBLE);
-                musicBox19.setVisibility(View.INVISIBLE);
-                musicBox20.setVisibility(View.INVISIBLE);
-                musicBox21.setVisibility(View.INVISIBLE);
+                rainImage.setVisibility(View.INVISIBLE);
+                forestImage.setVisibility(View.VISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.VISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                fireImage.setVisibility(View.VISIBLE);
+                birdImage.setVisibility(View.VISIBLE);
+                autumnImage.setVisibility(View.VISIBLE);
+
+                forestMusic.setClickable(true);
+                murmurMusic.setClickable(true);
+                rainMusic.setClickable(false);
+                natureMusic.setClickable(true);
+                nightNatureMusic.setClickable(true);
+                fireMusic.setClickable(true);
+                birdMusic.setClickable(true);
+                autumnMusic.setClickable(true);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.VISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.INVISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
             }
         });
         natureMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                natureMusic.startAnimation(animation4);
-
-                natureImage.setVisibility(View.INVISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(false);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
+                natureMusic.startAnimation(animation3);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -823,28 +879,46 @@ public class MusicActivity extends AppCompatActivity {
                 }
 
                 music4.start();
-                musicBox4.setVisibility(View.VISIBLE);
 
-                musicBox1.setVisibility(View.INVISIBLE);
-                musicBox2.setVisibility(View.INVISIBLE);
-                musicBox3.setVisibility(View.INVISIBLE);
-                musicBox5.setVisibility(View.INVISIBLE);
-                musicBox6.setVisibility(View.INVISIBLE);
-                musicBox7.setVisibility(View.INVISIBLE);
-                musicBox8.setVisibility(View.INVISIBLE);
-                musicBox9.setVisibility(View.INVISIBLE);
-                musicBox10.setVisibility(View.INVISIBLE);
-                musicBox11.setVisibility(View.INVISIBLE);
-                musicBox12.setVisibility(View.INVISIBLE);
-                musicBox13.setVisibility(View.INVISIBLE);
-                musicBox14.setVisibility(View.INVISIBLE);
-                musicBox15.setVisibility(View.INVISIBLE);
-                musicBox16.setVisibility(View.INVISIBLE);
-                musicBox17.setVisibility(View.INVISIBLE);
-                musicBox18.setVisibility(View.INVISIBLE);
-                musicBox19.setVisibility(View.INVISIBLE);
-                musicBox20.setVisibility(View.INVISIBLE);
-                musicBox21.setVisibility(View.INVISIBLE);
+                natureImage.setVisibility(View.INVISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
+                forestImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.VISIBLE);
+                fireImage.setVisibility(View.VISIBLE);
+                birdImage.setVisibility(View.VISIBLE);
+                autumnImage.setVisibility(View.VISIBLE);
+
+                forestMusic.setClickable(true);
+                murmurMusic.setClickable(true);
+                rainMusic.setClickable(true);
+                natureMusic.setClickable(false);
+                nightNatureMusic.setClickable(true);
+                fireMusic.setClickable(true);
+                birdMusic.setClickable(true);
+                autumnMusic.setClickable(true);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.VISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.INVISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
 
             }
         });
@@ -852,21 +926,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                nightNatureMusic.startAnimation(animation5);
-
-                natureImage.setVisibility(View.VISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.INVISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(false);
-                fireMusic.setClickable(true);
+                nightNatureMusic.startAnimation(animation4);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -950,49 +1010,53 @@ public class MusicActivity extends AppCompatActivity {
                 }
 
                 music5.start();
-                musicBox5.setVisibility(View.VISIBLE);
 
-                musicBox1.setVisibility(View.INVISIBLE);
-                musicBox2.setVisibility(View.INVISIBLE);
-                musicBox3.setVisibility(View.INVISIBLE);
-                musicBox4.setVisibility(View.INVISIBLE);
-                musicBox6.setVisibility(View.INVISIBLE);
-                musicBox7.setVisibility(View.INVISIBLE);
-                musicBox8.setVisibility(View.INVISIBLE);
-                musicBox9.setVisibility(View.INVISIBLE);
-                musicBox10.setVisibility(View.INVISIBLE);
-                musicBox11.setVisibility(View.INVISIBLE);
-                musicBox12.setVisibility(View.INVISIBLE);
-                musicBox13.setVisibility(View.INVISIBLE);
-                musicBox14.setVisibility(View.INVISIBLE);
-                musicBox15.setVisibility(View.INVISIBLE);
-                musicBox16.setVisibility(View.INVISIBLE);
-                musicBox17.setVisibility(View.INVISIBLE);
-                musicBox18.setVisibility(View.INVISIBLE);
-                musicBox19.setVisibility(View.INVISIBLE);
-                musicBox20.setVisibility(View.INVISIBLE);
-                musicBox21.setVisibility(View.INVISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
+                forestImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.INVISIBLE);
+                fireImage.setVisibility(View.VISIBLE);
+                birdImage.setVisibility(View.VISIBLE);
+                autumnImage.setVisibility(View.VISIBLE);
+
+                forestMusic.setClickable(true);
+                murmurMusic.setClickable(true);
+                rainMusic.setClickable(true);
+                natureMusic.setClickable(true);
+                nightNatureMusic.setClickable(false);
+                fireMusic.setClickable(true);
+                birdMusic.setClickable(true);
+                autumnMusic.setClickable(true);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.VISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.INVISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
             }
         });
         fireMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                fireMusic.startAnimation(animation6);
-
-                natureImage.setVisibility(View.VISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.INVISIBLE);
-
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(false);
+                fireMusic.startAnimation(animation5);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -1076,28 +1140,304 @@ public class MusicActivity extends AppCompatActivity {
                 }
 
                 music6.start();
-                musicBox6.setVisibility(View.VISIBLE);
 
-                musicBox1.setVisibility(View.INVISIBLE);
-                musicBox2.setVisibility(View.INVISIBLE);
-                musicBox3.setVisibility(View.INVISIBLE);
-                musicBox4.setVisibility(View.INVISIBLE);
-                musicBox5.setVisibility(View.INVISIBLE);
-                musicBox7.setVisibility(View.INVISIBLE);
-                musicBox8.setVisibility(View.INVISIBLE);
-                musicBox9.setVisibility(View.INVISIBLE);
-                musicBox10.setVisibility(View.INVISIBLE);
-                musicBox11.setVisibility(View.INVISIBLE);
-                musicBox12.setVisibility(View.INVISIBLE);
-                musicBox13.setVisibility(View.INVISIBLE);
-                musicBox14.setVisibility(View.INVISIBLE);
-                musicBox15.setVisibility(View.INVISIBLE);
-                musicBox16.setVisibility(View.INVISIBLE);
-                musicBox17.setVisibility(View.INVISIBLE);
-                musicBox18.setVisibility(View.INVISIBLE);
-                musicBox19.setVisibility(View.INVISIBLE);
-                musicBox20.setVisibility(View.INVISIBLE);
-                musicBox21.setVisibility(View.INVISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
+                forestImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.VISIBLE);
+                fireImage.setVisibility(View.INVISIBLE);
+                birdImage.setVisibility(View.VISIBLE);
+                autumnImage.setVisibility(View.VISIBLE);
+
+                forestMusic.setClickable(true);
+                murmurMusic.setClickable(true);
+                rainMusic.setClickable(true);
+                natureMusic.setClickable(true);
+                nightNatureMusic.setClickable(true);
+                fireMusic.setClickable(false);
+                birdMusic.setClickable(true);
+                autumnMusic.setClickable(true);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.VISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.INVISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
+            }
+        });
+        birdMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                birdMusic.startAnimation(animation6);
+
+                if (music1.isPlaying()) {
+                    music1.stop();
+                    music1.release();
+                }
+                if (music2.isPlaying()) {
+                    music2.stop();
+                    music2.release();
+                }
+                if (music3.isPlaying()) {
+                    music3.stop();
+                    music3.release();
+                }
+                if (music4.isPlaying()) {
+                    music4.stop();
+                    music4.release();
+                }
+                if (music5.isPlaying()) {
+                    music5.stop();
+                    music5.release();
+                }
+                if (music6.isPlaying()) {
+                    music6.stop();
+                    music6.release();
+                }
+                if (music8.isPlaying()) {
+                    music8.stop();
+                    music8.release();
+                }
+                if (music9.isPlaying()) {
+                    music9.stop();
+                    music9.release();
+                }
+                if (music10.isPlaying()) {
+                    music10.stop();
+                    music10.release();
+                }
+                if (music11.isPlaying()) {
+                    music11.stop();
+                    music11.release();
+                }
+                if (music12.isPlaying()) {
+                    music12.stop();
+                    music12.release();
+                }
+                if (music13.isPlaying()) {
+                    music13.stop();
+                    music13.release();
+                }
+                if (music14.isPlaying()) {
+                    music14.stop();
+                    music14.release();
+                }
+                if (music15.isPlaying()) {
+                    music15.stop();
+                    music15.release();
+                }
+                if (music16.isPlaying()) {
+                    music16.stop();
+                    music16.release();
+                }
+                if (music17.isPlaying()) {
+                    music17.stop();
+                    music17.release();
+                }
+                if (music18.isPlaying()) {
+                    music18.stop();
+                    music18.release();
+                }
+                if (music19.isPlaying()) {
+                    music19.stop();
+                    music19.release();
+                }
+                if (music20.isPlaying()) {
+                    music20.stop();
+                    music20.release();
+                }
+                if (music21.isPlaying()) {
+                    music21.stop();
+                    music21.release();
+                }
+
+                music7.start();
+
+                natureImage.setVisibility(View.VISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
+                forestImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.VISIBLE);
+                fireImage.setVisibility(View.VISIBLE);
+                birdImage.setVisibility(View.INVISIBLE);
+                autumnImage.setVisibility(View.VISIBLE);
+
+                forestMusic.setClickable(true);
+                murmurMusic.setClickable(true);
+                rainMusic.setClickable(true);
+                natureMusic.setClickable(true);
+                nightNatureMusic.setClickable(true);
+                fireMusic.setClickable(true);
+                birdMusic.setClickable(false);
+                autumnMusic.setClickable(true);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.VISIBLE);
+                selected8.setVisibility(View.INVISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
+            }
+        });
+        autumnMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                autumnMusic.startAnimation(animation7);
+
+                forestImage.setVisibility(View.INVISIBLE);
+                murmurImage.setVisibility(View.VISIBLE);
+                rainImage.setVisibility(View.VISIBLE);
+                nightNatureImage.setVisibility(View.VISIBLE);
+                natureImage.setVisibility(View.VISIBLE);
+                fireImage.setVisibility(View.VISIBLE);
+                birdImage.setVisibility(View.VISIBLE);
+                autumnImage.setVisibility(View.INVISIBLE);
+
+                forestMusic.setClickable(true);
+                murmurMusic.setClickable(true);
+                rainMusic.setClickable(true);
+                natureMusic.setClickable(true);
+                nightNatureMusic.setClickable(true);
+                fireMusic.setClickable(true);
+                birdMusic.setClickable(true);
+                autumnMusic.setClickable(false);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.VISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
+
+                if (music1.isPlaying()) {
+                    music1.stop();
+                    music1.release();
+                }
+                if (music2.isPlaying()) {
+                    music2.stop();
+                    music2.release();
+                }
+                if (music3.isPlaying()) {
+                    music3.stop();
+                    music3.release();
+                }
+                if (music4.isPlaying()) {
+                    music4.stop();
+                    music4.release();
+                }
+                if (music5.isPlaying()) {
+                    music5.stop();
+                    music5.release();
+                }
+                if (music6.isPlaying()) {
+                    music6.stop();
+                    music6.release();
+                }
+                if (music7.isPlaying()) {
+                    music7.stop();
+                    music7.release();
+                }
+                if (music9.isPlaying()) {
+                    music9.stop();
+                    music9.release();
+                }
+                if (music10.isPlaying()) {
+                    music10.stop();
+                    music10.release();
+                }
+                if (music11.isPlaying()) {
+                    music11.stop();
+                    music11.release();
+                }
+                if (music12.isPlaying()) {
+                    music12.stop();
+                    music12.release();
+                }
+                if (music13.isPlaying()) {
+                    music13.stop();
+                    music13.release();
+                }
+                if (music14.isPlaying()) {
+                    music14.stop();
+                    music14.release();
+                }
+                if (music15.isPlaying()) {
+                    music15.stop();
+                    music15.release();
+                }
+                if (music16.isPlaying()) {
+                    music16.stop();
+                    music16.release();
+                }
+                if (music17.isPlaying()) {
+                    music17.stop();
+                    music17.release();
+                }
+                if (music18.isPlaying()) {
+                    music18.stop();
+                    music18.release();
+                }
+                if (music19.isPlaying()) {
+                    music19.stop();
+                    music19.release();
+                }
+                if (music20.isPlaying()) {
+                    music20.stop();
+                    music20.release();
+                }
+                if (music21.isPlaying()) {
+                    music21.stop();
+                    music21.release();
+                }
+                music8.start();
             }
         });
         pause.setOnClickListener(new View.OnClickListener() {

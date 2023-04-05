@@ -7,7 +7,6 @@
     android:background="@drawable/zvezdnoe_nebo2"
     tools:context=".AlarmSleepActivity">
 
-    DC27DF0D
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,37 +17,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="center">
 
             <ImageView
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="0dp"
-                android:background="@drawable/round_back_while_settings"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="2dp"
+                android:elevation="1dp"
                 android:padding="12dp"
                 android:paddingStart="14dp"
                 android:src="@drawable/ic_night_sleep" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/setNewAlarm"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="300dp"
-                android:background="@drawable/round_back_while_settings"
-                android:drawableStart="@drawable/ic_close"
-                android:paddingStart="13dp"
-                android:src="@drawable/ic_night_sleep"
-                tools:ignore="SpeakableTextPresentCheck" />
-
             <TextView
-                android:layout_width="210dp"
+                android:layout_width="340dp"
                 android:layout_height="54dp"
-                android:layout_marginStart="72dp"
+                android:layout_marginStart="0dp"
                 android:background="@drawable/round_back_while_settings"
-                android:paddingStart="17dp"
+                android:paddingStart="84dp"
                 android:paddingTop="15dp"
                 android:text="Пора ложиться спать"
                 android:textColor="#9575CD"
@@ -61,18 +50,25 @@
             android:id="@+id/relativeLayout13"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/alarm_sleep_background_while"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="15dp"
+            android:padding="14dp"
             tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/recommendationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/non_background"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="225dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/round_back_while"
                 android:paddingStart="16dp"
                 android:paddingTop="9dp"
@@ -81,30 +77,14 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="65dp"
-                android:background="@drawable/round_back_while"
-                android:drawableRight="@drawable/ic_chevron_back_sleep"
-                android:paddingStart="16dp"
-                android:paddingTop="9dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="10dp"
-                android:text="Рекомендации перед сном"
-                android:textColor="#CDE8E6E6"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="265dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/button_oval"
                 android:padding="8dp"
-                android:src="@drawable/ic_sleep_recomendation"
+                android:src="@drawable/ic_chevron_back_sleep"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </RelativeLayout>
@@ -113,7 +93,7 @@
             android:id="@+id/relativeLayout17"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/alarm_sleep_background_while"
             android:gravity="center"
             android:orientation="horizontal"
@@ -121,7 +101,7 @@
             tools:ignore="MissingConstraints">
 
             <TextView
-                android:layout_width="225dp"
+                android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"

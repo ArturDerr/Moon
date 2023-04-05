@@ -190,6 +190,13 @@
                         android:elevation="1dp"
                         android:src="@drawable/forest" />
 
+                    <ImageView
+                        android:id="@+id/selected1"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/forestMusic"
                         android:layout_width="85dp"
@@ -237,6 +244,13 @@
                         android:src="@drawable/river"
                         android:elevation="1dp"/>
 
+                    <ImageView
+                        android:id="@+id/selected2"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/murmurMusic"
                         android:layout_width="85dp"
@@ -283,6 +297,13 @@
                         android:layout_marginStart="10dp"
                         android:src="@drawable/rain"
                         android:elevation="1dp"/>
+
+                    <ImageView
+                        android:id="@+id/selected3"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/rainMusic"
@@ -347,6 +368,13 @@
                         android:elevation="1dp"
                         android:src="@drawable/nature" />
 
+                    <ImageView
+                        android:id="@+id/selected4"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox4"
                         android:layout_width="85dp"
@@ -383,6 +411,13 @@
                         android:layout_height="85dp"
                         android:background="@color/non_background"
                         tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/selected5"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
 
                     <ImageView
                         android:id="@+id/nightNatureImage"
@@ -440,6 +475,13 @@
                         android:elevation="1dp"
                         android:src="@drawable/fire" />
 
+                    <ImageView
+                        android:id="@+id/selected6"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox6"
                         android:layout_width="85dp"
@@ -479,6 +521,22 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected7"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
+                    <ImageView
+                        android:id="@+id/birdImage"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/bird" />
+
                     <RelativeLayout
                         android:id="@+id/musicBox7"
                         android:layout_width="85dp"
@@ -498,7 +556,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic7"
+                        android:id="@+id/birdMusic"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -515,6 +573,22 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected8"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
+                    <ImageView
+                        android:id="@+id/autumnImage"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/autumn" />
 
                     <RelativeLayout
                         android:id="@+id/musicBox8"
@@ -535,7 +609,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic8"
+                        android:id="@+id/autumnMusic"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -552,6 +626,13 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected9"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
 
                     <RelativeLayout
                         android:id="@+id/musicBox9"
@@ -598,6 +679,13 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected10"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox10"
                         android:layout_width="85dp"
@@ -635,6 +723,13 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected11"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox11"
                         android:layout_width="85dp"
@@ -671,6 +766,13 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected12"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
 
                     <RelativeLayout
                         android:id="@+id/musicBox12"
@@ -717,6 +819,13 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected13"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox13"
                         android:layout_width="85dp"
@@ -761,6 +870,13 @@
                         android:layout_marginTop="0dp"
                         android:background="@drawable/background_media_player">
 
+                        <ImageView
+                            android:id="@+id/selected14"
+                            android:layout_width="85dp"
+                            android:layout_height="70dp"
+                            android:elevation="2dp"
+                            android:src="@drawable/background_selected_media_player"/>
+
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/pause14"
                             android:layout_width="36dp"
@@ -790,6 +906,13 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected15"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
 
                     <RelativeLayout
                         android:id="@+id/musicBox15"
@@ -836,6 +959,13 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected16"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox16"
                         android:layout_width="85dp"
@@ -873,6 +1003,13 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected17"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox17"
                         android:layout_width="85dp"
@@ -909,6 +1046,13 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected18"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
 
                     <RelativeLayout
                         android:id="@+id/musicBox18"
@@ -956,6 +1100,14 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected19"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
+
                     <RelativeLayout
                         android:id="@+id/musicBox19"
                         android:layout_width="85dp"
@@ -993,6 +1145,13 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected20"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
+
                     <RelativeLayout
                         android:id="@+id/musicBox20"
                         android:layout_width="85dp"
@@ -1029,6 +1188,13 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected21"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player"/>
 
                     <RelativeLayout
                         android:id="@+id/musicBox21"
