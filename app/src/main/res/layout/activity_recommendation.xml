@@ -6,65 +6,333 @@
     android:background="#121212"
     android:layout_height="match_parent"
     tools:context=".RecommendationActivity">
-    <LinearLayout
+
+    <Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#161616"
+        android:elevation="80dp"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:translationZ="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
-            android:id="@+id/relativeLayout13"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/round_back_while_settings"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="15dp"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:layout_width="83dp"
-                android:layout_height="wrap_content"
-                android:elevation="10dp"
-                android:src="@drawable/ic_shower"/>
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
 
             <TextView
-                android:layout_width="245dp"
-                android:layout_height="71dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/round_back_while"
-                android:paddingStart="16dp"
-                android:paddingTop="13dp"
-                android:text="Перед сном - расслабьтесь, отдохните, приймите ванну"
-                android:textColor="#BCBCBC"
-                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="15dp"
+                android:text="Рекомендации"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/next_rec1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="265dp"
+                android:id="@+id/backButton"
+                android:layout_marginStart="3dp"
+                android:layout_width="28dp"
+                android:layout_height="26dp"
                 android:layout_marginTop="17dp"
-                android:background="@drawable/button_oval"
-                android:drawableStart="@drawable/ic_next_rec"
-                android:padding="8dp"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                android:background="@drawable/ic_back"
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         </RelativeLayout>
 
-    </LinearLayout>
+    </Toolbar>
 
-    <com.google.android.material.card.MaterialCardView
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="236dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="SpeakableTextPresentCheck">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rec1"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="245dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Откажитесь от бокала вина"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen1"
+                android:layout_width="340dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="245dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Откажитесь от бокала вина"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="205dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Хотя многие люди считают, что алкоголь перед сном действует как самое лучшее снотворное, на самом деле это не так. Эксперты предупреждают, что хотя алкоголь дает чувство усталости и навевает сны, он делает сон поверхностным, беспокойным, а также способствует появлению храпа."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!--2-->
+
+            <RelativeLayout
+                android:id="@+id/rec2"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Перед сном ешьте рыбу"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen2"
+                android:layout_width="340dp"
+                android:layout_height="380dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Перед сном ешьте рыбу"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="290dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="В исследовании 2017 года, проведенном специалистами, было обнаружено, что употребление рыбы перед сном способствует скорейшему засыпанию и более крепкому ночному сну. Связано это с тем, что рыба изобилует Омега-3 жирными кислотами, которые увеличивают выработку гормона сна мелатонина.  Тем, кто не любит рыбу, эксперты советуют получать полезные жиры из других продуктов — например, растительных масел и орехов, или принимая добавки из аптеки."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!--3-->
+
+            <RelativeLayout
+                android:id="@+id/rec3"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="215dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Отношения с кофеином"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen3"
+                android:layout_width="340dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="215dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Отношения с кофеином"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="310dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Кто из нас не любит кофе? Мы так часто его пьем, что незаметно для себя страдаем от его избытка. Специалисты National Sleep Foundation говорят, что кофеин задерживается в организме на гораздо большее время, чем предполагает человек. Так, через 6 часов после употребления продуктов или напитков с кофеином усваивается только половина от общего количества. То есть если вы в 3—4 часа дня выпили чашку кофе, в 9—10 часов вечера вы можете чувствовать себя еще бодрым и активным, что помешает уснуть."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -182,7 +182,7 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <ImageView
-                        android:id="@+id/forestImage"
+                        android:id="@+id/image1"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginStart="10dp"
@@ -198,7 +198,7 @@
                         android:src="@drawable/background_selected_media_player"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/forestMusic"
+                        android:id="@+id/musicButton1"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -236,7 +236,7 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <ImageView
-                        android:id="@+id/murmurImage"
+                        android:id="@+id/image2"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginTop="10dp"
@@ -252,7 +252,7 @@
                         android:src="@drawable/background_selected_media_player"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/murmurMusic"
+                        android:id="@+id/musicButton2"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -290,7 +290,7 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <ImageView
-                        android:id="@+id/rainImage"
+                        android:id="@+id/image3"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginTop="10dp"
@@ -306,7 +306,7 @@
                         android:src="@drawable/background_selected_media_player"/>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/rainMusic"
+                        android:id="@+id/musicButton3"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -353,14 +353,14 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic"
+                        android:id="@+id/musicButton4"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <ImageView
-                        android:id="@+id/natureImage"
+                        android:id="@+id/image4"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginStart="10dp"
@@ -406,7 +406,7 @@
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/nightNatureMusic"
+                        android:id="@+id/musicButton5"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -420,7 +420,7 @@
                         android:src="@drawable/background_selected_media_player"/>
 
                     <ImageView
-                        android:id="@+id/nightNatureImage"
+                        android:id="@+id/image5"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginStart="10dp"
@@ -460,14 +460,14 @@
 
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/fireMusic"
+                        android:id="@+id/musicButton6"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <ImageView
-                        android:id="@+id/fireImage"
+                        android:id="@+id/image6"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginStart="10dp"
@@ -529,7 +529,7 @@
                         android:src="@drawable/background_selected_media_player"/>
 
                     <ImageView
-                        android:id="@+id/birdImage"
+                        android:id="@+id/image7"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginStart="10dp"
@@ -556,7 +556,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/birdMusic"
+                        android:id="@+id/musicButton7"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -582,7 +582,7 @@
                         android:src="@drawable/background_selected_media_player"/>
 
                     <ImageView
-                        android:id="@+id/autumnImage"
+                        android:id="@+id/image8"
                         android:layout_width="50dp"
                         android:layout_height="54dp"
                         android:layout_marginStart="10dp"
@@ -609,7 +609,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/autumnMusic"
+                        android:id="@+id/musicButton8"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -626,6 +626,15 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image9"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/autumn" />
 
                     <ImageView
                         android:id="@+id/selected9"
@@ -653,7 +662,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic9"
+                        android:id="@+id/musicButton9"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -678,6 +687,15 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image10"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/autumn" />
 
                     <ImageView
                         android:id="@+id/selected10"
@@ -705,7 +723,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic10"
+                        android:id="@+id/musicButton10"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -722,6 +740,15 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image11"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/autumn" />
 
                     <ImageView
                         android:id="@+id/selected11"
@@ -749,7 +776,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic11"
+                        android:id="@+id/musicButton11"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -766,6 +793,15 @@
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image12"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/autumn" />
 
                     <ImageView
                         android:id="@+id/selected12"

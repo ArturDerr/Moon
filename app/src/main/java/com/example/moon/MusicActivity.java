@@ -25,14 +25,14 @@ public class MusicActivity extends AppCompatActivity {
 
     SharedPreferences sharedPref;
 
-    ImageView forestImage, murmurImage, rainImage, natureImage, nightNatureImage, fireImage, birdImage, autumnImage;
-    Button forestMusic, murmurMusic, rainMusic, natureMusic, nightNatureMusic, fireMusic, birdMusic, autumnMusic;
+    ImageView image1, image2, image3, image4, image5, image6, image7, image8;
+    Button musicButton1, musicButton2, musicButton3, musicButton4, musicButton5, musicButton6, musicButton7, musicButton8;
 
     Button pause, pause2, pause3, pause4, pause5, pause6, pause7, pause8, pause9, pause10, pause11, pause12, pause13, pause14, pause15, pause16, pause17, pause18, pause19, pause20, pause21;
 
     ImageView selected1, selected2, selected3, selected4, selected5, selected6, selected7, selected8, selected9, selected10, selected11, selected12, selected13, selected14, selected15, selected16, selected17, selected18, selected19, selected20, selected21;
 
-    RelativeLayout background, musicBox1, musicBox2, musicBox3, musicBox4, musicBox5, musicBox6, musicBox7, musicBox8, musicBox9, musicBox10, musicBox11, musicBox12, musicBox13, musicBox14, musicBox15, musicBox16, musicBox17, musicBox18, musicBox19, musicBox20, musicBox21;
+    RelativeLayout musicBox1, musicBox2, musicBox3, musicBox4, musicBox5, musicBox6, musicBox7, musicBox8, musicBox9, musicBox10, musicBox11, musicBox12, musicBox13, musicBox14, musicBox15, musicBox16, musicBox17, musicBox18, musicBox19, musicBox20, musicBox21;
 
     MediaPlayer music1, music2, music3, music4, music5, music6, music7, music8, music9, music10, music11, music12, music13, music14, music15, music16, music17, music18, music19, music20, music21;
 
@@ -85,7 +85,7 @@ public class MusicActivity extends AppCompatActivity {
         pause20 = findViewById(R.id.pause20);
         pause21 = findViewById(R.id.pause21);
 
-        musicBox1.setVisibility(View.INVISIBLE);
+        //musicBox1.setVisibility(View.INVISIBLE);
         musicBox2.setVisibility(View.INVISIBLE);
         musicBox3.setVisibility(View.INVISIBLE);
         musicBox4.setVisibility(View.INVISIBLE);
@@ -151,26 +151,23 @@ public class MusicActivity extends AppCompatActivity {
         selected20 = findViewById(R.id.selected20);
         selected21 = findViewById(R.id.selected21);
 
+        image2 = findViewById(R.id.image2);
+        image1 = findViewById(R.id.image1);
+        image3 = findViewById(R.id.image3);
+        image4 = findViewById(R.id.image4);
+        image5 = findViewById(R.id.image5);
+        image6 = findViewById(R.id.image6);
+        image7 = findViewById(R.id.image7);
+        image8 = findViewById(R.id.image8);
 
-        murmurImage = findViewById(R.id.murmurImage);
-        forestImage = findViewById(R.id.forestImage);
-        rainImage = findViewById(R.id.rainImage);
-        natureImage = findViewById(R.id.natureImage);
-        nightNatureImage = findViewById(R.id.nightNatureImage);
-        fireImage = findViewById(R.id.fireImage);
-        birdImage = findViewById(R.id.birdImage);
-        autumnImage = findViewById(R.id.autumnImage);
-
-        rainMusic = findViewById(R.id.rainMusic);
-        forestMusic = findViewById(R.id.forestMusic);
-        murmurMusic = findViewById(R.id.murmurMusic);
-        natureMusic = findViewById(R.id.natureMusic);
-        nightNatureMusic = findViewById(R.id.nightNatureMusic);
-        fireMusic = findViewById(R.id.fireMusic);
-        birdMusic = findViewById(R.id.birdMusic);
-        autumnMusic = findViewById(R.id.autumnMusic);
-
-        background = findViewById(R.id.background);
+        musicButton3 = findViewById(R.id.musicButton3);
+        musicButton1 = findViewById(R.id.musicButton1);
+        musicButton2 = findViewById(R.id.musicButton2);
+        musicButton4 = findViewById(R.id.musicButton4);
+        musicButton5 = findViewById(R.id.musicButton5);
+        musicButton6 = findViewById(R.id.musicButton6);
+        musicButton7 = findViewById(R.id.musicButton7);
+        musicButton8 = findViewById(R.id.musicButton8);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
@@ -181,6 +178,19 @@ public class MusicActivity extends AppCompatActivity {
         Animation animation6 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation7 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation8 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation9 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation10 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation11 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation12 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation13 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation14 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation15 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation16 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation17 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation18 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation19 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation20 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation21 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
@@ -403,11 +413,11 @@ public class MusicActivity extends AppCompatActivity {
 
             }
         });
-        forestMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                forestMusic.startAnimation(animation);
+                musicButton1.startAnimation(animation);
 
                 if (music2.isPlaying()) {
                     music2.stop();
@@ -491,23 +501,23 @@ public class MusicActivity extends AppCompatActivity {
                 }
                 music1.start();
 
-                forestImage.setVisibility(View.INVISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                natureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-                birdImage.setVisibility(View.VISIBLE);
-                autumnImage.setVisibility(View.VISIBLE);
+                image1.setVisibility(View.INVISIBLE);
+                image2.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.VISIBLE);
+                image6.setVisibility(View.VISIBLE);
+                image7.setVisibility(View.VISIBLE);
+                image8.setVisibility(View.VISIBLE);
 
-                forestMusic.setClickable(false);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
-                birdMusic.setClickable(true);
-                autumnMusic.setClickable(true);
+                musicButton1.setClickable(false);
+                musicButton2.setClickable(true);
+                musicButton3.setClickable(true);
+                musicButton4.setClickable(true);
+                musicButton5.setClickable(true);
+                musicButton6.setClickable(true);
+                musicButton7.setClickable(true);
+                musicButton8.setClickable(true);
 
                 selected1.setVisibility(View.VISIBLE);
                 selected2.setVisibility(View.INVISIBLE);
@@ -532,11 +542,11 @@ public class MusicActivity extends AppCompatActivity {
                 selected21.setVisibility(View.INVISIBLE);
             }
         });
-        murmurMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                murmurMusic.startAnimation(animation1);
+                musicButton2.startAnimation(animation1);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -620,23 +630,23 @@ public class MusicActivity extends AppCompatActivity {
                 }
                 music2.start();
 
-                murmurImage.setVisibility(View.INVISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                natureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-                birdImage.setVisibility(View.VISIBLE);
-                autumnImage.setVisibility(View.VISIBLE);
+                image2.setVisibility(View.INVISIBLE);
+                image1.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.VISIBLE);
+                image6.setVisibility(View.VISIBLE);
+                image7.setVisibility(View.VISIBLE);
+                image8.setVisibility(View.VISIBLE);
 
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(false);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
-                birdMusic.setClickable(true);
-                autumnMusic.setClickable(true);
+                musicButton1.setClickable(true);
+                musicButton2.setClickable(false);
+                musicButton3.setClickable(true);
+                musicButton4.setClickable(true);
+                musicButton5.setClickable(true);
+                musicButton6.setClickable(true);
+                musicButton7.setClickable(true);
+                musicButton8.setClickable(true);
 
                 selected1.setVisibility(View.INVISIBLE);
                 selected2.setVisibility(View.VISIBLE);
@@ -661,11 +671,11 @@ public class MusicActivity extends AppCompatActivity {
                 selected21.setVisibility(View.INVISIBLE);
             }
         });
-        rainMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                rainMusic.startAnimation(animation2);
+                musicButton3.startAnimation(animation2);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -750,23 +760,23 @@ public class MusicActivity extends AppCompatActivity {
 
                 music3.start();
 
-                rainImage.setVisibility(View.INVISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                natureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-                birdImage.setVisibility(View.VISIBLE);
-                autumnImage.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.INVISIBLE);
+                image1.setVisibility(View.VISIBLE);
+                image2.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.VISIBLE);
+                image6.setVisibility(View.VISIBLE);
+                image7.setVisibility(View.VISIBLE);
+                image8.setVisibility(View.VISIBLE);
 
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(false);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
-                birdMusic.setClickable(true);
-                autumnMusic.setClickable(true);
+                musicButton1.setClickable(true);
+                musicButton2.setClickable(true);
+                musicButton3.setClickable(false);
+                musicButton4.setClickable(true);
+                musicButton5.setClickable(true);
+                musicButton6.setClickable(true);
+                musicButton7.setClickable(true);
+                musicButton8.setClickable(true);
 
                 selected1.setVisibility(View.INVISIBLE);
                 selected2.setVisibility(View.INVISIBLE);
@@ -791,11 +801,11 @@ public class MusicActivity extends AppCompatActivity {
                 selected21.setVisibility(View.INVISIBLE);
             }
         });
-        natureMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                natureMusic.startAnimation(animation3);
+                musicButton4.startAnimation(animation3);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -880,23 +890,23 @@ public class MusicActivity extends AppCompatActivity {
 
                 music4.start();
 
-                natureImage.setVisibility(View.INVISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-                birdImage.setVisibility(View.VISIBLE);
-                autumnImage.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.INVISIBLE);
+                image2.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.VISIBLE);
+                image1.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.VISIBLE);
+                image6.setVisibility(View.VISIBLE);
+                image7.setVisibility(View.VISIBLE);
+                image8.setVisibility(View.VISIBLE);
 
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(false);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
-                birdMusic.setClickable(true);
-                autumnMusic.setClickable(true);
+                musicButton1.setClickable(true);
+                musicButton2.setClickable(true);
+                musicButton3.setClickable(true);
+                musicButton4.setClickable(false);
+                musicButton5.setClickable(true);
+                musicButton6.setClickable(true);
+                musicButton7.setClickable(true);
+                musicButton8.setClickable(true);
 
                 selected1.setVisibility(View.INVISIBLE);
                 selected2.setVisibility(View.INVISIBLE);
@@ -922,11 +932,11 @@ public class MusicActivity extends AppCompatActivity {
 
             }
         });
-        nightNatureMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                nightNatureMusic.startAnimation(animation4);
+                musicButton5.startAnimation(animation4);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -1011,23 +1021,23 @@ public class MusicActivity extends AppCompatActivity {
 
                 music5.start();
 
-                natureImage.setVisibility(View.VISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.INVISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-                birdImage.setVisibility(View.VISIBLE);
-                autumnImage.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.VISIBLE);
+                image2.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.VISIBLE);
+                image1.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.INVISIBLE);
+                image6.setVisibility(View.VISIBLE);
+                image7.setVisibility(View.VISIBLE);
+                image8.setVisibility(View.VISIBLE);
 
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(false);
-                fireMusic.setClickable(true);
-                birdMusic.setClickable(true);
-                autumnMusic.setClickable(true);
+                musicButton1.setClickable(true);
+                musicButton2.setClickable(true);
+                musicButton3.setClickable(true);
+                musicButton4.setClickable(true);
+                musicButton5.setClickable(false);
+                musicButton6.setClickable(true);
+                musicButton7.setClickable(true);
+                musicButton8.setClickable(true);
 
                 selected1.setVisibility(View.INVISIBLE);
                 selected2.setVisibility(View.INVISIBLE);
@@ -1052,11 +1062,11 @@ public class MusicActivity extends AppCompatActivity {
                 selected21.setVisibility(View.INVISIBLE);
             }
         });
-        fireMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                fireMusic.startAnimation(animation5);
+                musicButton6.startAnimation(animation5);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -1141,23 +1151,23 @@ public class MusicActivity extends AppCompatActivity {
 
                 music6.start();
 
-                natureImage.setVisibility(View.VISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.INVISIBLE);
-                birdImage.setVisibility(View.VISIBLE);
-                autumnImage.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.VISIBLE);
+                image2.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.VISIBLE);
+                image1.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.VISIBLE);
+                image6.setVisibility(View.INVISIBLE);
+                image7.setVisibility(View.VISIBLE);
+                image8.setVisibility(View.VISIBLE);
 
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(false);
-                birdMusic.setClickable(true);
-                autumnMusic.setClickable(true);
+                musicButton1.setClickable(true);
+                musicButton2.setClickable(true);
+                musicButton3.setClickable(true);
+                musicButton4.setClickable(true);
+                musicButton5.setClickable(true);
+                musicButton6.setClickable(false);
+                musicButton7.setClickable(true);
+                musicButton8.setClickable(true);
 
                 selected1.setVisibility(View.INVISIBLE);
                 selected2.setVisibility(View.INVISIBLE);
@@ -1182,11 +1192,11 @@ public class MusicActivity extends AppCompatActivity {
                 selected21.setVisibility(View.INVISIBLE);
             }
         });
-        birdMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                birdMusic.startAnimation(animation6);
+                musicButton7.startAnimation(animation6);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -1271,23 +1281,23 @@ public class MusicActivity extends AppCompatActivity {
 
                 music7.start();
 
-                natureImage.setVisibility(View.VISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                forestImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-                birdImage.setVisibility(View.INVISIBLE);
-                autumnImage.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.VISIBLE);
+                image2.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.VISIBLE);
+                image1.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.VISIBLE);
+                image6.setVisibility(View.VISIBLE);
+                image7.setVisibility(View.INVISIBLE);
+                image8.setVisibility(View.VISIBLE);
 
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
-                birdMusic.setClickable(false);
-                autumnMusic.setClickable(true);
+                musicButton1.setClickable(true);
+                musicButton2.setClickable(true);
+                musicButton3.setClickable(true);
+                musicButton4.setClickable(true);
+                musicButton5.setClickable(true);
+                musicButton6.setClickable(true);
+                musicButton7.setClickable(false);
+                musicButton8.setClickable(true);
 
                 selected1.setVisibility(View.INVISIBLE);
                 selected2.setVisibility(View.INVISIBLE);
@@ -1312,50 +1322,11 @@ public class MusicActivity extends AppCompatActivity {
                 selected21.setVisibility(View.INVISIBLE);
             }
         });
-        autumnMusic.setOnClickListener(new View.OnClickListener() {
+        musicButton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                autumnMusic.startAnimation(animation7);
 
-                forestImage.setVisibility(View.INVISIBLE);
-                murmurImage.setVisibility(View.VISIBLE);
-                rainImage.setVisibility(View.VISIBLE);
-                nightNatureImage.setVisibility(View.VISIBLE);
-                natureImage.setVisibility(View.VISIBLE);
-                fireImage.setVisibility(View.VISIBLE);
-                birdImage.setVisibility(View.VISIBLE);
-                autumnImage.setVisibility(View.INVISIBLE);
-
-                forestMusic.setClickable(true);
-                murmurMusic.setClickable(true);
-                rainMusic.setClickable(true);
-                natureMusic.setClickable(true);
-                nightNatureMusic.setClickable(true);
-                fireMusic.setClickable(true);
-                birdMusic.setClickable(true);
-                autumnMusic.setClickable(false);
-
-                selected1.setVisibility(View.INVISIBLE);
-                selected2.setVisibility(View.INVISIBLE);
-                selected3.setVisibility(View.INVISIBLE);
-                selected4.setVisibility(View.INVISIBLE);
-                selected5.setVisibility(View.INVISIBLE);
-                selected6.setVisibility(View.INVISIBLE);
-                selected7.setVisibility(View.INVISIBLE);
-                selected8.setVisibility(View.VISIBLE);
-                selected9.setVisibility(View.INVISIBLE);
-                selected10.setVisibility(View.INVISIBLE);
-                selected11.setVisibility(View.INVISIBLE);
-                selected12.setVisibility(View.INVISIBLE);
-                selected13.setVisibility(View.INVISIBLE);
-                selected14.setVisibility(View.INVISIBLE);
-                selected15.setVisibility(View.INVISIBLE);
-                selected16.setVisibility(View.INVISIBLE);
-                selected17.setVisibility(View.INVISIBLE);
-                selected18.setVisibility(View.INVISIBLE);
-                selected19.setVisibility(View.INVISIBLE);
-                selected20.setVisibility(View.INVISIBLE);
-                selected21.setVisibility(View.INVISIBLE);
+                musicButton8.startAnimation(animation7);
 
                 if (music1.isPlaying()) {
                     music1.stop();
@@ -1438,13 +1409,53 @@ public class MusicActivity extends AppCompatActivity {
                     music21.release();
                 }
                 music8.start();
+
+                image1.setVisibility(View.INVISIBLE);
+                image2.setVisibility(View.VISIBLE);
+                image3.setVisibility(View.VISIBLE);
+                image5.setVisibility(View.VISIBLE);
+                image4.setVisibility(View.VISIBLE);
+                image6.setVisibility(View.VISIBLE);
+                image7.setVisibility(View.VISIBLE);
+                image8.setVisibility(View.INVISIBLE);
+
+                musicButton1.setClickable(true);
+                musicButton2.setClickable(true);
+                musicButton3.setClickable(true);
+                musicButton4.setClickable(true);
+                musicButton5.setClickable(true);
+                musicButton6.setClickable(true);
+                musicButton7.setClickable(true);
+                musicButton8.setClickable(false);
+
+                selected1.setVisibility(View.INVISIBLE);
+                selected2.setVisibility(View.INVISIBLE);
+                selected3.setVisibility(View.INVISIBLE);
+                selected4.setVisibility(View.INVISIBLE);
+                selected5.setVisibility(View.INVISIBLE);
+                selected6.setVisibility(View.INVISIBLE);
+                selected7.setVisibility(View.INVISIBLE);
+                selected8.setVisibility(View.VISIBLE);
+                selected9.setVisibility(View.INVISIBLE);
+                selected10.setVisibility(View.INVISIBLE);
+                selected11.setVisibility(View.INVISIBLE);
+                selected12.setVisibility(View.INVISIBLE);
+                selected13.setVisibility(View.INVISIBLE);
+                selected14.setVisibility(View.INVISIBLE);
+                selected15.setVisibility(View.INVISIBLE);
+                selected16.setVisibility(View.INVISIBLE);
+                selected17.setVisibility(View.INVISIBLE);
+                selected18.setVisibility(View.INVISIBLE);
+                selected19.setVisibility(View.INVISIBLE);
+                selected20.setVisibility(View.INVISIBLE);
+                selected21.setVisibility(View.INVISIBLE);
             }
         });
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
+                // 1
                 if (music1.isPlaying()) {
                     music1.pause();
                     pause.setBackgroundResource(R.drawable.ic_play);
@@ -1453,7 +1464,6 @@ public class MusicActivity extends AppCompatActivity {
                     pause.setBackgroundResource(R.drawable.ic_pause);
 
                 }
-
             }
         });
         pause2.setOnClickListener(new View.OnClickListener() {
