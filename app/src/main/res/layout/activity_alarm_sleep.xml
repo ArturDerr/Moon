@@ -77,14 +77,16 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recIntentButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="265dp"
                 android:layout_marginTop="3dp"
                 android:background="@drawable/button_oval"
                 android:padding="8dp"
-                android:src="@drawable/ic_chevron_back_sleep"
+                android:paddingStart="8dp"
+                android:drawableStart="@drawable/ic_chevron_back_sleep"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         </RelativeLayout>

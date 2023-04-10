@@ -188,13 +188,14 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/questionButton"
                     android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="275dp"
+                    android:layout_marginTop="180dp"
+                    android:background="@drawable/round_back_while_settings"
                     android:drawableStart="@drawable/ic_question"
                     android:paddingStart="7dp"
-                    android:background="@drawable/round_back_while_settings"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="180dp"
-                    android:layout_marginStart="275dp"
-                    android:tooltipText="Для корректной работы, отключите уже все включенные будильники из других приложений" />
+                    android:tooltipText="Для корректной работы, отключите уже все включенные будильники из других приложений"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 <TextView
                     android:layout_width="77dp"
@@ -276,6 +277,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="108dp"
                     android:layout_marginTop="84dp"
+                    android:elevation="3dp"
                     android:text=""
                     android:textColor="@color/white"
                     android:textSize="21sp"
@@ -287,6 +289,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="108dp"
                     android:layout_marginTop="167dp"
+                    android:elevation="3dp"
                     android:text=""
                     android:textColor="@color/white"
                     android:textSize="21sp" />
@@ -395,6 +398,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="108dp"
+                    android:elevation="3dp"
                     android:layout_marginTop="84dp"
                     android:text=""
                     android:textColor="@color/white"
