@@ -55,6 +55,23 @@ public class RecommendationActivity extends AppCompatActivity {
         //recOpen15 = findViewById(R.id.recOpen15);
         //recOpen16 = findViewById(R.id.recOpen16);
 
+        recOpen1.setVisibility(View.INVISIBLE);
+        recOpen2.setVisibility(View.INVISIBLE);
+        recOpen3.setVisibility(View.INVISIBLE);
+        recOpen4.setVisibility(View.INVISIBLE);
+        recOpen5.setVisibility(View.INVISIBLE);
+        recOpen6.setVisibility(View.INVISIBLE);
+        recOpen7.setVisibility(View.INVISIBLE);
+        recOpen8.setVisibility(View.INVISIBLE);
+        recOpen9.setVisibility(View.INVISIBLE);
+        recOpen10.setVisibility(View.INVISIBLE);
+        recOpen11.setVisibility(View.INVISIBLE);
+        recOpen12.setVisibility(View.INVISIBLE);
+        recOpen13.setVisibility(View.INVISIBLE);
+        recOpen14.setVisibility(View.INVISIBLE);
+        recOpen15.setVisibility(View.INVISIBLE);
+        recOpen16.setVisibility(View.INVISIBLE);
+
         buttonRec1 = findViewById(R.id.buttonRec1);
         buttonRec2 = findViewById(R.id.buttonRec2);
         buttonRec3 = findViewById(R.id.buttonRec3);

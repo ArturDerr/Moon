@@ -34,7 +34,7 @@ public class MusicActivity extends AppCompatActivity {
 
     RelativeLayout musicBox1, musicBox2, musicBox3, musicBox4, musicBox5, musicBox6, musicBox7, musicBox8, musicBox9, musicBox10, musicBox11, musicBox12, musicBox13, musicBox14, musicBox15, musicBox16, musicBox17, musicBox18, musicBox19, musicBox20, musicBox21;
 
-    MediaPlayer music1, music2, music3, music4, music5, music6, music7, music8, music9, music10, music11, music12, music13, music14, music15, music16, music17, music18, music19, music20, music21;
+    MediaPlayer musicForest, musicMurmur, musicRain, musicNature, musicNightNature, musicFire, musicBird, musicAutumn, music9, music10, music11, music12, music13, music14, music15, music16, music17, music18, music19, music20, music21;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +99,7 @@ public class MusicActivity extends AppCompatActivity {
         //musicBox12.setVisibility(View.INVISIBLE);
         //musicBox13.setVisibility(View.INVISIBLE);
         //musicBox14.setVisibility(View.INVISIBLE);
-       //musicBox15.setVisibility(View.INVISIBLE);
+        //musicBox15.setVisibility(View.INVISIBLE);
         //musicBox16.setVisibility(View.INVISIBLE);
         //musicBox17.setVisibility(View.INVISIBLE);
         //musicBox18.setVisibility(View.INVISIBLE);
@@ -187,21 +187,21 @@ public class MusicActivity extends AppCompatActivity {
         final ImageView notesImage = findViewById(R.id.notesImage);
 
         // лес
-        music1 = MediaPlayer.create(this, R.raw.forest);
+        musicForest = MediaPlayer.create(this, R.raw.forest);
         // журчание ручья
-        music2 = MediaPlayer.create(this, R.raw.murmur);
+        musicMurmur = MediaPlayer.create(this, R.raw.murmur);
         // дождь
-        music3 = MediaPlayer.create(this, R.raw.rain);
+        musicRain = MediaPlayer.create(this, R.raw.rain);
         // природа
-        music4 = MediaPlayer.create(this, R.raw.nature);
+        musicNature = MediaPlayer.create(this, R.raw.nature);
         // ночная природа
-        music5 = MediaPlayer.create(this, R.raw.night_nature);
+        musicNightNature = MediaPlayer.create(this, R.raw.night_nature);
         // звуки костра
-        music6 = MediaPlayer.create(this, R.raw.fire);
+        musicFire = MediaPlayer.create(this, R.raw.fire);
         // пение птиц
-        music7 = MediaPlayer.create(this, R.raw.bird);
+        musicBird = MediaPlayer.create(this, R.raw.bird);
         // осень природа
-        music8 = MediaPlayer.create(this, R.raw.autumn);
+        musicAutumn = MediaPlayer.create(this, R.raw.autumn);
         //
         music9 = MediaPlayer.create(this, R.raw.rain);
         //
@@ -396,89 +396,7 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 musicButton1.startAnimation(animation);
-
-                if (music2.isPlaying()) {
-                    music2.stop();
-                    music2.release();
-                }
-                if (music3.isPlaying()) {
-                    music3.stop();
-                    music3.release();
-                }
-                if (music4.isPlaying()) {
-                    music4.stop();
-                    music4.release();
-                }
-                if (music5.isPlaying()) {
-                    music5.stop();
-                    music5.release();
-                }
-                if (music6.isPlaying()) {
-                    music6.stop();
-                    music6.release();
-                }
-                if (music7.isPlaying()) {
-                    music7.stop();
-                    music7.release();
-                }
-                if (music8.isPlaying()) {
-                    music8.stop();
-                    music8.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-                music1.start();
-
+                
                 image1.setVisibility(View.INVISIBLE);
                 image2.setVisibility(View.VISIBLE);
                 image3.setVisibility(View.VISIBLE);
@@ -525,88 +443,6 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 musicButton2.startAnimation(animation1);
-
-                if (music1.isPlaying()) {
-                    music1.stop();
-                    music1.release();
-                }
-                if (music3.isPlaying()) {
-                    music3.stop();
-                    music3.release();
-                }
-                if (music4.isPlaying()) {
-                    music4.stop();
-                    music4.release();
-                }
-                if (music5.isPlaying()) {
-                    music5.stop();
-                    music5.release();
-                }
-                if (music6.isPlaying()) {
-                    music6.stop();
-                    music6.release();
-                }
-                if (music7.isPlaying()) {
-                    music7.stop();
-                    music7.release();
-                }
-                if (music8.isPlaying()) {
-                    music8.stop();
-                    music8.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-                music2.start();
 
                 image2.setVisibility(View.INVISIBLE);
                 image1.setVisibility(View.VISIBLE);
@@ -655,89 +491,6 @@ public class MusicActivity extends AppCompatActivity {
 
                 musicButton3.startAnimation(animation2);
 
-                if (music1.isPlaying()) {
-                    music1.stop();
-                    music1.release();
-                }
-                if (music2.isPlaying()) {
-                    music2.stop();
-                    music2.release();
-                }
-                if (music4.isPlaying()) {
-                    music4.stop();
-                    music4.release();
-                }
-                if (music5.isPlaying()) {
-                    music5.stop();
-                    music5.release();
-                }
-                if (music6.isPlaying()) {
-                    music6.stop();
-                    music6.release();
-                }
-                if (music7.isPlaying()) {
-                    music7.stop();
-                    music7.release();
-                }
-                if (music8.isPlaying()) {
-                    music8.stop();
-                    music8.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-
-                music3.start();
-
                 image3.setVisibility(View.INVISIBLE);
                 image1.setVisibility(View.VISIBLE);
                 image2.setVisibility(View.VISIBLE);
@@ -784,89 +537,6 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 musicButton4.startAnimation(animation3);
-
-                if (music1.isPlaying()) {
-                    music1.stop();
-                    music1.release();
-                }
-                if (music2.isPlaying()) {
-                    music2.stop();
-                    music2.release();
-                }
-                if (music3.isPlaying()) {
-                    music3.stop();
-                    music3.release();
-                }
-                if (music5.isPlaying()) {
-                    music5.stop();
-                    music5.release();
-                }
-                if (music6.isPlaying()) {
-                    music6.stop();
-                    music6.release();
-                }
-                if (music7.isPlaying()) {
-                    music7.stop();
-                    music7.release();
-                }
-                if (music8.isPlaying()) {
-                    music8.stop();
-                    music8.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-
-                music4.start();
 
                 image4.setVisibility(View.INVISIBLE);
                 image2.setVisibility(View.VISIBLE);
@@ -916,89 +586,6 @@ public class MusicActivity extends AppCompatActivity {
 
                 musicButton5.startAnimation(animation4);
 
-                if (music1.isPlaying()) {
-                    music1.stop();
-                    music1.release();
-                }
-                if (music2.isPlaying()) {
-                    music2.stop();
-                    music2.release();
-                }
-                if (music3.isPlaying()) {
-                    music3.stop();
-                    music3.release();
-                }
-                if (music4.isPlaying()) {
-                    music4.stop();
-                    music4.release();
-                }
-                if (music6.isPlaying()) {
-                    music6.stop();
-                    music6.release();
-                }
-                if (music7.isPlaying()) {
-                    music7.stop();
-                    music7.release();
-                }
-                if (music8.isPlaying()) {
-                    music8.stop();
-                    music8.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-
-                music5.start();
-
                 image4.setVisibility(View.VISIBLE);
                 image2.setVisibility(View.VISIBLE);
                 image3.setVisibility(View.VISIBLE);
@@ -1045,89 +632,6 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 musicButton6.startAnimation(animation5);
-
-                if (music1.isPlaying()) {
-                    music1.stop();
-                    music1.release();
-                }
-                if (music2.isPlaying()) {
-                    music2.stop();
-                    music2.release();
-                }
-                if (music3.isPlaying()) {
-                    music3.stop();
-                    music3.release();
-                }
-                if (music4.isPlaying()) {
-                    music4.stop();
-                    music4.release();
-                }
-                if (music5.isPlaying()) {
-                    music5.stop();
-                    music5.release();
-                }
-                if (music7.isPlaying()) {
-                    music7.stop();
-                    music7.release();
-                }
-                if (music8.isPlaying()) {
-                    music8.stop();
-                    music8.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-
-                music6.start();
 
                 image4.setVisibility(View.VISIBLE);
                 image2.setVisibility(View.VISIBLE);
@@ -1176,89 +680,6 @@ public class MusicActivity extends AppCompatActivity {
 
                 musicButton7.startAnimation(animation6);
 
-                if (music1.isPlaying()) {
-                    music1.stop();
-                    music1.release();
-                }
-                if (music2.isPlaying()) {
-                    music2.stop();
-                    music2.release();
-                }
-                if (music3.isPlaying()) {
-                    music3.stop();
-                    music3.release();
-                }
-                if (music4.isPlaying()) {
-                    music4.stop();
-                    music4.release();
-                }
-                if (music5.isPlaying()) {
-                    music5.stop();
-                    music5.release();
-                }
-                if (music6.isPlaying()) {
-                    music6.stop();
-                    music6.release();
-                }
-                if (music8.isPlaying()) {
-                    music8.stop();
-                    music8.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-
-                music7.start();
-
                 image4.setVisibility(View.VISIBLE);
                 image2.setVisibility(View.VISIBLE);
                 image3.setVisibility(View.VISIBLE);
@@ -1306,88 +727,6 @@ public class MusicActivity extends AppCompatActivity {
 
                 musicButton8.startAnimation(animation7);
 
-                if (music1.isPlaying()) {
-                    music1.stop();
-                    music1.release();
-                }
-                if (music2.isPlaying()) {
-                    music2.stop();
-                    music2.release();
-                }
-                if (music3.isPlaying()) {
-                    music3.stop();
-                    music3.release();
-                }
-                if (music4.isPlaying()) {
-                    music4.stop();
-                    music4.release();
-                }
-                if (music5.isPlaying()) {
-                    music5.stop();
-                    music5.release();
-                }
-                if (music6.isPlaying()) {
-                    music6.stop();
-                    music6.release();
-                }
-                if (music7.isPlaying()) {
-                    music7.stop();
-                    music7.release();
-                }
-                if (music9.isPlaying()) {
-                    music9.stop();
-                    music9.release();
-                }
-                if (music10.isPlaying()) {
-                    music10.stop();
-                    music10.release();
-                }
-                if (music11.isPlaying()) {
-                    music11.stop();
-                    music11.release();
-                }
-                if (music12.isPlaying()) {
-                    music12.stop();
-                    music12.release();
-                }
-                if (music13.isPlaying()) {
-                    music13.stop();
-                    music13.release();
-                }
-                if (music14.isPlaying()) {
-                    music14.stop();
-                    music14.release();
-                }
-                if (music15.isPlaying()) {
-                    music15.stop();
-                    music15.release();
-                }
-                if (music16.isPlaying()) {
-                    music16.stop();
-                    music16.release();
-                }
-                if (music17.isPlaying()) {
-                    music17.stop();
-                    music17.release();
-                }
-                if (music18.isPlaying()) {
-                    music18.stop();
-                    music18.release();
-                }
-                if (music19.isPlaying()) {
-                    music19.stop();
-                    music19.release();
-                }
-                if (music20.isPlaying()) {
-                    music20.stop();
-                    music20.release();
-                }
-                if (music21.isPlaying()) {
-                    music21.stop();
-                    music21.release();
-                }
-                music8.start();
-
                 image1.setVisibility(View.INVISIBLE);
                 image2.setVisibility(View.VISIBLE);
                 image3.setVisibility(View.VISIBLE);
@@ -1434,11 +773,11 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 1
-                if (music1.isPlaying()) {
-                    music1.pause();
+                if (musicForest.isPlaying()) {
+                    musicForest.pause();
                     pause.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music1.start();
+                    musicForest.start();
                     pause.setBackgroundResource(R.drawable.ic_pause);
 
                 }
@@ -1449,11 +788,11 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 2
-                if (music2.isPlaying()) {
-                    music2.pause();
+                if (musicMurmur.isPlaying()) {
+                    musicMurmur.pause();
                     pause2.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music2.start();
+                    musicMurmur.start();
                     pause2.setBackgroundResource(R.drawable.ic_pause);
                 }
             }
@@ -1463,11 +802,11 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 3
-                if (music3.isPlaying()) {
-                    music3.pause();
+                if (musicRain.isPlaying()) {
+                    musicRain.pause();
                     pause3.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music3.start();
+                    musicRain.start();
                     pause3.setBackgroundResource(R.drawable.ic_pause);
                 }
             }
@@ -1477,11 +816,11 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 4
-                if (music4.isPlaying()) {
-                    music4.pause();
+                if (musicNature.isPlaying()) {
+                    musicNature.pause();
                     pause4.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music4.start();
+                    musicNature.start();
                     pause4.setBackgroundResource(R.drawable.ic_pause);
                 }
             }
@@ -1491,11 +830,11 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 5
-                if (music5.isPlaying()) {
-                    music5.pause();
+                if (musicNightNature.isPlaying()) {
+                    musicNightNature.pause();
                     pause5.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music5.start();
+                    musicNightNature.start();
                     pause5.setBackgroundResource(R.drawable.ic_pause);
                 }
             }
@@ -1505,11 +844,11 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 6
-                if (music6.isPlaying()) {
-                    music6.pause();
+                if (musicFire.isPlaying()) {
+                    musicFire.pause();
                     pause6.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music6.start();
+                    musicFire.start();
                     pause6.setBackgroundResource(R.drawable.ic_pause);
                 }
             }
@@ -1519,11 +858,11 @@ public class MusicActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 7
-                if (music7.isPlaying()) {
-                    music7.pause();
+                if (musicBird.isPlaying()) {
+                    musicBird.pause();
                     pause7.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music7.start();
+                    musicBird.start();
                     pause7.setBackgroundResource(R.drawable.ic_pause);
                 }
             }
@@ -1536,11 +875,11 @@ public class MusicActivity extends AppCompatActivity {
                         .putBoolean(BUTTON_PRESSED, true)
                         .apply();
                 // 8
-                if (music8.isPlaying()) {
-                    music8.pause();
+                if (musicAutumn.isPlaying()) {
+                    musicAutumn.pause();
                     pause8.setBackgroundResource(R.drawable.ic_play);
                 } else {
-                    music8.start();
+                    musicAutumn.start();
                     pause8.setBackgroundResource(R.drawable.ic_pause);
                 }
             }
