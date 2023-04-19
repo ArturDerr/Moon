@@ -634,7 +634,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:elevation="1dp"
-                        android:src="@drawable/autumn" />
+                        android:src="@drawable/wave" />
 
                     <ImageView
                         android:id="@+id/selected9"
@@ -695,7 +695,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:elevation="1dp"
-                        android:src="@drawable/autumn" />
+                        android:src="@drawable/thunder_storm" />
 
                     <ImageView
                         android:id="@+id/selected10"
@@ -748,7 +748,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:elevation="1dp"
-                        android:src="@drawable/autumn" />
+                        android:src="@drawable/snow" />
 
                     <ImageView
                         android:id="@+id/selected11"
@@ -829,7 +829,7 @@
                     </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/natureMusic12"
+                        android:id="@+id/musicButton12"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:background="@color/non_background"
@@ -899,19 +899,19 @@
                     android:padding="15dp"
                     tools:ignore="MissingConstraints,ObsoleteLayoutParam">
 
+                    <ImageView
+                        android:id="@+id/selected14"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
                     <RelativeLayout
                         android:id="@+id/musicBox14"
                         android:layout_width="85dp"
                         android:layout_height="70dp"
                         android:layout_marginTop="0dp"
                         android:background="@drawable/background_media_player">
-
-                        <ImageView
-                            android:id="@+id/selected14"
-                            android:layout_width="85dp"
-                            android:layout_height="70dp"
-                            android:elevation="2dp"
-                            android:src="@drawable/background_selected_media_player"/>
 
                         <androidx.appcompat.widget.AppCompatButton
                             android:id="@+id/pause14"

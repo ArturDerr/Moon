@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="15dp"
-                android:text="Рекомендации"
+                android:text="Рекомендации перед сном"
                 android:textColor="#FFFFFF"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -103,7 +103,7 @@
                 android:id="@+id/recOpen1"
                 android:layout_width="340dp"
                 android:layout_height="280dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/round_back_while_settings"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -330,6 +330,545 @@
 
             </RelativeLayout>
 
+            <!--4-->
+
+            <RelativeLayout
+                android:id="@+id/rec4"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="225dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Возьмите хорошую книгу"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen4"
+                android:layout_width="340dp"
+                android:layout_height="305dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="225dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Возьмите хорошую книгу"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="205dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Вне зависимости от того, любите вы фантастику или предпочитаете любовные романы, старайтесь каждый день перед сном читать хорошую книгу. Исследование, проведенное в 2009 году показало, что чтение снижает уровень стресса на рекордные 68%. А чем меньше человек напряжен, тем легче он засыпает."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!--5-->
+
+            <RelativeLayout
+                android:id="@+id/rec5"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Впустите чистый воздух"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen5"
+                android:layout_width="340dp"
+                android:layout_height="305dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Впустите чистый воздух"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="205dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Исследование 2017 года, проанализировало данные 17 участников эксперимента. Им предложили перед сном приоткрывать окно, что они и делали на протяжении 5 дней. Выяснилось, что у людей, в спальне которых дул легкий ветерок, было меньше углекислого газа, что, в свою очередь, улучшало качество их сна."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!--6-->
+
+            <RelativeLayout
+                android:id="@+id/rec6"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="255dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Позовите домашнего питомца"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen6"
+                android:layout_width="340dp"
+                android:layout_height="305dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="255dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Позовите домашнего питомца"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="205dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Если у вас есть домашний питомец, это здорово! Исследование 2017 года, показало, что люди, которые спали со своей собакой в спальне, имели лучший сон, чем те, у кого нет питомца. Рядом с собакой участники эксперимента чувствовали себя в безопасности, поэтому быстрее расслаблялись и засыпали. Но есть и маленькое ограничение: питомец должен спать в одной комнате с вами, но не в одной постели. Поэтому обустройте для него отдельное место для сна, а утром позовите для объятий."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!--7-->
+
+            <RelativeLayout
+                android:id="@+id/rec7"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="235dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Возьмите уроки медитации"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen7"
+                android:layout_width="340dp"
+                android:layout_height="335dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="235dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Возьмите уроки медитации"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="240dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Существует много техник для скорейшего засыпания и многие из них отлично работают. Но исследование 2015 года, опубликованное в журнале JAMA Internal Medicine, показало, что люди, которые практиковали медитацию, в конечном итоге засыпали быстрее и спали лучше по сравнению с теми, кто изучал техники сна. Так что, возможно, вам не стоит терять время!"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!--8-->
+
+            <RelativeLayout
+                android:id="@+id/rec8"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="235dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Обогатите рацион магнием"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec8"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen8"
+                android:layout_width="340dp"
+                android:layout_height="355dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="235dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Обогатите рацион магнием"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="260dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Наверняка, вы не раз слышали, что магний дарит чудесные сны и возвращает потерянное душевное равновесие. Поэтому продукты с ним стоит чаще включать в рацион тем, кто испытывает трудности с засыпанием. А исследование, опубликованное в Journal of Research in Medical Sciences, продемонстрировало, что прием магния перед сном помогает уснуть быстрее и спать крепче. Правда, если принимать его на регулярной основе."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack8"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!--9-->
+
+            <RelativeLayout
+                android:id="@+id/rec9"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="215dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Ешьте на перекус орехи"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec9"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen9"
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="215dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Ешьте на перекус орехи"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="245dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="В список полезных продуктов, которые нужно есть перед сном, входят также орехи. Причем все их разновидности. Исследования показали, что регулярное их употребление дает организму ценные питательные вещества — магний и селен. Врачи говорят, что эти два вещества способствуют активизации мозговых волн, связанных с лучшим сном. Другими словами, орехи помогают вам спать, как младенцу!"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack9"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
 
         </LinearLayout>
 
