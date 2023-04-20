@@ -220,6 +220,102 @@ public class MusicActivity extends AppCompatActivity {
         }
 
     }
+    private void soundStopButton1(MediaPlayer sound1) {
+
+        if(sound1.isPlaying()){
+            sound1.pause();
+            sound1.setLooping(false);
+            pause.setBackgroundResource(R.drawable.ic_play);
+        } else {
+            sound1.start();
+            sound1.setLooping(true);
+            pause.setBackgroundResource(R.drawable.ic_pause);
+        }
+    }
+    private void soundStopButton2(MediaPlayer sound2) {
+
+        if(sound2.isPlaying()) {
+            sound2.pause();
+            sound2.setLooping(false);
+            pause2.setBackgroundResource(R.drawable.ic_play);
+        } else {
+            sound2.start();
+            sound2.setLooping(true);
+            pause2.setBackgroundResource(R.drawable.ic_pause);
+        }
+
+    }
+    private void soundStopButton3(MediaPlayer sound3) {
+
+        if(sound3.isPlaying()) {
+            sound3.pause();
+            sound3.setLooping(false);
+            pause3.setBackgroundResource(R.drawable.ic_play);
+        } else {
+            sound3.start();
+            sound3.setLooping(true);
+            pause3.setBackgroundResource(R.drawable.ic_pause);
+        }
+
+
+    }
+    private void soundStopButton4(MediaPlayer sound4) {
+
+        if(sound4.isPlaying()) {
+            sound4.pause();
+            sound4.setLooping(false);
+            pause4.setBackgroundResource(R.drawable.ic_play);
+        } else {
+            sound4.start();
+            sound4.setLooping(true);
+            pause4.setBackgroundResource(R.drawable.ic_pause);
+        }
+
+
+    }
+    private void soundStopButton5(MediaPlayer sound5) {
+
+        if(sound5.isPlaying()) {
+            sound5.pause();
+            sound5.setLooping(false);
+            pause5.setBackgroundResource(R.drawable.ic_play);
+        } else {
+            sound5.start();
+            sound5.setLooping(true);
+            pause5.setBackgroundResource(R.drawable.ic_pause);
+        }
+
+
+    }
+    private void soundStopButton6(MediaPlayer sound6) {
+
+        if(sound6.isPlaying()) {
+            sound6.pause();
+            sound6.setLooping(false);
+            pause6.setBackgroundResource(R.drawable.ic_play);
+        } else {
+            sound6.start();
+            sound6.setLooping(true);
+            pause6.setBackgroundResource(R.drawable.ic_pause);
+        }
+
+
+    }
+    private void soundStopButton7(MediaPlayer sound7) {
+
+        if(sound7.isPlaying()) {
+            sound7.pause();
+            sound7.setLooping(false);
+            pause7.setBackgroundResource(R.drawable.ic_play);
+        } else {
+            sound7.start();
+            sound7.setLooping(true);
+            pause7.setBackgroundResource(R.drawable.ic_pause);
+        }
+
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -335,6 +431,28 @@ public class MusicActivity extends AppCompatActivity {
         selected19.setVisibility(View.INVISIBLE);
         selected20.setVisibility(View.INVISIBLE);
         selected21.setVisibility(View.INVISIBLE);
+
+        pause.setVisibility(View.INVISIBLE);
+        pause2.setVisibility(View.INVISIBLE);
+        pause3.setVisibility(View.INVISIBLE);
+        pause4.setVisibility(View.INVISIBLE);
+        pause5.setVisibility(View.INVISIBLE);
+        pause6.setVisibility(View.INVISIBLE);
+        pause7.setVisibility(View.INVISIBLE);
+        pause8.setVisibility(View.INVISIBLE);
+        pause9.setVisibility(View.INVISIBLE);
+        pause10.setVisibility(View.INVISIBLE);
+        pause11.setVisibility(View.INVISIBLE);
+        pause12.setVisibility(View.INVISIBLE);
+        pause13.setVisibility(View.INVISIBLE);
+        pause14.setVisibility(View.INVISIBLE);
+        pause15.setVisibility(View.INVISIBLE);
+        pause16.setVisibility(View.INVISIBLE);
+        pause17.setVisibility(View.INVISIBLE);
+        pause18.setVisibility(View.INVISIBLE);
+        pause19.setVisibility(View.INVISIBLE);
+        pause20.setVisibility(View.INVISIBLE);
+        pause21.setVisibility(View.INVISIBLE);
 
         image2 = findViewById(R.id.image2);
         image1 = findViewById(R.id.image1);
@@ -613,7 +731,7 @@ public class MusicActivity extends AppCompatActivity {
                 soundPLayButton(musicForest, musicMurmur, musicRain, musicNature, musicNightNature, musicFire, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow);
 
                 musicButton1.startAnimation(animation);
-                
+
                 image1.setVisibility(View.INVISIBLE);
                 image2.setVisibility(View.VISIBLE);
                 image3.setVisibility(View.VISIBLE);
@@ -626,6 +744,49 @@ public class MusicActivity extends AppCompatActivity {
                 image10.setVisibility(View.VISIBLE);
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
+
+                pause.setVisibility(View.VISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
 
                 musicButton1.setClickable(false);
                 musicButton2.setClickable(true);
@@ -684,6 +845,49 @@ public class MusicActivity extends AppCompatActivity {
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
 
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.VISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
+
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(false);
                 musicButton3.setClickable(true);
@@ -741,6 +945,49 @@ public class MusicActivity extends AppCompatActivity {
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
 
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.VISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
+
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
                 musicButton3.setClickable(false);
@@ -797,6 +1044,49 @@ public class MusicActivity extends AppCompatActivity {
                 image10.setVisibility(View.VISIBLE);
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
+
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.VISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
 
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
@@ -856,6 +1146,49 @@ public class MusicActivity extends AppCompatActivity {
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
 
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.VISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
+
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
                 musicButton3.setClickable(true);
@@ -912,6 +1245,49 @@ public class MusicActivity extends AppCompatActivity {
                 image10.setVisibility(View.VISIBLE);
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
+
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.VISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
 
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
@@ -970,6 +1346,49 @@ public class MusicActivity extends AppCompatActivity {
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
 
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.VISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
+
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
                 musicButton3.setClickable(true);
@@ -1026,6 +1445,49 @@ public class MusicActivity extends AppCompatActivity {
                 image10.setVisibility(View.VISIBLE);
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
+
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.VISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
 
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
@@ -1084,6 +1546,49 @@ public class MusicActivity extends AppCompatActivity {
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
 
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.VISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
+
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
                 musicButton3.setClickable(true);
@@ -1140,6 +1645,49 @@ public class MusicActivity extends AppCompatActivity {
                 image10.setVisibility(View.INVISIBLE);
                 image11.setVisibility(View.VISIBLE);
                 image12.setVisibility(View.VISIBLE);
+
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.VISIBLE);
+                pause11.setVisibility(View.INVISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause11.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
 
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
@@ -1198,6 +1746,49 @@ public class MusicActivity extends AppCompatActivity {
                 image11.setVisibility(View.INVISIBLE);
                 image12.setVisibility(View.VISIBLE);
 
+                pause.setVisibility(View.INVISIBLE);
+                pause2.setVisibility(View.INVISIBLE);
+                pause3.setVisibility(View.INVISIBLE);
+                pause4.setVisibility(View.INVISIBLE);
+                pause5.setVisibility(View.INVISIBLE);
+                pause6.setVisibility(View.INVISIBLE);
+                pause7.setVisibility(View.INVISIBLE);
+                pause8.setVisibility(View.INVISIBLE);
+                pause9.setVisibility(View.INVISIBLE);
+                pause10.setVisibility(View.INVISIBLE);
+                pause11.setVisibility(View.VISIBLE);
+                pause12.setVisibility(View.INVISIBLE);
+                pause13.setVisibility(View.INVISIBLE);
+                pause14.setVisibility(View.INVISIBLE);
+                pause15.setVisibility(View.INVISIBLE);
+                pause16.setVisibility(View.INVISIBLE);
+                pause17.setVisibility(View.INVISIBLE);
+                pause18.setVisibility(View.INVISIBLE);
+                pause19.setVisibility(View.INVISIBLE);
+                pause20.setVisibility(View.INVISIBLE);
+                pause21.setVisibility(View.INVISIBLE);
+
+                pause2.setBackgroundResource(R.drawable.ic_pause);
+                pause3.setBackgroundResource(R.drawable.ic_pause);
+                pause4.setBackgroundResource(R.drawable.ic_pause);
+                pause5.setBackgroundResource(R.drawable.ic_pause);
+                pause6.setBackgroundResource(R.drawable.ic_pause);
+                pause7.setBackgroundResource(R.drawable.ic_pause);
+                pause8.setBackgroundResource(R.drawable.ic_pause);
+                pause9.setBackgroundResource(R.drawable.ic_pause);
+                pause10.setBackgroundResource(R.drawable.ic_pause);
+                pause.setBackgroundResource(R.drawable.ic_pause);
+                pause12.setBackgroundResource(R.drawable.ic_pause);
+                pause13.setBackgroundResource(R.drawable.ic_pause);
+                pause14.setBackgroundResource(R.drawable.ic_pause);
+                pause15.setBackgroundResource(R.drawable.ic_pause);
+                pause16.setBackgroundResource(R.drawable.ic_pause);
+                pause17.setBackgroundResource(R.drawable.ic_pause);
+                pause18.setBackgroundResource(R.drawable.ic_pause);
+                pause19.setBackgroundResource(R.drawable.ic_pause);
+                pause20.setBackgroundResource(R.drawable.ic_pause);
+                pause21.setBackgroundResource(R.drawable.ic_pause);
+
                 musicButton1.setClickable(true);
                 musicButton2.setClickable(true);
                 musicButton3.setClickable(true);
@@ -1238,49 +1829,49 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               soundStopButton(musicForest, musicMurmur, musicRain, musicNature, musicNightNature, musicFire, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow);
+               soundStopButton1(musicForest);
             }
         });
         pause2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                soundStopButton(musicMurmur, musicForest, musicRain, musicNature, musicNightNature, musicFire, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow);
+                soundStopButton2(musicMurmur);
             }
         });
         pause3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                soundStopButton(musicRain, musicForest, musicMurmur, musicNature, musicNightNature, musicFire, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow);
+                soundStopButton3(musicRain);
             }
         });
         pause4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                soundStopButton(musicNature, musicRain, musicForest, musicMurmur, musicNightNature, musicFire, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow);
+                soundStopButton4(musicNature);
             }
         });
         pause5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                soundStopButton(musicNightNature, musicNature, musicRain, musicForest, musicMurmur, musicFire, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow);
+                soundStopButton5(musicNightNature);
             }
         });
         pause6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                soundStopButton(musicFire, musicNightNature, musicNature, musicRain, musicForest, musicMurmur, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow);
+                soundStopButton6(musicFire);
             }
         });
         pause7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                soundStopButton(musicBird, musicFire, musicNightNature, musicNature, musicRain, musicForest, musicMurmur, musicAutumn, musicWave, musicThunderStorm, musicSnow);
+                soundStopButton7(musicBird);
             }
         });
         pause8.setOnClickListener(new View.OnClickListener() {

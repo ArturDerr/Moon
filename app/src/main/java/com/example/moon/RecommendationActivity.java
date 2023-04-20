@@ -106,11 +106,11 @@ public class RecommendationActivity extends AppCompatActivity {
         //buttonRecBack15 =  findViewById(R.id.buttonRecBack15);
         //buttonRecBack16 =  findViewById(R.id.buttonRecBack16);
 
-        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        Animation animation4 = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        Animation animation5 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha_recommendation);
+        Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha_recommendation);
+        Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.alpha_recommendation);
+        Animation animation4 = AnimationUtils.loadAnimation(this, R.anim.alpha_recommendation);
+        Animation animation5 = AnimationUtils.loadAnimation(this, R.anim.alpha_recommendation);
         Animation animation6 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation7 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation8 = AnimationUtils.loadAnimation(this, R.anim.alpha);
