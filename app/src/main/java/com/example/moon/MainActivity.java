@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int selectedTab = 1;
 
-    private TextView hour, hourSleep;
+    private TextView hour, hourSleep, notification;
     private Button setAlarm, setAlarmSleep;
     Calendar calendar, calendar2;
     SimpleDateFormat simpleDateFormat;
@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        notification = findViewById(R.id.notification);
 
         setAlarmSleep = findViewById(R.id.setAlarmSleep);
 
