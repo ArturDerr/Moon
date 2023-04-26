@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".MusicActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/musicList1"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/forest" />
+
+                    <ImageView
+                        android:id="@+id/selected1"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton1"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox1"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/river" />
+
+                    <ImageView
+                        android:id="@+id/selected2"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton2"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox2"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause2"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/rain" />
+
+                    <ImageView
+                        android:id="@+id/selected3"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton3"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox3"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause3"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList2"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton4"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/nature" />
+
+                    <ImageView
+                        android:id="@+id/selected4"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox4"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause4"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton5"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/selected5"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/nature_night" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox5"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause5"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton6"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/image6"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/fire" />
+
+                    <ImageView
+                        android:id="@+id/selected6"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox6"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause6"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList3"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected7"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <ImageView
+                        android:id="@+id/image7"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/bird" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox7"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause7"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton7"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/selected8"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <ImageView
+                        android:id="@+id/image8"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/autumn" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox8"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause8"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton8"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image9"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/wave" />
+
+                    <ImageView
+                        android:id="@+id/selected9"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox9"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause9"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton9"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList4"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image10"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/thunder_storm" />
+
+                    <ImageView
+                        android:id="@+id/selected10"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox10"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause10"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton10"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music11"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image11"
+                        android:layout_width="50dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/snow" />
+
+                    <ImageView
+                        android:id="@+id/selected11"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox11"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause11"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton11"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music12"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image12"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/dolphin" />
+
+                    <ImageView
+                        android:id="@+id/selected12"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox12"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause12"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton12"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList5"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music13"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image13"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/seagull" />
+
+                    <ImageView
+                        android:id="@+id/selected13"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox13"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause13"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton13"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music14"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image14"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/cat" />
+
+                    <ImageView
+                        android:id="@+id/selected14"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox14"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause14"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton14"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music15"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image15"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/steps" />
+
+                    <ImageView
+                        android:id="@+id/selected15"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox15"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause15"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton15"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList6"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music16"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image16"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/street" />
+
+                    <ImageView
+                        android:id="@+id/selected16"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox16"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause16"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton16"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music17"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image17"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/whale" />
+
+                    <ImageView
+                        android:id="@+id/selected17"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox17"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause17"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton17"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music18"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image18"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/train" />
+
+                    <ImageView
+                        android:id="@+id/selected18"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox18"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause18"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton18"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/musicList7"
+                android:layout_width="340dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                <RelativeLayout
+                    android:id="@+id/music19"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image19"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/space" />
+
+                    <ImageView
+                        android:id="@+id/selected19"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox19"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause19"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton19"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music20"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="117dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image20"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/pianino" />
+
+                    <ImageView
+                        android:id="@+id/selected20"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox20"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause20"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton20"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music21"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="235dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_back_while"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+                    <ImageView
+                        android:id="@+id/image21"
+                        android:layout_width="48dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp"
+                        android:src="@drawable/guitar" />
+
+                    <ImageView
+                        android:id="@+id/selected21"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/background_selected_media_player" />
+
+                    <RelativeLayout
+                        android:id="@+id/musicBox21"
+                        android:layout_width="85dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/background_media_player">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/pause21"
+                            android:layout_width="36dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="17dp"
+                            android:background="@drawable/ic_pause"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/musicButton21"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:background="@color/non_background"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="20dp"
+            android:text="Выберите музыку"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave5"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave7"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave8"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave9"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave10"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave11"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave12"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave13"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave14"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave15"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave16"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:padding="5dp"
+            android:paddingStart="34dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave17"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave18"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave19"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave20"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/musicSave21"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/round_back_while"
+            android:drawableStart="@drawable/ic_save"
+            android:paddingStart="34dp"
+            android:padding="5dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

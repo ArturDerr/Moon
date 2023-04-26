@@ -336,10 +336,23 @@
                     android:background="@drawable/round_back_while_settings"
                     android:paddingStart="16dp"
                     android:paddingTop="9dp"
-                    android:text="Описание: "
                     android:textColor="#48FFFFFF"
                     android:textSize="15sp"
                     android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextNotification"
+                    android:layout_width="273dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="142dp"
+                    android:backgroundTint="@color/non_background"
+                    android:hint="Описание:"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:maxLength="25"
+                    android:textColorHint="#48FFFFFF"
+                    android:textColor="#48FFFFFF" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -352,7 +365,7 @@
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                 <TextView
-                    android:id="@id/notification"
+                    android:id="@id/hourNotification"
                     android:layout_width="130dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="5dp"
@@ -395,7 +408,7 @@
                     android:translationZ="4dp" />
 
                 <TextView
-                    android:id="@+id/notification"
+                    android:id="@+id/hourNotification"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="108dp"

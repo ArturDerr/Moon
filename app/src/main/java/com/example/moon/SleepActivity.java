@@ -2,6 +2,7 @@ package com.example.moon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -17,6 +18,11 @@ public class SleepActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sleep);
+
+        if (savedInstanceState != null) {
+            Intent intent = new Intent(this, SleepActivity.class);
+            startActivity(intent);
+        }
 
         simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 

@@ -18,9 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class MusicActivity extends AppCompatActivity {
-
-    private int selectedTab = 2;
+public class MusicSleepActivity extends AppCompatActivity {
 
     final static String BUTTON_PRESSED = "button_pressed";
 
@@ -33,115 +31,118 @@ public class MusicActivity extends AppCompatActivity {
 
     Button pause, pause2, pause3, pause4, pause5, pause6, pause7, pause8, pause9, pause10, pause11, pause12, pause13, pause14, pause15, pause16, pause17, pause18, pause19, pause20, pause21;
 
+    Button musicSave1, musicSave2, musicSave3, musicSave4, musicSave5, musicSave6, musicSave7, musicSave8, musicSave9, musicSave10, musicSave11, musicSave12, musicSave13, musicSave14, musicSave15, musicSave16, musicSave17, musicSave18, musicSave19, musicSave20, musicSave21;
+
     ImageView selected1, selected2, selected3, selected4, selected5, selected6, selected7, selected8, selected9, selected10, selected11, selected12, selected13, selected14, selected15, selected16, selected17, selected18, selected19, selected20, selected21;
 
     RelativeLayout musicBox1, musicBox2, musicBox3, musicBox4, musicBox5, musicBox6, musicBox7, musicBox8, musicBox9, musicBox10, musicBox11, musicBox12, musicBox13, musicBox14, musicBox15, musicBox16, musicBox17, musicBox18, musicBox19, musicBox20, musicBox21;
 
     MediaPlayer musicForest, musicMurmur, musicRain, musicNature, musicNightNature, musicFire, musicBird, musicAutumn, musicWave, musicThunderStorm, musicSnow, musicDolphin, musicSeagull, musicCat, musicSteps, musicStreet, musicWhale, musicTrain, musicSpace, musicPianino, musicGuitar;
 
+
     private void soundPLayButton(MediaPlayer sound1, MediaPlayer sound2, MediaPlayer sound3, MediaPlayer sound4, MediaPlayer sound5, MediaPlayer sound6, MediaPlayer sound7, MediaPlayer sound8, MediaPlayer sound9, MediaPlayer sound10, MediaPlayer sound11, MediaPlayer sound12, MediaPlayer sound13, MediaPlayer sound14, MediaPlayer sound15, MediaPlayer sound16, MediaPlayer sound17, MediaPlayer sound18, MediaPlayer sound19, MediaPlayer sound20, MediaPlayer sound21) {
 
-        if(sound1.isPlaying()){
+        if (sound1.isPlaying()) {
             sound1.pause();
             sound1.seekTo(0);
             sound1.setLooping(false);
         }
-        if(sound2.isPlaying()) {
+        if (sound2.isPlaying()) {
             sound2.pause();
             sound2.seekTo(0);
             sound2.setLooping(false);
         }
-        if(sound3.isPlaying()) {
+        if (sound3.isPlaying()) {
             sound3.pause();
             sound3.seekTo(0);
             sound3.setLooping(false);
         }
-        if(sound4.isPlaying()) {
+        if (sound4.isPlaying()) {
             sound4.pause();
             sound4.seekTo(0);
             sound4.setLooping(false);
         }
-        if(sound5.isPlaying()) {
+        if (sound5.isPlaying()) {
             sound5.pause();
             sound5.seekTo(0);
             sound5.setLooping(false);
         }
-        if(sound6.isPlaying()) {
+        if (sound6.isPlaying()) {
             sound6.pause();
             sound6.seekTo(0);
             sound6.setLooping(false);
         }
-        if(sound7.isPlaying()) {
+        if (sound7.isPlaying()) {
             sound7.pause();
             sound7.seekTo(0);
             sound7.setLooping(false);
         }
-        if(sound8.isPlaying()) {
+        if (sound8.isPlaying()) {
             sound8.pause();
             sound8.seekTo(0);
             sound8.setLooping(false);
         }
-        if(sound9.isPlaying()) {
+        if (sound9.isPlaying()) {
             sound9.pause();
             sound9.seekTo(0);
             sound9.setLooping(false);
         }
-        if(sound10.isPlaying()) {
+        if (sound10.isPlaying()) {
             sound10.pause();
             sound10.seekTo(0);
             sound10.setLooping(false);
         }
-        if(sound11.isPlaying()) {
+        if (sound11.isPlaying()) {
             sound11.pause();
             sound11.seekTo(0);
             sound11.setLooping(false);
         }
-        if(sound12.isPlaying()) {
+        if (sound12.isPlaying()) {
             sound12.pause();
             sound12.seekTo(0);
             sound12.setLooping(false);
         }
-        if(sound13.isPlaying()) {
+        if (sound13.isPlaying()) {
             sound13.pause();
             sound13.seekTo(0);
             sound13.setLooping(false);
         }
-        if(sound14.isPlaying()) {
+        if (sound14.isPlaying()) {
             sound14.pause();
             sound14.seekTo(0);
             sound14.setLooping(false);
         }
-        if(sound15.isPlaying()) {
+        if (sound15.isPlaying()) {
             sound15.pause();
             sound15.seekTo(0);
             sound15.setLooping(false);
         }
-        if(sound16.isPlaying()) {
+        if (sound16.isPlaying()) {
             sound16.pause();
             sound16.seekTo(0);
             sound16.setLooping(false);
         }
-        if(sound17.isPlaying()) {
+        if (sound17.isPlaying()) {
             sound17.pause();
             sound17.seekTo(0);
             sound17.setLooping(false);
         }
-        if(sound18.isPlaying()) {
+        if (sound18.isPlaying()) {
             sound18.pause();
             sound18.seekTo(0);
             sound18.setLooping(false);
         }
-        if(sound19.isPlaying()) {
+        if (sound19.isPlaying()) {
             sound19.pause();
             sound19.seekTo(0);
             sound19.setLooping(false);
         }
-        if(sound20.isPlaying()) {
+        if (sound20.isPlaying()) {
             sound20.pause();
             sound20.seekTo(0);
             sound20.setLooping(false);
         }
-        if(sound21.isPlaying()) {
+        if (sound21.isPlaying()) {
             sound21.pause();
             sound21.seekTo(0);
             sound21.setLooping(false);
@@ -151,9 +152,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton1(MediaPlayer sound1) {
 
-        if(sound1.isPlaying()){
+        if (sound1.isPlaying()) {
             sound1.pause();
             sound1.setLooping(false);
             pause.setBackgroundResource(R.drawable.ic_play);
@@ -163,9 +165,10 @@ public class MusicActivity extends AppCompatActivity {
             pause.setBackgroundResource(R.drawable.ic_pause);
         }
     }
+
     private void soundStopButton2(MediaPlayer sound2) {
 
-        if(sound2.isPlaying()) {
+        if (sound2.isPlaying()) {
             sound2.pause();
             sound2.setLooping(false);
             pause2.setBackgroundResource(R.drawable.ic_play);
@@ -176,9 +179,10 @@ public class MusicActivity extends AppCompatActivity {
         }
 
     }
+
     private void soundStopButton3(MediaPlayer sound3) {
 
-        if(sound3.isPlaying()) {
+        if (sound3.isPlaying()) {
             sound3.pause();
             sound3.setLooping(false);
             pause3.setBackgroundResource(R.drawable.ic_play);
@@ -190,9 +194,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton4(MediaPlayer sound4) {
 
-        if(sound4.isPlaying()) {
+        if (sound4.isPlaying()) {
             sound4.pause();
             sound4.setLooping(false);
             pause4.setBackgroundResource(R.drawable.ic_play);
@@ -204,9 +209,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton5(MediaPlayer sound5) {
 
-        if(sound5.isPlaying()) {
+        if (sound5.isPlaying()) {
             sound5.pause();
             sound5.setLooping(false);
             pause5.setBackgroundResource(R.drawable.ic_play);
@@ -218,9 +224,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton6(MediaPlayer sound6) {
 
-        if(sound6.isPlaying()) {
+        if (sound6.isPlaying()) {
             sound6.pause();
             sound6.setLooping(false);
             pause6.setBackgroundResource(R.drawable.ic_play);
@@ -232,9 +239,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton7(MediaPlayer sound7) {
 
-        if(sound7.isPlaying()) {
+        if (sound7.isPlaying()) {
             sound7.pause();
             sound7.setLooping(false);
             pause7.setBackgroundResource(R.drawable.ic_play);
@@ -246,9 +254,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton8(MediaPlayer sound8) {
 
-        if(sound8.isPlaying()) {
+        if (sound8.isPlaying()) {
             sound8.pause();
             sound8.setLooping(false);
             pause8.setBackgroundResource(R.drawable.ic_play);
@@ -260,9 +269,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton9(MediaPlayer sound9) {
 
-        if(sound9.isPlaying()) {
+        if (sound9.isPlaying()) {
             sound9.pause();
             sound9.setLooping(false);
             pause9.setBackgroundResource(R.drawable.ic_play);
@@ -274,9 +284,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton10(MediaPlayer sound10) {
 
-        if(sound10.isPlaying()) {
+        if (sound10.isPlaying()) {
             sound10.pause();
             sound10.setLooping(false);
             pause10.setBackgroundResource(R.drawable.ic_play);
@@ -288,9 +299,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton11(MediaPlayer sound11) {
 
-        if(sound11.isPlaying()) {
+        if (sound11.isPlaying()) {
             sound11.pause();
             sound11.setLooping(false);
             pause11.setBackgroundResource(R.drawable.ic_play);
@@ -302,9 +314,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton12(MediaPlayer sound12) {
 
-        if(sound12.isPlaying()) {
+        if (sound12.isPlaying()) {
             sound12.pause();
             sound12.setLooping(false);
             pause12.setBackgroundResource(R.drawable.ic_play);
@@ -316,9 +329,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton13(MediaPlayer sound13) {
 
-        if(sound13.isPlaying()) {
+        if (sound13.isPlaying()) {
             sound13.pause();
             sound13.setLooping(false);
             pause13.setBackgroundResource(R.drawable.ic_play);
@@ -330,9 +344,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton14(MediaPlayer sound14) {
 
-        if(sound14.isPlaying()) {
+        if (sound14.isPlaying()) {
             sound14.pause();
             sound14.setLooping(false);
             pause14.setBackgroundResource(R.drawable.ic_play);
@@ -344,9 +359,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton15(MediaPlayer sound15) {
 
-        if(sound15.isPlaying()) {
+        if (sound15.isPlaying()) {
             sound15.pause();
             sound15.setLooping(false);
             pause15.setBackgroundResource(R.drawable.ic_play);
@@ -358,9 +374,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton16(MediaPlayer sound16) {
 
-        if(sound16.isPlaying()) {
+        if (sound16.isPlaying()) {
             sound16.pause();
             sound16.setLooping(false);
             pause16.setBackgroundResource(R.drawable.ic_play);
@@ -372,9 +389,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton17(MediaPlayer sound17) {
 
-        if(sound17.isPlaying()) {
+        if (sound17.isPlaying()) {
             sound17.pause();
             sound17.setLooping(false);
             pause17.setBackgroundResource(R.drawable.ic_play);
@@ -386,9 +404,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton18(MediaPlayer sound18) {
 
-        if(sound18.isPlaying()) {
+        if (sound18.isPlaying()) {
             sound18.pause();
             sound18.setLooping(false);
             pause18.setBackgroundResource(R.drawable.ic_play);
@@ -400,9 +419,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton19(MediaPlayer sound19) {
 
-        if(sound19.isPlaying()) {
+        if (sound19.isPlaying()) {
             sound19.pause();
             sound19.setLooping(false);
             pause19.setBackgroundResource(R.drawable.ic_play);
@@ -414,9 +434,10 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton20(MediaPlayer sound20) {
 
-        if(sound20.isPlaying()) {
+        if (sound20.isPlaying()) {
             sound20.pause();
             sound20.setLooping(false);
             pause20.setBackgroundResource(R.drawable.ic_play);
@@ -428,6 +449,7 @@ public class MusicActivity extends AppCompatActivity {
 
 
     }
+
     private void soundStopButton21(MediaPlayer sound21) {
 
         if (sound21.isPlaying()) {
@@ -440,14 +462,207 @@ public class MusicActivity extends AppCompatActivity {
             pause21.setBackgroundResource(R.drawable.ic_pause);
         }
 
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_music);
+        setContentView(R.layout.activity_music_sleep);
 
         button1Pressed();
+
+        if (musicForest.isPlaying()) {
+            musicSave1.setVisibility(View.VISIBLE);
+            musicSave1.setClickable(true);
+        }
+        else{
+            musicSave1.setVisibility(View.GONE);
+            musicSave1.setClickable(false);
+        }
+
+        if (musicMurmur.isPlaying()) {
+
+            musicSave2.setVisibility(View.VISIBLE);
+            musicSave2.setClickable(true);
+        }
+        else{
+            musicSave2.setVisibility(View.GONE);
+            musicSave2.setClickable(false);
+        }
+
+        if (musicRain.isPlaying()) {
+            musicSave3.setVisibility(View.VISIBLE);
+            musicSave3.setClickable(true);
+        }
+        else{
+            musicSave3.setVisibility(View.GONE);
+            musicSave3.setClickable(false);
+        }
+
+        if (musicNature.isPlaying()) {
+            musicSave4.setVisibility(View.VISIBLE);
+            musicSave4.setClickable(true);
+        }
+        else{
+            musicSave4.setVisibility(View.GONE);
+            musicSave4.setClickable(false);
+        }
+
+        if (musicNightNature.isPlaying()) {
+            musicSave5.setVisibility(View.VISIBLE);
+            musicSave5.setClickable(true);
+        }
+        else{
+            musicSave5.setVisibility(View.GONE);
+            musicSave5.setClickable(false);
+        }
+
+        if (musicFire.isPlaying()) {
+            musicSave6.setVisibility(View.VISIBLE);
+            musicSave6.setClickable(true);
+
+        }
+        else{
+            musicSave6.setVisibility(View.GONE);
+            musicSave6.setClickable(false);
+        }
+
+        if (musicBird.isPlaying()) {
+            musicSave7.setVisibility(View.VISIBLE);
+            musicSave7.setClickable(true);
+        }
+        else{
+            musicSave7.setVisibility(View.GONE);
+            musicSave7.setClickable(false);
+        }
+
+        if (musicAutumn.isPlaying()) {
+            musicSave8.setVisibility(View.VISIBLE);
+            musicSave8.setClickable(false);
+        }
+        else{
+            musicSave8.setVisibility(View.GONE);
+            musicSave1.setClickable(true);
+        }
+
+        if (musicWave.isPlaying()) {
+            musicSave9.setVisibility(View.VISIBLE);
+            musicSave9.setClickable(true);
+        }
+        else{
+            musicSave9.setVisibility(View.GONE);
+            musicSave9.setClickable(false);
+        }
+
+        if (musicThunderStorm.isPlaying()) {
+            musicSave10.setVisibility(View.VISIBLE);
+            musicSave10.setClickable(true);
+        }
+        else{
+            musicSave10.setVisibility(View.GONE);
+            musicSave10.setClickable(false);
+        }
+
+        if (musicSnow.isPlaying()) {
+            musicSave11.setVisibility(View.VISIBLE);
+            musicSave11.setClickable(true);
+        }
+        else{
+            musicSave11.setVisibility(View.GONE);
+            musicSave11.setClickable(false);
+        }
+
+        if (musicDolphin.isPlaying()) {
+            musicSave12.setVisibility(View.VISIBLE);
+            musicSave12.setClickable(true);
+        }
+        else{
+            musicSave12.setVisibility(View.GONE);
+            musicSave12.setClickable(false);
+        }
+
+        if (musicSeagull.isPlaying()) {
+            musicSave13.setVisibility(View.VISIBLE);
+            musicSave13.setClickable(true);
+        }
+        else{
+            musicSave13.setVisibility(View.GONE);
+            musicSave13.setClickable(false);
+        }
+
+        if (musicCat.isPlaying()) {
+            musicSave14.setVisibility(View.VISIBLE);
+            musicSave14.setClickable(true);
+        }
+        else{
+            musicSave14.setVisibility(View.GONE);
+            musicSave14.setClickable(false);
+        }
+
+        if (musicSteps.isPlaying()) {
+            musicSave15.setVisibility(View.VISIBLE);
+            musicSave15.setClickable(true);
+        }
+        else{
+            musicSave15.setVisibility(View.GONE);
+            musicSave15.setClickable(false);
+        }
+
+        if (musicStreet.isPlaying()) {
+            musicSave16.setVisibility(View.VISIBLE);
+            musicSave16.setClickable(true);
+        }
+        else{
+            musicSave16.setVisibility(View.GONE);
+            musicSave16.setClickable(false);
+        }
+
+        if (musicWhale.isPlaying()) {
+            musicSave17.setVisibility(View.VISIBLE);
+            musicSave17.setClickable(true);
+        }
+        else{
+            musicSave17.setVisibility(View.GONE);
+            musicSave17.setClickable(false);
+        }
+
+        if (musicTrain.isPlaying()) {
+            musicSave18.setVisibility(View.VISIBLE);
+            musicSave18.setClickable(false);
+        }
+        else{
+            musicSave18.setVisibility(View.GONE);
+            musicSave18.setClickable(false);
+        }
+
+        if (musicSpace.isPlaying()) {
+            musicSave19.setVisibility(View.VISIBLE);
+            musicSave19.setClickable(true);
+        }
+        else{
+            musicSave19.setVisibility(View.GONE);
+            musicSave19.setClickable(false);
+        }
+
+        if (musicPianino.isPlaying()) {
+            musicSave20.setVisibility(View.VISIBLE);
+            musicSave20.setClickable(true);
+
+        }
+        else{
+            musicSave20.setVisibility(View.GONE);
+            musicSave20.setClickable(false);
+        }
+
+        if (musicGuitar.isPlaying()) {
+            musicSave21.setVisibility(View.VISIBLE);
+            musicSave21.setClickable(true);
+        }
+        else{
+            musicSave21.setVisibility(View.GONE);
+            musicSave21.setClickable(false);
+        }
 
         musicBox1 = findViewById(R.id.musicBox1);
         musicBox2 = findViewById(R.id.musicBox2);
@@ -626,21 +841,94 @@ public class MusicActivity extends AppCompatActivity {
         Animation animation20 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation21 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
+        Animation animationB = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB3 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB4 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB5 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB6 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB7 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB8 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB9 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB10 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB11 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB12 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB13 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB14 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB15 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB16 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB17 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB18 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB19 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB20 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animationB21 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
-        final LinearLayout homeLayout = findViewById(R.id.homeLayout);
-        final LinearLayout musicLayout = findViewById(R.id.musicLayout);
-        final LinearLayout settingsLayout = findViewById(R.id.settingsLayout);
-        final LinearLayout notesLayout = findViewById(R.id.notesLayout);
+        musicSave1 = findViewById(R.id.musicSave1);
+        musicSave2 = findViewById(R.id.musicSave2);
+        musicSave3 = findViewById(R.id.musicSave3);
+        musicSave4 = findViewById(R.id.musicSave4);
+        musicSave5 = findViewById(R.id.musicSave5);
+        musicSave6 = findViewById(R.id.musicSave6);
+        musicSave7 = findViewById(R.id.musicSave7);
+        musicSave8 = findViewById(R.id.musicSave8);
+        musicSave9 = findViewById(R.id.musicSave9);
+        musicSave10 = findViewById(R.id.musicSave10);
+        musicSave11 = findViewById(R.id.musicSave11);
+        musicSave12 = findViewById(R.id.musicSave12);
+        musicSave13 = findViewById(R.id.musicSave13);
+        musicSave14 = findViewById(R.id.musicSave14);
+        musicSave15 = findViewById(R.id.musicSave15);
+        musicSave16 = findViewById(R.id.musicSave16);
+        musicSave17 = findViewById(R.id.musicSave17);
+        musicSave18 = findViewById(R.id.musicSave18);
+        musicSave19 = findViewById(R.id.musicSave19);
+        musicSave20 = findViewById(R.id.musicSave20);
+        musicSave21 = findViewById(R.id.musicSave21);
 
-        final TextView homeTxt = findViewById(R.id.homeTxt);
-        final TextView musicTxt = findViewById(R.id.musicTxt);
-        final TextView settingsTxt = findViewById(R.id.settingsTxt);
-        final TextView notesTxt = findViewById(R.id.notesTxt);
+        musicSave1.setVisibility(View.GONE);
+        musicSave2.setVisibility(View.GONE);
+        musicSave3.setVisibility(View.GONE);
+        musicSave4.setVisibility(View.GONE);
+        musicSave5.setVisibility(View.GONE);
+        musicSave6.setVisibility(View.GONE);
+        musicSave7.setVisibility(View.GONE);
+        musicSave8.setVisibility(View.GONE);
+        musicSave9.setVisibility(View.GONE);
+        musicSave10.setVisibility(View.GONE);
+        musicSave11.setVisibility(View.GONE);
+        musicSave12.setVisibility(View.GONE);
+        musicSave13.setVisibility(View.GONE);
+        musicSave14.setVisibility(View.GONE);
+        musicSave15.setVisibility(View.GONE);
+        musicSave16.setVisibility(View.GONE);
+        musicSave17.setVisibility(View.GONE);
+        musicSave18.setVisibility(View.GONE);
+        musicSave19.setVisibility(View.GONE);
+        musicSave20.setVisibility(View.GONE);
+        musicSave21.setVisibility(View.GONE);
 
-        final ImageView homeImage = findViewById(R.id.homeImage);
-        final ImageView musicImage = findViewById(R.id.musicImage);
-        final ImageView settingsImage = findViewById(R.id.settingsImage);
-        final ImageView notesImage = findViewById(R.id.notesImage);
+        musicSave1.setClickable(false);
+        musicSave2.setClickable(false);
+        musicSave3.setClickable(false);
+        musicSave4.setClickable(false);
+        musicSave5.setClickable(false);
+        musicSave6.setClickable(false);
+        musicSave7.setClickable(false);
+        musicSave8.setClickable(false);
+        musicSave9.setClickable(false);
+        musicSave10.setClickable(false);
+        musicSave11.setClickable(false);
+        musicSave12.setClickable(false);
+        musicSave13.setClickable(false);
+        musicSave14.setClickable(false);
+        musicSave15.setClickable(false);
+        musicSave16.setClickable(false);
+        musicSave17.setClickable(false);
+        musicSave18.setClickable(false);
+        musicSave19.setClickable(false);
+        musicSave20.setClickable(false);
+        musicSave21.setClickable(false);
 
         // лес
         musicForest = MediaPlayer.create(this, R.raw.forest);
@@ -685,168 +973,6 @@ public class MusicActivity extends AppCompatActivity {
         // гитара
         musicGuitar = MediaPlayer.create(this, R.raw.guitar);
 
-        homeTxt.setVisibility(View.GONE);
-        settingsTxt.setVisibility(View.GONE);
-        notesTxt.setVisibility(View.GONE);
-
-        homeImage.setImageResource(R.drawable.ic_home);
-        settingsImage.setImageResource(R.drawable.ic_settings);
-        notesImage.setImageResource(R.drawable.ic_notes);
-
-        homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-        settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-        notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-        musicTxt.setVisibility(View.VISIBLE);
-        musicImage.setImageResource(R.drawable.ic_music_selected);
-        musicLayout.setBackgroundResource(R.drawable.round_back_music);
-
-        ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-        scaleAnimation.setDuration(200);
-        scaleAnimation.setFillAfter(true);
-        musicLayout.startAnimation(scaleAnimation);
-
-        homeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (selectedTab != 1) {
-
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    overridePendingTransition(0, 0);
-
-                    musicTxt.setVisibility(View.GONE);
-                    settingsTxt.setVisibility(View.GONE);
-                    notesTxt.setVisibility(View.GONE);
-
-                    musicImage.setImageResource(R.drawable.ic_music);
-                    settingsImage.setImageResource(R.drawable.ic_settings);
-                    notesImage.setImageResource(R.drawable.ic_notes);
-
-                    musicLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-                    homeTxt.setVisibility(View.VISIBLE);
-                    homeImage.setImageResource(R.drawable.ic_home_selected);
-                    homeLayout.setBackgroundResource(R.drawable.round_back_home);
-
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-                    scaleAnimation.setDuration(200);
-                    scaleAnimation.setFillAfter(true);
-                    homeLayout.startAnimation(scaleAnimation);
-
-                    finish();
-
-                    selectedTab = 1;
-                }
-
-            }
-        });
-        musicLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (selectedTab != 2) {
-
-                    homeTxt.setVisibility(View.GONE);
-                    settingsTxt.setVisibility(View.GONE);
-                    notesTxt.setVisibility(View.GONE);
-
-                    homeImage.setImageResource(R.drawable.ic_home);
-                    settingsImage.setImageResource(R.drawable.ic_settings);
-                    notesImage.setImageResource(R.drawable.ic_notes);
-
-                    homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-                    musicTxt.setVisibility(View.VISIBLE);
-                    musicImage.setImageResource(R.drawable.ic_music_selected);
-                    musicLayout.setBackgroundResource(R.drawable.round_back_music);
-
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-                    scaleAnimation.setDuration(200);
-                    scaleAnimation.setFillAfter(true);
-                    musicLayout.startAnimation(scaleAnimation);
-
-                    selectedTab = 2;
-                }
-
-            }
-        });
-        notesLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (selectedTab != 3) {
-
-                    startActivity(new Intent(getApplicationContext(), NotesActivity.class));
-                    overridePendingTransition(0, 0);
-
-                    homeTxt.setVisibility(View.GONE);
-                    musicTxt.setVisibility(View.GONE);
-                    settingsTxt.setVisibility(View.GONE);
-
-                    homeImage.setImageResource(R.drawable.ic_home);
-                    musicImage.setImageResource(R.drawable.ic_music);
-                    settingsImage.setImageResource(R.drawable.ic_settings);
-
-                    homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    musicLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-                    notesTxt.setVisibility(View.VISIBLE);
-                    notesImage.setImageResource(R.drawable.ic_notes_selected);
-                    notesLayout.setBackgroundResource(R.drawable.round_back_notes);
-
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-                    scaleAnimation.setDuration(200);
-                    scaleAnimation.setFillAfter(true);
-                    notesLayout.startAnimation(scaleAnimation);
-
-                    finish();
-
-                    selectedTab = 3;
-                }
-            }
-        });
-        settingsLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (selectedTab != 4) {
-
-                    startActivity(new Intent(getApplicationContext(), MainActivity2.class));
-                    overridePendingTransition(0, 0);
-
-                    homeTxt.setVisibility(View.GONE);
-                    musicTxt.setVisibility(View.GONE);
-                    notesTxt.setVisibility(View.GONE);
-
-                    homeImage.setImageResource(R.drawable.ic_home);
-                    musicImage.setImageResource(R.drawable.ic_music);
-                    notesImage.setImageResource(R.drawable.ic_notes);
-
-                    homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    musicLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-                    settingsTxt.setVisibility(View.VISIBLE);
-                    settingsImage.setImageResource(R.drawable.ic_settings_selected);
-                    settingsLayout.setBackgroundResource(R.drawable.round_back_alarm);
-
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-                    scaleAnimation.setDuration(200);
-                    scaleAnimation.setFillAfter(true);
-                    settingsLayout.startAnimation(scaleAnimation);
-
-                    finish();
-
-                    selectedTab = 4;
-                }
-
-            }
-        });
         musicButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -3334,7 +3460,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               soundStopButton1(musicForest);
+                soundStopButton1(musicForest);
             }
         });
         pause2.setOnClickListener(new View.OnClickListener() {
@@ -3432,7 +3558,7 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                 soundStopButton15(musicSteps);
+                soundStopButton15(musicSteps);
             }
         });
         pause16.setOnClickListener(new View.OnClickListener() {
@@ -3478,8 +3604,147 @@ public class MusicActivity extends AppCompatActivity {
             }
         });
 
+
+        musicSave1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave1.startAnimation(animationB1);
+                Intent intent = new Intent(MusicSleepActivity.this, AlarmSleepActivity.class);
+                intent.putExtra("music1", "Звуки леса");
+                startActivity(intent);
+            }
+        });
+        musicSave2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave2.startAnimation(animationB2);
+                Intent intent = new Intent(MusicSleepActivity.this, AlarmSleepActivity.class);
+                intent.putExtra("music2", "Звуки журчание ручья");
+                startActivity(intent);
+            }
+        });
+        musicSave3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave3.startAnimation(animationB3);
+                Intent intent = new Intent(MusicSleepActivity.this, AlarmSleepActivity.class);
+                intent.putExtra("music3", "Звуки дождя");
+                startActivity(intent);
+            }
+        });
+        musicSave4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave4.startAnimation(animationB4);
+            }
+        });
+        musicSave5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave5.startAnimation(animationB5);
+            }
+        });
+        musicSave6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave6.startAnimation(animationB6);
+            }
+        });
+        musicSave7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave7.startAnimation(animationB7);
+            }
+        });
+        musicSave8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave8.startAnimation(animationB8);
+            }
+        });
+        musicSave9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave9.startAnimation(animationB9);
+            }
+        });
+        musicSave10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave10.startAnimation(animationB10);
+            }
+        });
+        musicSave11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave11.startAnimation(animationB11);
+            }
+        });
+        musicSave12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave12.startAnimation(animationB12);
+            }
+        });
+        musicSave13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave13.startAnimation(animationB13);
+            }
+        });
+        musicSave14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave14.startAnimation(animationB14);
+            }
+        });
+        musicSave15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave15.startAnimation(animationB15);
+            }
+        });
+        musicSave16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave16.startAnimation(animationB16);
+            }
+        });
+        musicSave17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave17.startAnimation(animationB17);
+            }
+        });
+        musicSave18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave18.startAnimation(animationB18);
+            }
+        });
+        musicSave19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave19.startAnimation(animationB19);
+            }
+        });
+        musicSave20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave20.startAnimation(animationB20);
+            }
+        });
+        musicSave21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                musicSave21.startAnimation(animationB21);
+            }
+        });
+
+
     }
-    private void button1Pressed(){
+
+    private void button1Pressed() {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean isButton1Pressed = prefs.getBoolean("button_1_pressed", false);
         if (isButton1Pressed) {

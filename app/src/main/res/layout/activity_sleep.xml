@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text=""
+        android:textColor="@color/black"
+        android:textSize="55sp"
         tools:layout_editor_absoluteX="186dp"
         tools:layout_editor_absoluteY="146dp" />
 

@@ -1,14 +1,17 @@
 package com.example.moon;
 
 import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.text.format.DateFormat;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,7 +23,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
@@ -33,22 +38,34 @@ public class MainActivity extends AppCompatActivity {
 
     private int selectedTab = 1;
 
-    private TextView hour, hourSleep, notification;
-    private Button setAlarm, setAlarmSleep;
-    Calendar calendar, calendar2;
+    PendingIntent pendingIntent;
+    NotificationCompat.Builder builder = null;
+    Notification notification;
+    NotificationManager notificationManager;
+    NotificationChannel notificationChannel = null;
+    private TextView hour, hourSleep, hourNotification;
+    private Button setAlarm, setAlarmSleep, setNotification;
+    Calendar calendar, calendar2, calendar3;
     SimpleDateFormat simpleDateFormat;
+    EditText editTextNotification;
 
     SharedPreferences sPref;
 
     final String SAVED_HOURS = "saved_hours";
     final String SAVED_HOURS_SLEEP = "saved_hours_sleep";
+    final String SAVED_HOURS_NOTIFICATION = "saved_hours_notification";
+    final String SAVED_TEXT_NOTIFICATION = "saved_text_notification";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        notification = findViewById(R.id.notification);
+        editTextNotification = findViewById(R.id.editTextNotification);
+
+        hourNotification = findViewById(R.id.hourNotification);
+
+        setNotification = findViewById(R.id.setNotification);
 
         setAlarmSleep = findViewById(R.id.setAlarmSleep);
 
@@ -58,10 +75,20 @@ public class MainActivity extends AppCompatActivity {
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
         hour = findViewById(R.id.hour);
 
         hourSleep = findViewById(R.id.hourSleep);
+
+        Intent intent = new Intent(getApplicationContext(), AlarmSleepActivity.class);
+        pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        if (editTextNotification.getText().toString().equals("")){
+            builder.setContentText("Пора спать!");
+        }
+
+        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -77,6 +104,16 @@ public class MainActivity extends AppCompatActivity {
         final ImageView musicImage = findViewById(R.id.musicImage);
         final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            notificationChannel = new NotificationChannel("ID", "Name", importance);
+            notificationManager.createNotificationChannel(notificationChannel);
+            builder = new NotificationCompat.Builder(getApplicationContext(), notificationChannel.getId());
+        }
+        else {
+            builder = new NotificationCompat.Builder(getApplicationContext());
+        }
 
         simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
@@ -298,7 +335,48 @@ public class MainActivity extends AppCompatActivity {
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
 
         });
+        setNotification.setOnClickListener(v -> {
+            MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
+                    .setTimeFormat(TimeFormat.CLOCK_24H)
+                    .setHour(12)
+                    .setMinute(0)
+                    .setTitleText("Выберите время уведомления")
+                    .build();
+            setNotification.startAnimation(animation2);
 
+            materialTimePicker.addOnPositiveButtonClickListener(view1 -> {
+                calendar3 = Calendar.getInstance();
+                calendar3.set(Calendar.SECOND, 0);
+                calendar3.set(Calendar.MILLISECOND, 0);
+                calendar3.set(Calendar.MINUTE, materialTimePicker.getMinute());
+                calendar3.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
+
+                if (calendar3.getTimeInMillis() <= System.currentTimeMillis()) {
+                    calendar3.add(Calendar.DAY_OF_YEAR, 1);
+                }
+
+                Toast.makeText(this, "Увеомление установлено на " + simpleDateFormat.format(calendar2.getTime()), Toast.LENGTH_SHORT).show();
+
+                hourNotification.setText("     " + simpleDateFormat.format(calendar3.getTime()));
+
+                builder.setContentIntent(pendingIntent)
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setWhen(calendar3.getTimeInMillis())
+                        .setContentTitle("Напоминание")
+                        .setContentText(editTextNotification.getText().toString())
+                        .setAutoCancel(true)
+                        .setPriority(NotificationCompat.PRIORITY_MAX);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
+                    notification = builder.build();
+                }
+                notification.defaults = Notification.DEFAULT_ALL;
+                notificationManager.notify(101, notification);
+
+            });
+            materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
+
+        });
 
     }
     public PendingIntent getAlarmInfoPendingIntent() {
@@ -329,17 +407,25 @@ public class MainActivity extends AppCompatActivity {
     public void saveText() {
         String text = hour.getText().toString();
         String textSleep = hourSleep.getText().toString();
+        String textNotification = hourNotification.getText().toString();
+        String textEditTextNotification = editTextNotification.getText().toString();
         // сохраняем его в настройках
         SharedPreferences.Editor prefEditor = sPref.edit();
         prefEditor.putString(SAVED_HOURS, text);
         prefEditor.putString(SAVED_HOURS_SLEEP, textSleep);
+        prefEditor.putString(SAVED_HOURS_NOTIFICATION, textNotification);
+        prefEditor.putString(SAVED_TEXT_NOTIFICATION, textEditTextNotification);
         prefEditor.apply();
     }
     public void loadText() {
         String text = sPref.getString(SAVED_HOURS, "");
         String textSleep = sPref.getString(SAVED_HOURS_SLEEP, "");
+        String textNotification = sPref.getString(SAVED_HOURS_NOTIFICATION, "");
+        String textEditTextNotification = sPref.getString(SAVED_TEXT_NOTIFICATION, "");
         hour.setText(text);
         hourSleep.setText(textSleep);
+        hourNotification.setText(textNotification);
+        //textEditTextNotification.setText(textEditTextNotification);
     }
     @Override
     protected void onPause() {
@@ -347,3 +433,4 @@ public class MainActivity extends AppCompatActivity {
         saveText();
     }
 }
+
