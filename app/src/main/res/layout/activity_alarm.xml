@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,57 +7,101 @@
     android:background="#121212"
     tools:context=".AlarmActivity">
 
-    <TextView
-        android:layout_width="140dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="113dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="493dp"
-        android:text="Подъем!!!"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp">
+            android:id="@+id/smileLayout"
+            android:layout_width="85dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/alarm_button_while"
+            android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/avatarButton"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="0dp"
-                android:background="@drawable/round_back_settings"
-                android:drawableStart="@drawable/ic_close"
-                android:padding="9dp"
-                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                android:id="@+id/smileButton"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_back_button_alarm_while"
+                android:drawableStart="@drawable/ic_smile"
+                android:paddingStart="15dp"
+                android:textColor="#CDE8E6E6"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/openSmileLayout"
+            android:layout_width="85dp"
+            android:layout_height="451dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/alarm_sleep_background_while"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="425dp"
+                android:background="@drawable/round_back_while"
+                android:textColor="#CDE8E6E6"
+                android:textSize="17sp"
+                android:textStyle="italic" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/settingsButton"
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="305dp"
-                android:background="@drawable/round_back_settings"
-                android:drawableStart="@drawable/ic_save"
-                android:padding="9dp"
-                tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                android:id="@+id/closeSmileButton"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/ic_arrow_up_alarm" />
 
         </RelativeLayout>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="2dp"
+                android:elevation="1dp"
+                android:padding="12dp"
+                android:paddingStart="14dp"
+                android:src="@drawable/ic_alarm_sun" />
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/round_back_while_settings"
+                android:paddingStart="114dp"
+                android:paddingTop="15dp"
+                android:text="Пора вставать"
+                android:textColor="#E6B500"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

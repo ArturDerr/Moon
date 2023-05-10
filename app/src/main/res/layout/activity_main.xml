@@ -178,7 +178,7 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout13"
                 android:layout_width="340dp"
-                android:layout_height="245dp"
+                android:layout_height="163dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/round_back_while"
                 android:orientation="horizontal"
@@ -190,7 +190,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="275dp"
-                    android:layout_marginTop="180dp"
+                    android:layout_marginTop="100dp"
                     android:background="@drawable/round_back_while_settings"
                     android:drawableStart="@drawable/ic_question"
                     android:paddingStart="7dp"
@@ -211,6 +211,14 @@
                     android:textSize="12sp"
                     android:textStyle="bold"
                     android:translationZ="4dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/alarmRecButton"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/non_background" />
 
                 <TextView
                     android:layout_width="110dp"
@@ -245,31 +253,6 @@
                     android:padding="8dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/setAlarmSleep"
-                    android:layout_width="175dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="70dp"
-                    android:layout_marginTop="145dp"
-                    android:background="@drawable/background_watch"
-                    android:padding="8dp"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-                <TextView
-                    android:layout_width="107dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="105dp"
-                    android:layout_marginTop="135dp"
-                    android:background="@drawable/round_back_while_settings"
-                    android:elevation="26dp"
-                    android:paddingStart="16dp"
-                    android:paddingTop="6dp"
-                    android:text="Отход ко сну"
-                    android:textColor="#9575CD"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:translationZ="4dp" />
-
 
                 <TextView
                     android:id="@+id/hour"
@@ -283,30 +266,12 @@
                     android:textSize="21sp"
                     android:textStyle="" />
 
-                <TextView
-                    android:id="@+id/hourSleep"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="108dp"
-                    android:layout_marginTop="167dp"
-                    android:elevation="3dp"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textSize="21sp" />
-
                 <ImageView
                     android:layout_width="37dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="78dp"
                     android:layout_marginTop="85dp"
                     android:src="@drawable/ic_sun" />
-
-                <ImageView
-                    android:layout_width="37dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="78dp"
-                    android:layout_marginTop="165dp"
-                    android:src="@drawable/ic_bed" />
 
             </RelativeLayout>
 
@@ -329,6 +294,7 @@
                     android:src="@drawable/ic_night" />
 
                 <TextView
+                    android:id="@+id/textNotificationEdit"
                     android:layout_width="300dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="5dp"
@@ -337,6 +303,19 @@
                     android:paddingStart="16dp"
                     android:paddingTop="9dp"
                     android:textColor="#48FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:paddingStart="16dp"
+                    android:paddingTop="9dp"
+                    android:text="Напоминание"
+                    android:textColor="#CDE8E6E6"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -363,20 +342,6 @@
                     android:src="@drawable/ic_notifications"
                     android:padding="8dp"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-                <TextView
-                    android:id="@id/hourNotification"
-                    android:layout_width="130dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/button_oval"
-                    android:paddingStart="16dp"
-                    android:paddingTop="9dp"
-                    android:text="Напоминание"
-                    android:textColor="#CDE8E6E6"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/setNotification"

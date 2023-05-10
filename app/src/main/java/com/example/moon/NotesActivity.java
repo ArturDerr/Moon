@@ -170,7 +170,7 @@ public class NotesActivity extends AppCompatActivity {
 
                 if (selectedTab != 4) {
 
-                    startActivity(new Intent(getApplicationContext(), MainActivity2.class));
+                    startActivity(new Intent(getApplicationContext(), RecommendationActivity.class));
                     overridePendingTransition(0, 0);
 
                     homeTxt.setVisibility(View.GONE);

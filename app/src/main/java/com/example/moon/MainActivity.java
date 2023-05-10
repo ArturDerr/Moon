@@ -10,8 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
+import android.view.ContentInfo;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -23,10 +22,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import com.example.moon.databinding.ActivityMainBinding;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
 
@@ -38,21 +38,18 @@ public class MainActivity extends AppCompatActivity {
 
     private int selectedTab = 1;
 
+    NotificationCompat.Builder builder;
     PendingIntent pendingIntent;
-    NotificationCompat.Builder builder = null;
-    Notification notification;
-    NotificationManager notificationManager;
-    NotificationChannel notificationChannel = null;
-    private TextView hour, hourSleep, hourNotification;
-    private Button setAlarm, setAlarmSleep, setNotification;
-    Calendar calendar, calendar2, calendar3;
+    private TextView hour, hourNotification, textNotificationEdit;
+    private Button setAlarm, alarmRecButton, setNotification;
+    Calendar calendar, calendar3;
     SimpleDateFormat simpleDateFormat;
     EditText editTextNotification;
+    AlarmManager alarmManager;
 
     SharedPreferences sPref;
 
     final String SAVED_HOURS = "saved_hours";
-    final String SAVED_HOURS_SLEEP = "saved_hours_sleep";
     final String SAVED_HOURS_NOTIFICATION = "saved_hours_notification";
     final String SAVED_TEXT_NOTIFICATION = "saved_text_notification";
 
@@ -61,13 +58,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        createNotificationChannel();
+
+        textNotificationEdit = findViewById(R.id.textNotificationEdit);
+
+        alarmRecButton = findViewById(R.id.alarmRecButton);
+
         editTextNotification = findViewById(R.id.editTextNotification);
 
         hourNotification = findViewById(R.id.hourNotification);
 
         setNotification = findViewById(R.id.setNotification);
-
-        setAlarmSleep = findViewById(R.id.setAlarmSleep);
 
         setAlarm = findViewById(R.id.setAlarm);
 
@@ -76,19 +77,11 @@ public class MainActivity extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
         hour = findViewById(R.id.hour);
 
-        hourSleep = findViewById(R.id.hourSleep);
-
         Intent intent = new Intent(getApplicationContext(), AlarmSleepActivity.class);
-        pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-
-        if (editTextNotification.getText().toString().equals("")){
-            builder.setContentText("Пора спать!");
-        }
-
-        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
@@ -104,16 +97,6 @@ public class MainActivity extends AppCompatActivity {
         final ImageView musicImage = findViewById(R.id.musicImage);
         final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            notificationChannel = new NotificationChannel("ID", "Name", importance);
-            notificationManager.createNotificationChannel(notificationChannel);
-            builder = new NotificationCompat.Builder(getApplicationContext(), notificationChannel.getId());
-        }
-        else {
-            builder = new NotificationCompat.Builder(getApplicationContext());
-        }
 
         simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
@@ -229,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (selectedTab != 4) {
 
-                    startActivity(new Intent(getApplicationContext(), MainActivity2.class));
+                    startActivity(new Intent(getApplicationContext(), RecommendationActivity.class));
                     overridePendingTransition(0, 0);
 
                     homeTxt.setVisibility(View.GONE);
@@ -263,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
         setAlarm.setOnClickListener(v -> {
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
                     .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(12)
+                    .setHour(9)
                     .setMinute(0)
                     .setTitleText("Выберите время")
                     .build();
@@ -277,63 +260,27 @@ public class MainActivity extends AppCompatActivity {
                 calendar.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
 
                 if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
-                    calendar.add(Calendar.DAY_OF_YEAR, 1);
+                    calendar.add(Calendar.DAY_OF_YEAR, 1); // Проверить!!!!!!!!!!!!!!! Либо 0 либо 1
                 }
 
                 AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
                 AlarmManager.AlarmClockInfo alarmClockInfo = new AlarmManager.AlarmClockInfo(calendar.getTimeInMillis(), getAlarmInfoPendingIntent());
 
-                //alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent()); // ПРОВЕРИТЬ!!!!!!!
+                alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent()); // ПРОВЕРИТЬ!!!!!!!
 
-                alarmManager.setWindow(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), calendar.getTimeInMillis(), getAlarmActionPendingIntent());
+                //alarmManager.setWindow(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), calendar.getTimeInMillis(), getAlarmActionPendingIntent());
 
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24 * 60 * 60 * 1000, getAlarmActionPendingIntent());
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24 * 60 * 60 * 1000, getAlarmActionPendingIntent());
 
                 Toast.makeText(this, "Будильник установлен на " + simpleDateFormat.format(calendar.getTime()), Toast.LENGTH_SHORT).show();
 
                 hour.setText("     " + simpleDateFormat.format(calendar.getTime()));
 
-            });
-            materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
-        });
-        setAlarmSleep.setOnClickListener(v -> {
-            MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
-                    .setTimeFormat(TimeFormat.CLOCK_24H)
-                    .setHour(12)
-                    .setMinute(0)
-                    .setTitleText("Выберите время")
-                    .build();
-            setAlarmSleep.startAnimation(animation1);
-
-            materialTimePicker.addOnPositiveButtonClickListener(view1 -> {
-                calendar2 = Calendar.getInstance();
-                calendar2.set(Calendar.SECOND, 0);
-                calendar2.set(Calendar.MILLISECOND, 0);
-                calendar2.set(Calendar.MINUTE, materialTimePicker.getMinute());
-                calendar2.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
-
-                if (calendar2.getTimeInMillis() <= System.currentTimeMillis()) {
-                    calendar2.add(Calendar.DAY_OF_YEAR, 1);
-                }
-
-                AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-
-                AlarmManager.AlarmClockInfo alarmClockInfo = new AlarmManager.AlarmClockInfo(calendar2.getTimeInMillis(), getAlarmSleepInfoPendingIntent());
-
-                //alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent()); // ПРОВЕРИТЬ!!!!!!!
-
-                alarmManager.setWindow(AlarmManager.RTC_WAKEUP, calendar2.getTimeInMillis(), calendar2.getTimeInMillis(), getAlarmSleepActionPendingIntent());
-
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar2.getTimeInMillis(), 24 * 60 * 60 * 1000, getAlarmSleepActionPendingIntent());
-
-                Toast.makeText(this, "Будильник установлен на " + simpleDateFormat.format(calendar2.getTime()), Toast.LENGTH_SHORT).show();
-
-                hourSleep.setText("     " + simpleDateFormat.format(calendar2.getTime()));
+                intentAlarm();
 
             });
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
-
         });
         setNotification.setOnClickListener(v -> {
             MaterialTimePicker materialTimePicker = new MaterialTimePicker.Builder()
@@ -351,31 +298,26 @@ public class MainActivity extends AppCompatActivity {
                 calendar3.set(Calendar.MINUTE, materialTimePicker.getMinute());
                 calendar3.set(Calendar.HOUR_OF_DAY, materialTimePicker.getHour());
 
+                alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                Intent intentAlarm = new Intent(this, AlarmReceiver.class);
+                pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, intentAlarm, PendingIntent.FLAG_IMMUTABLE);
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar3.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+
                 if (calendar3.getTimeInMillis() <= System.currentTimeMillis()) {
-                    calendar3.add(Calendar.DAY_OF_YEAR, 1);
+                    calendar3.add(Calendar.DAY_OF_YEAR, 1); // Проверить!!!!!!!!!!!!!!! Либо 0 либо 1
                 }
 
-                Toast.makeText(this, "Увеомление установлено на " + simpleDateFormat.format(calendar2.getTime()), Toast.LENGTH_SHORT).show();
-
-                hourNotification.setText("     " + simpleDateFormat.format(calendar3.getTime()));
-
-                builder.setContentIntent(pendingIntent)
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setWhen(calendar3.getTimeInMillis())
-                        .setContentTitle("Напоминание")
-                        .setContentText(editTextNotification.getText().toString())
-                        .setAutoCancel(true)
-                        .setPriority(NotificationCompat.PRIORITY_MAX);
-
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
-                    notification = builder.build();
-                }
-                notification.defaults = Notification.DEFAULT_ALL;
-                notificationManager.notify(101, notification);
+                Toast.makeText(this, "Уведомление установлено на " + simpleDateFormat.format(calendar3.getTime()), Toast.LENGTH_SHORT).show();
 
             });
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
 
+        });
+        alarmRecButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alarmRecButton.startAnimation(animation3);
+            }
         });
 
     }
@@ -388,44 +330,49 @@ public class MainActivity extends AppCompatActivity {
         // потом отправим данные в броадкаст ресиевер
         Intent intent = new Intent(this, AlarmActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (Build.VERSION.SDK_INT >= 16)intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
         // тут FLAG_IMMUTABLE
         return PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_IMMUTABLE);
     }
-    // Будильник ночь //
-    public PendingIntent getAlarmSleepInfoPendingIntent() {
-        Intent alarmInfoIntentSleep = new Intent(this, MainActivity.class);
-        alarmInfoIntentSleep.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        return PendingIntent.getActivity(this, 2, alarmInfoIntentSleep, PendingIntent.FLAG_IMMUTABLE);
-    }
-    public PendingIntent getAlarmSleepActionPendingIntent() {
-        // потом отправим данные в броадкаст ресиевер
-        Intent intent1 = new Intent(this, AlarmSleepActivity.class);
-        intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        // тут FLAG_IMMUTABLE
-        return PendingIntent.getActivity(this, 3, intent1, PendingIntent.FLAG_IMMUTABLE);
-    }
     public void saveText() {
         String text = hour.getText().toString();
-        String textSleep = hourSleep.getText().toString();
         String textNotification = hourNotification.getText().toString();
         String textEditTextNotification = editTextNotification.getText().toString();
         // сохраняем его в настройках
         SharedPreferences.Editor prefEditor = sPref.edit();
         prefEditor.putString(SAVED_HOURS, text);
-        prefEditor.putString(SAVED_HOURS_SLEEP, textSleep);
         prefEditor.putString(SAVED_HOURS_NOTIFICATION, textNotification);
         prefEditor.putString(SAVED_TEXT_NOTIFICATION, textEditTextNotification);
         prefEditor.apply();
     }
     public void loadText() {
         String text = sPref.getString(SAVED_HOURS, "");
-        String textSleep = sPref.getString(SAVED_HOURS_SLEEP, "");
         String textNotification = sPref.getString(SAVED_HOURS_NOTIFICATION, "");
         String textEditTextNotification = sPref.getString(SAVED_TEXT_NOTIFICATION, "");
         hour.setText(text);
-        hourSleep.setText(textSleep);
         hourNotification.setText(textNotification);
-        //textEditTextNotification.setText(textEditTextNotification);
+        textNotificationEdit.setText(textEditTextNotification);
+    }
+    public void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            int imp = NotificationManager.IMPORTANCE_HIGH;
+            CharSequence name = "notif";
+            String desc = "Channel";
+            NotificationChannel channel = new NotificationChannel("notification", name, imp);
+            channel.setDescription(desc);
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+
+        }
+        else {
+            builder = new NotificationCompat.Builder(getApplicationContext());
+        }
+    }
+    public void intentAlarm() {
+        Intent intent = new Intent(MainActivity.this, SleepActivity.class);
+        intent.putExtra("hour", hour.getText().toString());
+        startActivity(intent);
     }
     @Override
     protected void onPause() {

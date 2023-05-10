@@ -447,8 +447,6 @@ public class MusicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
 
-        button1Pressed();
-
         musicBox1 = findViewById(R.id.musicBox1);
         musicBox2 = findViewById(R.id.musicBox2);
         musicBox3 = findViewById(R.id.musicBox3);
@@ -816,7 +814,7 @@ public class MusicActivity extends AppCompatActivity {
 
                 if (selectedTab != 4) {
 
-                    startActivity(new Intent(getApplicationContext(), MainActivity2.class));
+                    startActivity(new Intent(getApplicationContext(), RecommendationActivity.class));
                     overridePendingTransition(0, 0);
 
                     homeTxt.setVisibility(View.GONE);
@@ -855,8 +853,8 @@ public class MusicActivity extends AppCompatActivity {
 
                 musicButton1.startAnimation(animation);
 
-                final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-                prefs.edit().putBoolean("button_1_pressed", true).apply();
+                //final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MusicActivity.this);
+                //prefs.edit().putBoolean("button_1_pressed", true).apply();
 
                 image1.setVisibility(View.INVISIBLE);
                 image2.setVisibility(View.VISIBLE);
@@ -3479,120 +3477,10 @@ public class MusicActivity extends AppCompatActivity {
         });
 
     }
-    private void button1Pressed(){
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean isButton1Pressed = prefs.getBoolean("button_1_pressed", false);
-        if (isButton1Pressed) {
+    //private void button1Pressed(){
+        //final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //boolean isButton1Pressed = prefs.getBoolean("button_1_pressed", false);
+        //if (isButton1Pressed)
 
-            image1.setVisibility(View.INVISIBLE);
-            image2.setVisibility(View.VISIBLE);
-            image3.setVisibility(View.VISIBLE);
-            image5.setVisibility(View.VISIBLE);
-            image4.setVisibility(View.VISIBLE);
-            image6.setVisibility(View.VISIBLE);
-            image7.setVisibility(View.VISIBLE);
-            image8.setVisibility(View.VISIBLE);
-            image9.setVisibility(View.VISIBLE);
-            image10.setVisibility(View.VISIBLE);
-            image11.setVisibility(View.VISIBLE);
-            image12.setVisibility(View.VISIBLE);
-            image13.setVisibility(View.VISIBLE);
-            image14.setVisibility(View.VISIBLE);
-            image15.setVisibility(View.VISIBLE);
-            image16.setVisibility(View.VISIBLE);
-            image17.setVisibility(View.VISIBLE);
-            image18.setVisibility(View.VISIBLE);
-            image19.setVisibility(View.VISIBLE);
-            image20.setVisibility(View.VISIBLE);
-            image21.setVisibility(View.VISIBLE);
-
-            pause.setVisibility(View.VISIBLE);
-            pause2.setVisibility(View.INVISIBLE);
-            pause3.setVisibility(View.INVISIBLE);
-            pause4.setVisibility(View.INVISIBLE);
-            pause5.setVisibility(View.INVISIBLE);
-            pause6.setVisibility(View.INVISIBLE);
-            pause7.setVisibility(View.INVISIBLE);
-            pause8.setVisibility(View.INVISIBLE);
-            pause9.setVisibility(View.INVISIBLE);
-            pause10.setVisibility(View.INVISIBLE);
-            pause11.setVisibility(View.INVISIBLE);
-            pause12.setVisibility(View.INVISIBLE);
-            pause13.setVisibility(View.INVISIBLE);
-            pause14.setVisibility(View.INVISIBLE);
-            pause15.setVisibility(View.INVISIBLE);
-            pause16.setVisibility(View.INVISIBLE);
-            pause17.setVisibility(View.INVISIBLE);
-            pause18.setVisibility(View.INVISIBLE);
-            pause19.setVisibility(View.INVISIBLE);
-            pause20.setVisibility(View.INVISIBLE);
-            pause21.setVisibility(View.INVISIBLE);
-
-            pause2.setBackgroundResource(R.drawable.ic_pause);
-            pause3.setBackgroundResource(R.drawable.ic_pause);
-            pause4.setBackgroundResource(R.drawable.ic_pause);
-            pause5.setBackgroundResource(R.drawable.ic_pause);
-            pause6.setBackgroundResource(R.drawable.ic_pause);
-            pause7.setBackgroundResource(R.drawable.ic_pause);
-            pause8.setBackgroundResource(R.drawable.ic_pause);
-            pause9.setBackgroundResource(R.drawable.ic_pause);
-            pause10.setBackgroundResource(R.drawable.ic_pause);
-            pause11.setBackgroundResource(R.drawable.ic_pause);
-            pause12.setBackgroundResource(R.drawable.ic_pause);
-            pause13.setBackgroundResource(R.drawable.ic_pause);
-            pause14.setBackgroundResource(R.drawable.ic_pause);
-            pause15.setBackgroundResource(R.drawable.ic_pause);
-            pause16.setBackgroundResource(R.drawable.ic_pause);
-            pause17.setBackgroundResource(R.drawable.ic_pause);
-            pause18.setBackgroundResource(R.drawable.ic_pause);
-            pause19.setBackgroundResource(R.drawable.ic_pause);
-            pause20.setBackgroundResource(R.drawable.ic_pause);
-            pause21.setBackgroundResource(R.drawable.ic_pause);
-
-            musicButton1.setClickable(false);
-            musicButton2.setClickable(true);
-            musicButton3.setClickable(true);
-            musicButton4.setClickable(true);
-            musicButton5.setClickable(true);
-            musicButton6.setClickable(true);
-            musicButton7.setClickable(true);
-            musicButton8.setClickable(true);
-            musicButton9.setClickable(true);
-            musicButton10.setClickable(true);
-            musicButton11.setClickable(true);
-            musicButton12.setClickable(true);
-            musicButton13.setClickable(true);
-            musicButton14.setClickable(true);
-            musicButton15.setClickable(true);
-            musicButton16.setClickable(true);
-            musicButton17.setClickable(true);
-            musicButton18.setClickable(true);
-            musicButton19.setClickable(true);
-            musicButton20.setClickable(true);
-            musicButton21.setClickable(true);
-
-            selected1.setVisibility(View.VISIBLE);
-            selected2.setVisibility(View.INVISIBLE);
-            selected3.setVisibility(View.INVISIBLE);
-            selected4.setVisibility(View.INVISIBLE);
-            selected5.setVisibility(View.INVISIBLE);
-            selected6.setVisibility(View.INVISIBLE);
-            selected7.setVisibility(View.INVISIBLE);
-            selected8.setVisibility(View.INVISIBLE);
-            selected9.setVisibility(View.INVISIBLE);
-            selected10.setVisibility(View.INVISIBLE);
-            selected11.setVisibility(View.INVISIBLE);
-            selected12.setVisibility(View.INVISIBLE);
-            selected13.setVisibility(View.INVISIBLE);
-            selected14.setVisibility(View.INVISIBLE);
-            selected15.setVisibility(View.INVISIBLE);
-            selected16.setVisibility(View.INVISIBLE);
-            selected17.setVisibility(View.INVISIBLE);
-            selected18.setVisibility(View.INVISIBLE);
-            selected19.setVisibility(View.INVISIBLE);
-            selected20.setVisibility(View.INVISIBLE);
-            selected21.setVisibility(View.INVISIBLE);
-        }
 
     }
-}
