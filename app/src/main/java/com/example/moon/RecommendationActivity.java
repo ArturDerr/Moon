@@ -22,9 +22,6 @@ public class RecommendationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation);
 
-        Button alarmButtonSettings = findViewById(R.id.alarmButtonSettings);
-        Button backgroundButtonSettings = findViewById(R.id.backgroundButtonSettings);
-
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
@@ -42,20 +39,6 @@ public class RecommendationActivity extends AppCompatActivity {
         final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
 
-        alarmButtonSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RecommendationActivity.this, AlarmSettingsActivity.class);
-                startActivity(intent);
-            }
-        });
-        backgroundButtonSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RecommendationActivity.this, BackgroundActivity.class);
-                startActivity(intent);
-            }
-        });
         homeTxt.setVisibility(View.GONE);
         musicTxt.setVisibility(View.GONE);
         notesTxt.setVisibility(View.GONE);

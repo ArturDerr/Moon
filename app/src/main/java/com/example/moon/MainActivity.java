@@ -277,7 +277,7 @@ public class MainActivity extends AppCompatActivity {
 
                 hour.setText("     " + simpleDateFormat.format(calendar.getTime()));
 
-                intentAlarm();
+                //intentAlarm();
 
             });
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
@@ -307,6 +307,7 @@ public class MainActivity extends AppCompatActivity {
                     calendar3.add(Calendar.DAY_OF_YEAR, 1); // Проверить!!!!!!!!!!!!!!! Либо 0 либо 1
                 }
 
+                hourNotification.setText("     " + simpleDateFormat.format(calendar3.getTime()));
                 Toast.makeText(this, "Уведомление установлено на " + simpleDateFormat.format(calendar3.getTime()), Toast.LENGTH_SHORT).show();
 
             });

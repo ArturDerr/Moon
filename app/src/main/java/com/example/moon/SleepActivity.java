@@ -13,8 +13,7 @@ import java.util.Locale;
 
 public class SleepActivity extends AppCompatActivity {
 
-    public int click = getIntent().getIntExtra("click", CLICK);
-
+    public int click;
     public static final int CLICK = 0;
     SimpleDateFormat simpleDateFormat;
     TextView textView, textHourSleep;
@@ -32,26 +31,26 @@ public class SleepActivity extends AppCompatActivity {
         background = findViewById(R.id.background);
 
         String text = getIntent().getStringExtra("hour");
-        int click = getIntent().getIntExtra("click", CLICK);
+        click = getIntent().getIntExtra("click", CLICK);
 
         textHourSleep.setText(text);
 
         saveClick();
 
         if (click == 1){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture1);
         }
         if (click == 2){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture2);
         }
         if (click == 3){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture3);
         }
         if (click == 4){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture4);
         }
         if (click == 5){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture5);
         }
         if (click == 6){
             //background.setBackgroundResource(R.drawable.round_back_home);
@@ -63,39 +62,34 @@ public class SleepActivity extends AppCompatActivity {
             //background.setBackgroundResource(R.drawable.round_back_home);
         }
 
-        if (savedInstanceState != null) {
-            Intent intent = new Intent(this, SleepActivity.class);
-            startActivity(intent);
-        }
-
         simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
         textView = findViewById(R.id.textView);
 
-        textView.setText(simpleDateFormat.toString());
+        textView.setText(simpleDateFormat.getTimeZone().toString());
     }
     public void saveClick () {
-        SharedPreferences.Editor prefEditor = sPref.edit();
-        prefEditor.putInt(SAVED_CLICK, click);
-        prefEditor.apply();
+        //SharedPreferences.Editor prefEditor = sPref.edit();
+        //prefEditor.putInt(SAVED_CLICK, click);
+        //prefEditor.apply();
     }
     public void loadClick () {
         int savedClick = sPref.getInt(SAVED_CLICK, click);
 
         if (savedClick == 1){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture1);
         }
         if (savedClick == 2){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture2);
         }
         if (savedClick == 3){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture3);
         }
         if (savedClick == 4){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture4);
         }
         if (savedClick == 5){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            background.setBackgroundResource(R.drawable.picture5);
         }
         if (savedClick == 6){
             //background.setBackgroundResource(R.drawable.round_back_home);

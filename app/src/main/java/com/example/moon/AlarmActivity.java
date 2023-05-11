@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 
 public class AlarmActivity extends AppCompatActivity {
     MediaPlayer mp;
-    Context context;
+    Context context = this;
     Button smileButton, closeSmileButton;
     RelativeLayout smileLayout, openSmileLayout;
 

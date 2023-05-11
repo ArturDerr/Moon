@@ -1204,11 +1204,6 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="20dp"
-                android:layout_height="25dp"
-                android:background="@color/non_background" />
-
         </LinearLayout>
 
     </ScrollView>
@@ -1235,9 +1230,8 @@
             android:layout_marginTop="13dp"
             android:background="@drawable/round_back_while"
             android:drawableStart="@drawable/ic_save"
-            android:padding="5dp"
             android:paddingStart="34dp"
-            tools:ignore="DuplicateClickableBoundsCheck" />
+            android:padding="5dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/musicSave2"
@@ -1311,6 +1305,7 @@
             android:drawableStart="@drawable/ic_save"
             android:paddingStart="34dp"
             android:padding="5dp"/>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/musicSave9"
             android:layout_width="100dp"
