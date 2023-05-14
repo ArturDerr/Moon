@@ -20,15 +20,15 @@
             android:layout_width="85dp"
             android:layout_height="71dp"
             android:layout_marginStart="280dp"
-            android:layout_marginTop="110dp"
-            android:background="@drawable/alarm_button_while"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/alarm_sleep_background_while"
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/smileButton"
                 android:layout_width="60dp"
                 android:layout_height="50dp"
-                android:background="@drawable/round_back_button_alarm_while"
+                android:background="@drawable/round_back_while"
                 android:drawableStart="@drawable/ic_smile"
                 android:paddingStart="15dp"
                 android:textColor="#CDE8E6E6"
@@ -100,6 +100,49 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/white"
+            android:textSize="55sp"
+            tools:layout_editor_absoluteX="186dp"
+            tools:layout_editor_absoluteY="146dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="70dp"
+                android:text="Доброе утро!"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="340dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/alarm_sleep_background_while"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonWekup"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_back_while"
+                android:text="Проснуться"
+                android:textColor="#CDE8E6E6"
+                android:textSize="17sp"
+                android:textStyle="bold|italic" />
         </RelativeLayout>
 
     </LinearLayout>

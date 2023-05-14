@@ -5,20 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Locale;
 
 public class SleepActivity extends AppCompatActivity {
 
     public int click;
     public static final int CLICK = 0;
-    SimpleDateFormat simpleDateFormat;
     TextView textView, textHourSleep;
     RelativeLayout background;
     SharedPreferences sPref;
+    Button buttonBackground;
     final String SAVED_CLICK = "saved_click";
 
     @Override
@@ -26,7 +30,13 @@ public class SleepActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sleep);
 
+        background.setBackgroundResource(R.drawable.zvezdnoe_nebo2);
+
+        timer();
+
         textHourSleep = findViewById(R.id.textHourSleep);
+
+        buttonBackground = findViewById(R.id.buttonBackground);
 
         background = findViewById(R.id.background);
 
@@ -36,6 +46,14 @@ public class SleepActivity extends AppCompatActivity {
         textHourSleep.setText(text);
 
         saveClick();
+
+        buttonBackground.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SleepActivity.this, BackgroundActivity.class);
+                startActivity(intent);
+            }
+        });
 
         if (click == 1){
             background.setBackgroundResource(R.drawable.picture1);
@@ -62,16 +80,13 @@ public class SleepActivity extends AppCompatActivity {
             //background.setBackgroundResource(R.drawable.round_back_home);
         }
 
-        simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
-
         textView = findViewById(R.id.textView);
 
-        textView.setText(simpleDateFormat.getTimeZone().toString());
     }
     public void saveClick () {
-        //SharedPreferences.Editor prefEditor = sPref.edit();
-        //prefEditor.putInt(SAVED_CLICK, click);
-        //prefEditor.apply();
+        SharedPreferences.Editor prefEditor = sPref.edit();
+        prefEditor.putInt(SAVED_CLICK, click);
+        prefEditor.apply();
     }
     public void loadClick () {
         int savedClick = sPref.getInt(SAVED_CLICK, click);
@@ -101,10 +116,35 @@ public class SleepActivity extends AppCompatActivity {
             //background.setBackgroundResource(R.drawable.round_back_home);
         }
     }
-
     @Override
     protected void onPause() {
         super.onPause();
         loadClick();
+    }
+    boolean run = true;
+    Handler mHandler = new Handler();
+
+    public void timer() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (run) {
+                    try {
+                        Thread.sleep(1000);
+                        mHandler.post(new Runnable() {
+
+                            @Override
+                            public void run() {
+                                Calendar c = Calendar.getInstance();
+                                int min = c.get(Calendar.MINUTE);
+                                int hour = c.get(Calendar.HOUR);
+                                textView.setText(String.valueOf(hour)+":"+String.valueOf(min));
+                            }
+                        });
+                    } catch (Exception e) {
+                    }
+                }
+            }
+        }).start();
     }
 }

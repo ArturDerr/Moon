@@ -169,14 +169,14 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonSleep"
+                android:id="@+id/buttonWekup"
                 android:layout_width="295dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round_back_while"
                 android:text="Cпать..."
                 android:textColor="#CDE8E6E6"
                 android:textSize="17sp"
-                android:textStyle="italic" />
+                android:textStyle="bold|italic" />
         </RelativeLayout>
 
     </LinearLayout>

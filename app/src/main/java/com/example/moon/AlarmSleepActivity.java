@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class AlarmSleepActivity extends AppCompatActivity {
 
+    public static final int CLICK = 0;
     private Button recIntentButton, buttonSleep;
     TextView musicTextView, defaultTextView;
 
@@ -25,9 +26,10 @@ public class AlarmSleepActivity extends AppCompatActivity {
         musicTextView.setVisibility(View.GONE);
         defaultTextView = findViewById(R.id.defaultTextView);
         recIntentButton = findViewById(R.id.recIntentButton);
-        buttonSleep = findViewById(R.id.buttonSleep);
+        buttonSleep = findViewById(R.id.buttonWekup);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        String text = getIntent().getStringExtra("hour1");
 
         recIntentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,7 @@ public class AlarmSleepActivity extends AppCompatActivity {
             public void onClick(View v) {
                 buttonSleep.startAnimation(animation2);
                 Intent intent1 = new Intent(AlarmSleepActivity.this, SleepActivity.class);
+                intent1.putExtra("hour", text);
                 startActivity(intent1);
 
             }

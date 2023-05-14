@@ -144,14 +144,14 @@
 
             <TextView
                 android:id="@+id/settingsTxt"
-                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="#9575CD"
-                android:text="Настройки"
                 android:layout_marginStart="10dp"
-                android:textSize="16sp"/>
+                android:text="Рекомендации"
+                android:textColor="#9575CD"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
         </LinearLayout>
 
     </LinearLayout>

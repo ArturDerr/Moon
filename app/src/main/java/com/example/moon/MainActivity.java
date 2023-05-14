@@ -277,8 +277,6 @@ public class MainActivity extends AppCompatActivity {
 
                 hour.setText("     " + simpleDateFormat.format(calendar.getTime()));
 
-                //intentAlarm();
-
             });
             materialTimePicker.show(getSupportFragmentManager(), "tag_picker");
         });
@@ -328,18 +326,16 @@ public class MainActivity extends AppCompatActivity {
         return PendingIntent.getActivity(this, 0, alarmInfoIntent, PendingIntent.FLAG_IMMUTABLE);
     }
     public PendingIntent getAlarmActionPendingIntent() {
-        // потом отправим данные в броадкаст ресиевер
         Intent intent = new Intent(this, AlarmActivity.class);
+        intent.putExtra("hour1", hour.getText().toString());
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         if (Build.VERSION.SDK_INT >= 16)intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
-        // тут FLAG_IMMUTABLE
         return PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_IMMUTABLE);
     }
     public void saveText() {
         String text = hour.getText().toString();
         String textNotification = hourNotification.getText().toString();
         String textEditTextNotification = editTextNotification.getText().toString();
-        // сохраняем его в настройках
         SharedPreferences.Editor prefEditor = sPref.edit();
         prefEditor.putString(SAVED_HOURS, text);
         prefEditor.putString(SAVED_HOURS_NOTIFICATION, textNotification);
@@ -369,11 +365,6 @@ public class MainActivity extends AppCompatActivity {
         else {
             builder = new NotificationCompat.Builder(getApplicationContext());
         }
-    }
-    public void intentAlarm() {
-        Intent intent = new Intent(MainActivity.this, SleepActivity.class);
-        intent.putExtra("hour", hour.getText().toString());
-        startActivity(intent);
     }
     @Override
     protected void onPause() {

@@ -14,6 +14,21 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonBackground"
+                android:layout_width="65dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="310dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_back_while_settings"
+                android:drawableStart="@drawable/ic_background"
+                android:padding="17dp" />
+        </RelativeLayout>
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
