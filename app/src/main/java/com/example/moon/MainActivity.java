@@ -269,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
 
                 alarmManager.setAlarmClock(alarmClockInfo, getAlarmActionPendingIntent()); // ПРОВЕРИТЬ!!!!!!!
 
-                //alarmManager.setWindow(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), calendar.getTimeInMillis(), getAlarmActionPendingIntent());
+                alarmManager.setWindow(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), calendar.getTimeInMillis(), getAlarmActionPendingIntent());
 
                 alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24 * 60 * 60 * 1000, getAlarmActionPendingIntent());
 

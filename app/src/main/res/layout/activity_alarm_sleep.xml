@@ -169,7 +169,7 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonWekup"
+                android:id="@+id/buttonWakeup"
                 android:layout_width="295dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round_back_while"
