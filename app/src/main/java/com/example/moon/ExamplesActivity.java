@@ -29,31 +29,26 @@ public class ExamplesActivity extends AppCompatActivity {
 
         String editText = editTextNumber.toString();
 
-        generate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Random random = new Random();
+        final Random random = new Random();
 
-                int number1 = (random.nextInt(100));
-                int number2 = (random.nextInt(150));
+        int number1 = (random.nextInt(100));
+        int number2 = (random.nextInt(150));
+
+        generate.setOnClickListener(v -> {
 
                 firstNumber.setText(String.valueOf(number1));
                 secondNumber.setText(String.valueOf(number2));
 
-            }
         });
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        button.setOnClickListener(v -> {
 
-                //String result = String.valueOf(number1 + number2);
+                String result = String.valueOf(number1 + number2);
 
-                //if (editText == result) {
+                if (editText == result) {
                     textViewResult.setText("Верно");
-                //} else {
+                } else {
                     textViewResult.setText("Неверно");
-                //}
-            }
-        });
+                }
+            });
     }
 }

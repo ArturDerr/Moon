@@ -2,6 +2,7 @@ package com.example.moon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -38,13 +39,13 @@ public class AlarmActivity extends AppCompatActivity {
         mp.setLooping(true);
         mp.start();
 
-        //LayoutInflater layoutInflater = getLayoutInflater();
-        //View layout = layoutInflater.inflate(R.layout.dialog, (ViewGroup)findViewById(R.id.layout_dialog));
+        LayoutInflater layoutInflater = getLayoutInflater();
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) View layout = layoutInflater.inflate(R.layout.dialog, (ViewGroup)findViewById(R.id.layout_dialog));
 
-        //final Toast toast = new Toast(getApplicationContext());
-        //toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        //toast.setDuration(Toast.LENGTH_SHORT);
-        //toast.setView(layout);
+        final Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
 
         smileButton = findViewById(R.id.smileButton);
         buttonWakeup = findViewById(R.id.buttonWakeup);
@@ -76,12 +77,10 @@ public class AlarmActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlarmActivity.this, ExamplesActivity.class);
-                //toast.show();
+                toast.show();
                 startActivity(intent);
             }
         });
-
-
     }
     boolean run = true;
     Handler mHandler = new Handler();
