@@ -30,7 +30,7 @@ public class SleepActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sleep);
 
-        background.setBackgroundResource(R.drawable.zvezdnoe_nebo2);
+        //background.setBackgroundResource(R.drawable.zvezdnoe_nebo2);
 
         timer();
 

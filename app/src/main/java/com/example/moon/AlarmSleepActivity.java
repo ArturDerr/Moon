@@ -29,7 +29,9 @@ public class AlarmSleepActivity extends AppCompatActivity {
         buttonSleep = findViewById(R.id.buttonWakeup);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        String text = getIntent().getStringExtra("hour1");
+        String text = getIntent().getStringExtra("hour2");
+        String music = getIntent().getStringExtra("music1");
+        musicTextView.setText(music);
 
         recIntentButton.setOnClickListener(new View.OnClickListener() {
             @Override

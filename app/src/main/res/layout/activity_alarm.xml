@@ -36,44 +36,6 @@
                 android:textStyle="italic" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/openSmileLayout"
-            android:layout_width="389dp"
-            android:layout_height="143dp"
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/alarm_sleep_background_while"
-            android:gravity="center">
-
-            <RelativeLayout
-                android:layout_width="349dp"
-                android:layout_height="117dp"
-                android:background="@drawable/round_back_while"
-                android:textColor="#CDE8E6E6"
-                android:textSize="17sp"
-                android:textStyle="italic">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="19dp"
-                    android:layout_marginTop="11dp"
-                    android:text="Оцените качество сна"
-                    android:textColor="@color/white"
-                    android:textSize="19sp" />
-
-            </RelativeLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/closeSmileButton"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:layout_marginStart="299dp"
-                android:layout_marginTop="7dp"
-                android:background="@drawable/ic_arrow_up_alarm" />
-
-        </RelativeLayout>
-
     </LinearLayout>
 
     <LinearLayout

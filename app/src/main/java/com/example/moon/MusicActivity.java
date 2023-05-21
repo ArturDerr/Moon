@@ -627,17 +627,14 @@ public class MusicActivity extends AppCompatActivity {
 
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout musicLayout = findViewById(R.id.musicLayout);
-        final LinearLayout settingsLayout = findViewById(R.id.settingsLayout);
         final LinearLayout notesLayout = findViewById(R.id.notesLayout);
 
         final TextView homeTxt = findViewById(R.id.homeTxt);
         final TextView musicTxt = findViewById(R.id.musicTxt);
-        final TextView settingsTxt = findViewById(R.id.settingsTxt);
         final TextView notesTxt = findViewById(R.id.notesTxt);
 
         final ImageView homeImage = findViewById(R.id.homeImage);
         final ImageView musicImage = findViewById(R.id.musicImage);
-        final ImageView settingsImage = findViewById(R.id.settingsImage);
         final ImageView notesImage = findViewById(R.id.notesImage);
 
         // лес
@@ -684,15 +681,12 @@ public class MusicActivity extends AppCompatActivity {
         musicGuitar = MediaPlayer.create(this, R.raw.guitar);
 
         homeTxt.setVisibility(View.GONE);
-        settingsTxt.setVisibility(View.GONE);
         notesTxt.setVisibility(View.GONE);
 
         homeImage.setImageResource(R.drawable.ic_home);
-        settingsImage.setImageResource(R.drawable.ic_settings);
         notesImage.setImageResource(R.drawable.ic_notes);
 
         homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-        settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         musicTxt.setVisibility(View.VISIBLE);
@@ -714,15 +708,12 @@ public class MusicActivity extends AppCompatActivity {
                     overridePendingTransition(0, 0);
 
                     musicTxt.setVisibility(View.GONE);
-                    settingsTxt.setVisibility(View.GONE);
                     notesTxt.setVisibility(View.GONE);
 
                     musicImage.setImageResource(R.drawable.ic_music);
-                    settingsImage.setImageResource(R.drawable.ic_settings);
                     notesImage.setImageResource(R.drawable.ic_notes);
 
                     musicLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
                     homeTxt.setVisibility(View.VISIBLE);
@@ -748,15 +739,12 @@ public class MusicActivity extends AppCompatActivity {
                 if (selectedTab != 2) {
 
                     homeTxt.setVisibility(View.GONE);
-                    settingsTxt.setVisibility(View.GONE);
                     notesTxt.setVisibility(View.GONE);
 
                     homeImage.setImageResource(R.drawable.ic_home);
-                    settingsImage.setImageResource(R.drawable.ic_settings);
                     notesImage.setImageResource(R.drawable.ic_notes);
 
                     homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
                     musicTxt.setVisibility(View.VISIBLE);
@@ -783,15 +771,12 @@ public class MusicActivity extends AppCompatActivity {
 
                     homeTxt.setVisibility(View.GONE);
                     musicTxt.setVisibility(View.GONE);
-                    settingsTxt.setVisibility(View.GONE);
 
                     homeImage.setImageResource(R.drawable.ic_home);
                     musicImage.setImageResource(R.drawable.ic_music);
-                    settingsImage.setImageResource(R.drawable.ic_settings);
 
                     homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     musicLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    settingsLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
                     notesTxt.setVisibility(View.VISIBLE);
                     notesImage.setImageResource(R.drawable.ic_notes_selected);
@@ -806,43 +791,6 @@ public class MusicActivity extends AppCompatActivity {
 
                     selectedTab = 3;
                 }
-            }
-        });
-        settingsLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (selectedTab != 4) {
-
-                    startActivity(new Intent(getApplicationContext(), RecommendationActivity.class));
-                    overridePendingTransition(0, 0);
-
-                    homeTxt.setVisibility(View.GONE);
-                    musicTxt.setVisibility(View.GONE);
-                    notesTxt.setVisibility(View.GONE);
-
-                    homeImage.setImageResource(R.drawable.ic_home);
-                    musicImage.setImageResource(R.drawable.ic_music);
-                    notesImage.setImageResource(R.drawable.ic_notes);
-
-                    homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    musicLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-                    notesLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-
-                    settingsTxt.setVisibility(View.VISIBLE);
-                    settingsImage.setImageResource(R.drawable.ic_settings_selected);
-                    settingsLayout.setBackgroundResource(R.drawable.round_back_alarm);
-
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-                    scaleAnimation.setDuration(200);
-                    scaleAnimation.setFillAfter(true);
-                    settingsLayout.startAnimation(scaleAnimation);
-
-                    finish();
-
-                    selectedTab = 4;
-                }
-
             }
         });
         musicButton1.setOnClickListener(new View.OnClickListener() {

@@ -25,7 +25,7 @@ public class AlarmActivity extends AppCompatActivity {
     MediaPlayer mp;
     TextView textView;
     Context context = this;
-    Button smileButton, closeSmileButton, buttonWakeup;
+    Button buttonWakeup;
     RelativeLayout smileLayout, openSmileLayout;
 
     @Override
@@ -47,32 +47,9 @@ public class AlarmActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
 
-        smileButton = findViewById(R.id.smileButton);
         buttonWakeup = findViewById(R.id.buttonWakeup);
-        closeSmileButton = findViewById(R.id.closeSmileButton);
-        smileLayout = findViewById(R.id.smileLayout);
-        openSmileLayout = findViewById(R.id.openSmileLayout);
         textView = findViewById(R.id.textView);
 
-        openSmileLayout.setVisibility(View.GONE);
-        closeSmileButton.setClickable(false);
-
-        smileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSmileLayout.setVisibility(View.VISIBLE);
-                smileLayout.setVisibility(View.GONE);
-                smileButton.setClickable(false);
-            }
-        });
-        closeSmileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                smileButton.setClickable(true);
-                smileLayout.setVisibility(View.VISIBLE);
-                openSmileLayout.setVisibility(View.GONE);
-            }
-        });
         buttonWakeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

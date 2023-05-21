@@ -306,7 +306,7 @@
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="310dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginStart="0dp"
                     android:layout_marginTop="60dp"
                     android:background="@drawable/round_back_while"
                     android:paddingStart="21dp"
@@ -858,6 +858,641 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/buttonRecBack9"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!-- 10 -->
+
+            <RelativeLayout
+                android:id="@+id/rec10"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="205dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Уменьшите  синий свет"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen10"
+                android:layout_width="340dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="205dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Уменьшите синий свет"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="305dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Синий свет, который исходит от гаджетов, может негативно влиять на качество сна. Именно поэтому привычки скроллить ленту в социальных сетях или смотреть сериалы перед сном — не самые здоровые. Синий свет влияет на естественные циркадные ритмы. Проще всего минимизировать негативное воздействие синего света — это отказаться от гаджетов за 1-2 часа до сна. Альтернативой может стать бумажная книга, разговоры с близкими или любое хобби, для которого не нужен телефон или компьютер."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!-- 11 -->
+
+            <RelativeLayout
+                android:id="@+id/rec11"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Упражнения днем"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec11"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen11"
+                android:layout_width="340dp"
+                android:layout_height="440dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Упражнения днем"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="345dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Упражнения в течение дня помогут вам быстрее заснуть и погрузят вас в более долгий и глубокий сон. Упражнения также помогают вашему телу вырабатывать больше гормонов роста, пока вы спите. Эти гормоны помогают вашему телу восстанавливаться и восстанавливаться ночью.  Самое приятное то, что вам не нужно делать ничего слишком интенсивного, чтобы воспользоваться преимуществами упражнений. Вот некоторые упражнения низкой интенсивности, которые помогут вам лучше выглядеть, чувствовать себя и спать:  Ходьба по 30 минут в день Йога Плавание Поездка на велосипеде"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack11"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!-- 12 -->
+
+            <RelativeLayout
+                android:id="@+id/rec12"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Горячий душ перед сном"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec12"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen12"
+                android:layout_width="340dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="210dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Горячий душ перед сном"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="345dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Тепло может способствовать более глубокому сну. Принятие горячей ванны или посещение сауны перед сном может помочь улучшить качество сна."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack12"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!-- 13 -->
+
+            <RelativeLayout
+                android:id="@+id/rec13"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Спальня место комфорта"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec13"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen13"
+                android:layout_width="340dp"
+                android:layout_height="310dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Спальня место комфорта"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="345dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="«Исключите в спальне лишний свет и шум, температура в помещении должна быть прохладной. Дискомфорт отвлекает от сна как во время засыпания, так и в течение
+                     всей ночи. Комфортное постельное белье тоже важно. Стоит в целом избегать яркого освещения перед сном, потому что оно сильно снижает выработку мелатонина», — поясняет психолог Варя Махновская."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack13"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!-- 14 -->
+
+            <RelativeLayout
+                android:id="@+id/rec14"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Не думать о работе"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec14"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen14"
+                android:layout_width="340dp"
+                android:layout_height="350dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Не думать о работе"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="345dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Важное правило соблюдения гигиены сна - обеспечить переключение мозга с дневного режима работы на вечерний, на расслабление нервной системы. За два часа до сна надо отменить всю умственную нагрузку. Это касается и составления годовых отчетов, и решения ребусов. Нужно заняться чем-то приятным, спокойным, что позволит переключить мысли  с производственных забот. Перед сном самое лучшее время для хобби."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack14"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!-- 15 -->
+
+            <RelativeLayout
+                android:id="@+id/rec15"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Часы в спальне - это враг"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec15"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen15"
+                android:layout_width="340dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Часы в спальне - это враг"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="345dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="21dp"
+                    android:paddingTop="12dp"
+                    android:text="Категорически не рекомендуется держать в спальне часы с подсвечиваемым циферблатом, потому что случайно проснувшись и бросив взгляд на часы, человек начинает нервничать уснет ли он снова. В большинстве случаев уснуть не может.  Не меньший враг в
+                    спальне – телевизор."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack15"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow_up"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <!-- 16 -->
+
+            <RelativeLayout
+                android:id="@+id/rec16"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Если днем, то до трех"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRec16"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="265dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_oval"
+                    android:drawableStart="@drawable/ic_arrow"
+                    android:padding="7dp"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recOpen16"
+                android:layout_width="340dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_back_while_settings"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="12dp"
+                    android:text="Если днем, то до трех"
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="345dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/round_back_while"
+                    android:paddingStart="19dp"
+                    android:paddingTop="16dp"
+                    android:text="Полчаса дневного сна, действительно,
+
+                       позволяют восстановиться после бессонной ночи. Но если есть необходимость прикорнуть днем, делать это надо строго до 15.00.
+Дальше уже нужно бороться с собой, иначе ночью не заснуть."
+                    android:textColor="#BCBCBC"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonRecBack16"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="265dp"

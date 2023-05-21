@@ -32,13 +32,13 @@ public class RecommendationSleepActivity extends AppCompatActivity {
         rec7 = findViewById(R.id.rec7);
         rec8 = findViewById(R.id.rec8);
         rec9 = findViewById(R.id.rec9);
-        //rec10 = findViewById(R.id.rec10);
-        //rec11 = findViewById(R.id.rec11);
-        //rec12 = findViewById(R.id.rec12);
-        //rec13 = findViewById(R.id.rec13);
-        //rec14 = findViewById(R.id.rec14);
-        //rec15 = findViewById(R.id.rec15);
-        //rec16 = findViewById(R.id.rec16);
+        rec10 = findViewById(R.id.rec10);
+        rec11 = findViewById(R.id.rec11);
+        rec12 = findViewById(R.id.rec12);
+        rec13 = findViewById(R.id.rec13);
+        rec14 = findViewById(R.id.rec14);
+        rec15 = findViewById(R.id.rec15);
+        rec16 = findViewById(R.id.rec16);
 
         recOpen1 = findViewById(R.id.recOpen1);
         recOpen2 = findViewById(R.id.recOpen2);
@@ -49,13 +49,13 @@ public class RecommendationSleepActivity extends AppCompatActivity {
         recOpen7 = findViewById(R.id.recOpen7);
         recOpen8 = findViewById(R.id.recOpen8);
         recOpen9 = findViewById(R.id.recOpen9);
-        //recOpen10 = findViewById(R.id.recOpen10);
-        //recOpen11 = findViewById(R.id.recOpen11);
-        //recOpen12 = findViewById(R.id.recOpen12);
-        //recOpen13 = findViewById(R.id.recOpen13);
-        //recOpen14 = findViewById(R.id.recOpen14);
-        //recOpen15 = findViewById(R.id.recOpen15);
-        //recOpen16 = findViewById(R.id.recOpen16);
+        recOpen10 = findViewById(R.id.recOpen10);
+        recOpen11 = findViewById(R.id.recOpen11);
+        recOpen12 = findViewById(R.id.recOpen12);
+        recOpen13 = findViewById(R.id.recOpen13);
+        recOpen14 = findViewById(R.id.recOpen14);
+        recOpen15 = findViewById(R.id.recOpen15);
+        recOpen16 = findViewById(R.id.recOpen16);
 
         recOpen1.setVisibility(View.GONE);
         recOpen2.setVisibility(View.GONE);
@@ -66,13 +66,13 @@ public class RecommendationSleepActivity extends AppCompatActivity {
         recOpen7.setVisibility(View.GONE);
         recOpen8.setVisibility(View.GONE);
         recOpen9.setVisibility(View.GONE);
-        //recOpen10.setVisibility(View.GONE);
-        //recOpen11.setVisibility(View.GONE);
-        //recOpen12.setVisibility(View.GONE);
-        //recOpen13.setVisibility(View.GONE);
-        //recOpen14.setVisibility(View.GONE);
-        //recOpen15.setVisibility(View.GONE);
-        //recOpen16.setVisibility(View.GONE);
+        recOpen10.setVisibility(View.GONE);
+        recOpen11.setVisibility(View.GONE);
+        recOpen12.setVisibility(View.GONE);
+        recOpen13.setVisibility(View.GONE);
+        recOpen14.setVisibility(View.GONE);
+        recOpen15.setVisibility(View.GONE);
+        recOpen16.setVisibility(View.GONE);
 
         buttonRec1 = findViewById(R.id.buttonRec1);
         buttonRec2 = findViewById(R.id.buttonRec2);
@@ -83,13 +83,13 @@ public class RecommendationSleepActivity extends AppCompatActivity {
         buttonRec7 = findViewById(R.id.buttonRec7);
         buttonRec8 = findViewById(R.id.buttonRec8);
         buttonRec9 = findViewById(R.id.buttonRec9);
-        //buttonRec10 = findViewById(R.id.buttonRec10);
-        //buttonRec11 = findViewById(R.id.buttonRec11);
-        //buttonRec12 = findViewById(R.id.buttonRec12);
-        //buttonRec13 = findViewById(R.id.buttonRec13);
-        //buttonRec14 = findViewById(R.id.buttonRec14);
-        //buttonRec15 = findViewById(R.id.buttonRec15);
-        //buttonRec16 = findViewById(R.id.buttonRec16);
+        buttonRec10 = findViewById(R.id.buttonRec10);
+        buttonRec11 = findViewById(R.id.buttonRec11);
+        buttonRec12 = findViewById(R.id.buttonRec12);
+        buttonRec13 = findViewById(R.id.buttonRec13);
+        buttonRec14 = findViewById(R.id.buttonRec14);
+        buttonRec15 = findViewById(R.id.buttonRec15);
+        buttonRec16 = findViewById(R.id.buttonRec16);
 
         buttonRecBack1 =  findViewById(R.id.buttonRecBack1);
         buttonRecBack2 =  findViewById(R.id.buttonRecBack2);
@@ -100,13 +100,13 @@ public class RecommendationSleepActivity extends AppCompatActivity {
         buttonRecBack7 =  findViewById(R.id.buttonRecBack7);
         buttonRecBack8 =  findViewById(R.id.buttonRecBack8);
         buttonRecBack9 =  findViewById(R.id.buttonRecBack9);
-        //buttonRecBack10 =  findViewById(R.id.buttonRecBack10);
-        //buttonRecBack11 =  findViewById(R.id.buttonRecBack11);
-        //buttonRecBack12 =  findViewById(R.id.buttonRecBack12);
-        //buttonRecBack13 =  findViewById(R.id.buttonRecBack13);
-        //buttonRecBack14 =  findViewById(R.id.buttonRecBack14);
-        //buttonRecBack15 =  findViewById(R.id.buttonRecBack15);
-        //buttonRecBack16 =  findViewById(R.id.buttonRecBack16);
+        buttonRecBack10 =  findViewById(R.id.buttonRecBack10);
+        buttonRecBack11 =  findViewById(R.id.buttonRecBack11);
+        buttonRecBack12 =  findViewById(R.id.buttonRecBack12);
+        buttonRecBack13 =  findViewById(R.id.buttonRecBack13);
+        buttonRecBack14 =  findViewById(R.id.buttonRecBack14);
+        buttonRecBack15 =  findViewById(R.id.buttonRecBack15);
+        buttonRecBack16 =  findViewById(R.id.buttonRecBack16);
 
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.alpha_recommendation);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha_recommendation);
@@ -414,6 +414,216 @@ public class RecommendationSleepActivity extends AppCompatActivity {
 
                 buttonRec9.setClickable(true);
                 buttonRecBack9.setClickable(false);
+
+            }
+        });
+
+        // 10
+        buttonRec10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRec10.startAnimation(animation10);
+
+                recOpen10.setVisibility(View.VISIBLE);
+                rec10.setVisibility(View.GONE);
+
+                buttonRec10.setClickable(false);
+                buttonRecBack10.setClickable(true);
+
+            }
+        });
+        buttonRecBack10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRecBack10.startAnimation(animationBack10);
+
+                recOpen10.setVisibility(View.GONE);
+                rec10.setVisibility(View.VISIBLE);
+
+                buttonRec10.setClickable(true);
+                buttonRecBack10.setClickable(false);
+
+            }
+        });
+
+        // 11
+        buttonRec11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRec11.startAnimation(animation11);
+
+                recOpen11.setVisibility(View.VISIBLE);
+                rec11.setVisibility(View.GONE);
+
+                buttonRec11.setClickable(false);
+                buttonRecBack11.setClickable(true);
+
+            }
+        });
+        buttonRecBack11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRecBack11.startAnimation(animationBack11);
+
+                recOpen11.setVisibility(View.GONE);
+                rec11.setVisibility(View.VISIBLE);
+
+                buttonRec11.setClickable(true);
+                buttonRecBack11.setClickable(false);
+
+            }
+        });
+
+        // 12
+        buttonRec12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRec12.startAnimation(animation12);
+
+                recOpen12.setVisibility(View.VISIBLE);
+                rec12.setVisibility(View.GONE);
+
+                buttonRec12.setClickable(false);
+                buttonRecBack12.setClickable(true);
+
+            }
+        });
+        buttonRecBack12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRecBack12.startAnimation(animationBack12);
+
+                recOpen12.setVisibility(View.GONE);
+                rec12.setVisibility(View.VISIBLE);
+
+                buttonRec12.setClickable(true);
+                buttonRecBack12.setClickable(false);
+
+            }
+        });
+
+        // 13
+        buttonRec13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRec13.startAnimation(animation13);
+
+                recOpen13.setVisibility(View.VISIBLE);
+                rec13.setVisibility(View.GONE);
+
+                buttonRec13.setClickable(false);
+                buttonRecBack13.setClickable(true);
+
+            }
+        });
+        buttonRecBack13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRecBack13.startAnimation(animationBack13);
+
+                recOpen13.setVisibility(View.GONE);
+                rec13.setVisibility(View.VISIBLE);
+
+                buttonRec13.setClickable(true);
+                buttonRecBack13.setClickable(false);
+
+            }
+        });
+
+        // 14
+        buttonRec14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRec14.startAnimation(animation14);
+
+                recOpen14.setVisibility(View.VISIBLE);
+                rec14.setVisibility(View.GONE);
+
+                buttonRec14.setClickable(false);
+                buttonRecBack14.setClickable(true);
+
+            }
+        });
+        buttonRecBack14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRecBack14.startAnimation(animationBack14);
+
+                recOpen14.setVisibility(View.GONE);
+                rec14.setVisibility(View.VISIBLE);
+
+                buttonRec14.setClickable(true);
+                buttonRecBack14.setClickable(false);
+
+            }
+        });
+
+        // 15
+        buttonRec15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRec15.startAnimation(animation15);
+
+                recOpen15.setVisibility(View.VISIBLE);
+                rec15.setVisibility(View.GONE);
+
+                buttonRec15.setClickable(false);
+                buttonRecBack15.setClickable(true);
+
+            }
+        });
+        buttonRecBack15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRecBack15.startAnimation(animationBack15);
+
+                recOpen15.setVisibility(View.GONE);
+                rec15.setVisibility(View.VISIBLE);
+
+                buttonRec15.setClickable(true);
+                buttonRecBack15.setClickable(false);
+
+            }
+        });
+
+        // 16
+        buttonRec16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRec16.startAnimation(animation16);
+
+                recOpen16.setVisibility(View.VISIBLE);
+                rec16.setVisibility(View.GONE);
+
+                buttonRec16.setClickable(false);
+                buttonRecBack16.setClickable(true);
+
+            }
+        });
+        buttonRecBack16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonRecBack16.startAnimation(animationBack16);
+
+                recOpen16.setVisibility(View.GONE);
+                rec16.setVisibility(View.VISIBLE);
+
+                buttonRec16.setClickable(true);
+                buttonRecBack16.setClickable(false);
 
             }
         });

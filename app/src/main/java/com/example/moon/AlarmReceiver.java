@@ -10,16 +10,21 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 public class AlarmReceiver extends BroadcastReceiver {
+
     @Override
     public void onReceive(Context context, Intent intent) {
+
+        //String hour1 = getIntent().getStringExtra("hour");
+
         Intent intentNotification = new Intent(context, AlarmSleepActivity.class);
+        //intent.putExtra("hour2", hour1.getText().toString());
         intentNotification.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intentNotification, PendingIntent.FLAG_IMMUTABLE);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "notification")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("Напоминание, нажмите для открытия")
-                .setContentText("xnjxxxx")
+                .setContentText("Пора спать!")
                 .setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setPriority(NotificationCompat.PRIORITY_MAX)

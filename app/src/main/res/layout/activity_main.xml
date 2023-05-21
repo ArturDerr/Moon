@@ -124,36 +124,6 @@
                 android:textSize="16sp"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/settingsLayout"
-            android:background="@android:color/transparent"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:gravity="center"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/settingsImage"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ic_settings"/>
-
-            <TextView
-                android:id="@+id/settingsTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Рекомендации"
-                android:textColor="#9575CD"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:visibility="gone" />
-        </LinearLayout>
-
     </LinearLayout>
 
     <ScrollView
@@ -174,6 +144,12 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/intentSleepActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
 
             <RelativeLayout
                 android:id="@+id/relativeLayout13"
@@ -278,10 +254,10 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout11"
                 android:layout_width="340dp"
-                android:layout_height="220dp"
+                android:layout_height="170dp"
                 android:layout_marginTop="15dp"
-                android:gravity="center"
                 android:background="@drawable/round_back_while"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="15dp"
                 tools:ignore="MissingConstraints">
@@ -294,23 +270,10 @@
                     android:src="@drawable/ic_night" />
 
                 <TextView
-                    android:id="@+id/textNotificationEdit"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="145dp"
-                    android:background="@drawable/round_back_while_settings"
-                    android:paddingStart="16dp"
-                    android:paddingTop="9dp"
-                    android:textColor="#48FFFFFF"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:layout_width="130dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="0dp"
                     android:background="@drawable/button_oval"
                     android:paddingStart="16dp"
                     android:paddingTop="9dp"
@@ -319,28 +282,14 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextNotification"
-                    android:layout_width="273dp"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="142dp"
-                    android:backgroundTint="@color/non_background"
-                    android:hint="Описание:"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:maxLength="25"
-                    android:textColorHint="#48FFFFFF"
-                    android:textColor="#48FFFFFF" />
-
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="265dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="0dp"
                     android:background="@drawable/button_oval"
-                    android:src="@drawable/ic_notifications"
                     android:padding="8dp"
+                    android:src="@drawable/ic_notifications"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -377,8 +326,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="108dp"
-                    android:elevation="3dp"
                     android:layout_marginTop="84dp"
+                    android:elevation="3dp"
                     android:text=""
                     android:textColor="@color/white"
                     android:textSize="21sp"
@@ -389,12 +338,1756 @@
             <RelativeLayout
                 android:id="@+id/relativeLayout10"
                 android:layout_width="340dp"
-                android:layout_height="175dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/round_back_while"
                 android:orientation="horizontal"
                 android:padding="15dp"
                 tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout1"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="6:00"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout2"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="6:15"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout3"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="6:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout4"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="6:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout5"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="7:00"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout6"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="7:15"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout7"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="7:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout8"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="7:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout9"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="8:00"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout10"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="8:15"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout11"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="8:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout12"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="8:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout13"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="9:00"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout14"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="9:15"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectedLayout15"
+                    android:layout_width="89dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="9:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/timeSelected15"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/non_background" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout1"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="20:45    22:15"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout2"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="21:00    22:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout3"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="21:15    22:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout4"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="21:30    23:00"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout5"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="21:45    23:15"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout6"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="22:00    23:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout7"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="22:15    23:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout8"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="22:30    00:00"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout9"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="22:45    00:15"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout10"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="23:00    00:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout11"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="23:15   00:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout12"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="23:30    01:00"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout13"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="23:45    01:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout14"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="00:00    01:30"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sleepTimeLayout15"
+                    android:layout_width="160dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/round_back_while"
+                    android:elevation="5dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="00:15   01:45"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="65dp"
+                            android:layout_marginTop="0dp"
+                            app:dividerColor="#5E5E5E" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="110dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="208dp"
+                        android:layout_marginTop="3dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_zzz" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="170dp"
+                        android:layout_marginTop="25dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Лучше лечь спать"
+                            android:textColor="#9575CD"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="43dp"
+                        android:layout_marginTop="3dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_alarm_add" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Время подъема"
+                            android:textColor="#9575CD"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Ложиться спать в одно время    ̶   полезная привычка, улучшающая сон"
+                        android:textColor="#CDE8E6E6"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectTimeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="170dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Выберите время"
+                        android:textColor="#CDE8E6E6"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/upButton"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/ic_arrow_up" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/openLayout"
+                    android:layout_width="389dp"
+                    android:layout_height="353dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="100dp"
+                    android:elevation="30dp"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="327dp"
+                        android:layout_marginStart="0dp"
+                        android:background="@drawable/round_back_while"
+                        android:elevation="20dp"
+                        android:textColor="#CDE8E6E6"
+                        android:textSize="17sp"
+                        android:textStyle="italic">
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="45dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="6:00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="103dp"
+                            android:layout_marginTop="45dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="6:15"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="195dp"
+                            android:layout_marginTop="45dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="6:30"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="100dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="6:45"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="103dp"
+                            android:layout_marginTop="100dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="7:00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="195dp"
+                            android:layout_marginTop="100dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="7:15"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="155dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="7:30"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="103dp"
+                            android:layout_marginTop="155dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="7:45"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="195dp"
+                            android:layout_marginTop="155dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="8:00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="210dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="8:15"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="103dp"
+                            android:layout_marginTop="210dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="8:30"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="195dp"
+                            android:layout_marginTop="210dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="8:45"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="265dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="9:00"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time13"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="103dp"
+                            android:layout_marginTop="265dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="9:15"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="89dp"
+                            android:layout_height="49dp"
+                            android:layout_marginStart="195dp"
+                            android:layout_marginTop="265dp"
+                            android:background="@drawable/round_back_while"
+                            android:elevation="20dp"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            tools:ignore="MissingConstraints">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="9:30"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/time15"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/non_background" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/closeButton"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginStart="230dp"
+                            android:layout_marginTop="11dp"
+                            android:background="@drawable/ic_arrow" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="11dp"
+                            android:text="Выберите время подъема"
+                            android:textColor="#CDE8E6E6"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
 
                 <ImageView
                     android:layout_width="40dp"
@@ -402,24 +2095,29 @@
                     android:layout_marginStart="265dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/button_oval"
-                    android:src="@drawable/ic_analytics"
                     android:padding="8dp"
+                    android:src="@drawable/ic_info"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                 <TextView
-                    android:layout_width="110dp"
+                    android:layout_width="235dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/button_oval"
                     android:paddingStart="16dp"
                     android:paddingTop="9dp"
-                    android:text="Аналитика"
+                    android:text="Во сколько ложиться спать?"
                     android:textColor="#CDE8E6E6"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:background="@color/non_background" />
 
         </LinearLayout>
 

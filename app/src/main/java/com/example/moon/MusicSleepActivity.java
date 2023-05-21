@@ -981,9 +981,6 @@ public class MusicSleepActivity extends AppCompatActivity {
 
                 musicButton1.startAnimation(animation);
 
-                final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-                prefs.edit().putBoolean("button_1_pressed", true).apply();
-
                 image1.setVisibility(View.INVISIBLE);
                 image2.setVisibility(View.VISIBLE);
                 image3.setVisibility(View.VISIBLE);

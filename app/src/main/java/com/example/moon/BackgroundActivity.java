@@ -64,6 +64,7 @@ public class BackgroundActivity extends AppCompatActivity {
                 button1.startAnimation(animation1);
                 Intent intent = new Intent(BackgroundActivity.this, SleepActivity.class);
                 intent.putExtra("click", imageClick);
+                startActivity(intent);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +74,7 @@ public class BackgroundActivity extends AppCompatActivity {
                 button2.startAnimation(animation2);
                 Intent intent = new Intent(BackgroundActivity.this, SleepActivity.class);
                 intent.putExtra("click", imageClick);
+                startActivity(intent);
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +84,7 @@ public class BackgroundActivity extends AppCompatActivity {
                 button3.startAnimation(animation3);
                 Intent intent = new Intent(BackgroundActivity.this, SleepActivity.class);
                 intent.putExtra("click", imageClick);
+
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
