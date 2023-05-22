@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#121212"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="115dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/button_oval"
+                android:gravity="center"
+                android:text="Дата"
+                android:textColor="#CDE8E6E6"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="30dp"
+                android:paddingTop="6dp"
+                android:text=""
+                android:background="#00FFFFFF"
+                android:textSize="19sp"
+                android:textColor="#CDE8E6E6"
+                android:layout_marginTop="10dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="661dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="225dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/button_oval"
+                    android:gravity="center"
+                    android:text="Название сновидения"
+                    android:textColor="#CDE8E6E6"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="30dp"
+                    android:background="#00FFFFFF"
+                    android:textColor="#CDE8E6E6"
+                    android:layout_marginTop="10dp"
+                    android:hint="Введите название"
+                    android:textColorHint="#CDE8E6E6"
+                    android:textSize="19sp"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="572dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/button_oval"
+                    android:gravity="center"
+                    android:text="Текст"
+                    android:textColor="#CDE8E6E6"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Что вам снилось?"
+                    android:inputType="text"
+                    android:textColorHint="#CDE8E6E6"
+                    android:textSize="19sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="380dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonSave"
+                        android:layout_width="160dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="25dp"
+                        android:background="@drawable/button_oval"
+                        android:gravity="center"
+                        android:text="Сохранить"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonCancel"
+                        android:layout_width="160dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="205dp"
+                        android:background="@drawable/button_oval"
+                        android:gravity="center"
+                        android:text="Отмена"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

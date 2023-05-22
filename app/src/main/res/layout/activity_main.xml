@@ -145,12 +145,6 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/intentSleepActivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
             <RelativeLayout
                 android:id="@+id/relativeLayout13"
                 android:layout_width="340dp"

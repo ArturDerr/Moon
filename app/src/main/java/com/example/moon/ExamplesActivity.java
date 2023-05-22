@@ -24,7 +24,6 @@ public class ExamplesActivity extends AppCompatActivity {
         firstNumber = findViewById(R.id.firstNumber);
         secondNumber = findViewById(R.id.secondNumber);
         editTextNumber = findViewById(R.id.editTextNumber);
-        textViewResult = findViewById(R.id.textViewResult);
         textView = findViewById(R.id.textView);
 
         final Random random = new Random();
@@ -36,7 +35,6 @@ public class ExamplesActivity extends AppCompatActivity {
         secondNumber.setText(String.valueOf(number2));
 
         String result = String.valueOf(number1 + number2);
-        textViewResult.setText(result);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

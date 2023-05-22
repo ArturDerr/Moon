@@ -27,14 +27,6 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Результат: "
-        android:layout_marginTop="250dp"/>
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
