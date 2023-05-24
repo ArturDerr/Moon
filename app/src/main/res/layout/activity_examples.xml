@@ -7,39 +7,298 @@
     android:background="#121212"
     tools:context=".ExamplesActivity">
 
-    <TextView
-        android:id="@+id/firstNumber"
-        android:layout_width="match_parent"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/secondNumber"
-        android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="match_parent"
-        android:layout_marginTop="70dp"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text=""
-        android:textSize="30sp"
-        android:layout_marginTop="360dp"/>
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:text="Проверка"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/button_oval"
-        android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="2dp"
+                android:elevation="1dp"
+                android:padding="12dp"
+                android:paddingStart="14dp"
+                android:src="@drawable/ic_examples" />
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/round_back_while_settings"
+                android:paddingStart="99dp"
+                android:paddingTop="15dp"
+                android:text="Решите примеры"
+                android:textColor="#9575CD"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="340dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_back_while_settings"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="325dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/background_watch"
+                android:paddingStart="15dp"
+                android:paddingTop="9dp"
+                android:text="Решите примеры для выключения будильника и звука"
+                android:textColor="#9575CD"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:elevation="1dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgNumberExample1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/number_example1"
+                    android:elevation="3dp"/>
+
+                <ImageView
+                    android:id="@+id/imgNumberExample2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/number_example2"
+                    android:elevation="3dp"/>
+
+                <ImageView
+                    android:id="@+id/imgNumberExample3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/number_example3"
+                    android:elevation="3dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="340dp"
+                android:layout_height="96dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/round_back_while_settings">
+
+                <TextView
+                    android:id="@+id/firstNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="60dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="159dp"
+                    android:text=""
+                    android:textColor="#9575CD"
+                    android:textSize="29sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/secondNumber"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="165dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text=""
+                    android:textSize="27sp"
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="365dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="25dp"
+                    app:boxBackgroundColor="#191919"
+                    app:boxStrokeColor="#9575CD"
+                    android:background="@null"
+                    app:endIconMode="clear_text"
+                    app:endIconDrawable="@drawable/ic_clear"
+                    android:textColorHint="#9575CD"
+                    android:hint="Введите ответ"
+                    app:hintTextColor="@color/white"
+                    android:layout_marginTop="0dp"
+                    android:layout_height="wrap_content" >
+
+                    <EditText
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColor="@color/white"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="365dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:id="@+id/textInput2"
+                    android:layout_marginStart="25dp"
+                    app:boxBackgroundColor="#191919"
+                    app:boxStrokeColor="#9575CD"
+                    android:background="@null"
+                    app:endIconMode="clear_text"
+                    app:endIconDrawable="@drawable/ic_clear"
+                    android:textColorHint="#9575CD"
+                    android:hint="Введите ответ"
+                    app:hintTextColor="@color/white"
+                    android:layout_marginTop="0dp"
+                    android:layout_height="wrap_content" >
+
+                    <EditText
+                        android:id="@+id/editTextNumber2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColor="@color/white"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="365dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="25dp"
+                    app:boxBackgroundColor="#191919"
+                    android:id="@+id/textInput3"
+                    app:boxStrokeColor="#9575CD"
+                    android:background="@null"
+                    app:endIconMode="clear_text"
+                    app:endIconDrawable="@drawable/ic_clear"
+                    android:textColorHint="#9575CD"
+                    android:hint="Введите ответ"
+                    app:hintTextColor="@color/white"
+                    android:layout_marginTop="0dp"
+                    android:layout_height="wrap_content" >
+
+                    <EditText
+                        android:id="@+id/editTextNumber3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:textColor="@color/white"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="340dp"
+                android:elevation="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/button_oval_examples"
+                android:text="Проверить"
+                android:textColor="#CDE8E6E6"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="340dp"
+                android:elevation="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/button_oval_examples"
+                android:text="Проверить"
+                android:textColor="#CDE8E6E6"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="340dp"
+                android:elevation="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/button_oval_examples"
+                android:text="Проверить"
+                android:textColor="#CDE8E6E6"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

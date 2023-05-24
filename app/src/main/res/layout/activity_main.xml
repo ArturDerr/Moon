@@ -11,12 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/buttonIntent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
         <ImageView
             android:layout_width="129dp"
             android:layout_height="65dp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_name_luna" />
+
+        <Button
+            android:id="@+id/buttonIntent2"
+            android:layout_marginStart="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
 
     </RelativeLayout>
 

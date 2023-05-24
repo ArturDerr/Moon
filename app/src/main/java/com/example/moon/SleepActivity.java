@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -19,7 +20,7 @@ public class SleepActivity extends AppCompatActivity {
 
     public int click;
     public static final int CLICK = 0;
-    TextView textView, textHourSleep;
+    TextView textView;
     RelativeLayout background;
     SharedPreferences sPref;
     Button buttonBackground;
@@ -34,18 +35,11 @@ public class SleepActivity extends AppCompatActivity {
 
         timer();
 
-        textHourSleep = findViewById(R.id.textHourSleep);
-
         buttonBackground = findViewById(R.id.buttonBackground);
 
         background = findViewById(R.id.background);
 
-        String text = getIntent().getStringExtra("hour");
         click = getIntent().getIntExtra("click", CLICK);
-
-        textHourSleep.setText(text);
-
-        saveClick();
 
         buttonBackground.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,55 +65,17 @@ public class SleepActivity extends AppCompatActivity {
             background.setBackgroundResource(R.drawable.picture5);
         }
         if (click == 6){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            //background.setBackgroundResource(R.drawable.picture6);
         }
         if (click == 7){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            //background.setBackgroundResource(R.drawable.picture7);
         }
         if (click == 8){
-            //background.setBackgroundResource(R.drawable.round_back_home);
+            //background.setBackgroundResource(R.drawable.picture8);
         }
 
         textView = findViewById(R.id.textView);
 
-    }
-    public void saveClick () {
-        SharedPreferences.Editor prefEditor = sPref.edit();
-        prefEditor.putInt(SAVED_CLICK, click);
-        prefEditor.apply();
-    }
-    public void loadClick () {
-        int savedClick = sPref.getInt(SAVED_CLICK, click);
-
-        if (savedClick == 1){
-            background.setBackgroundResource(R.drawable.picture1);
-        }
-        if (savedClick == 2){
-            background.setBackgroundResource(R.drawable.picture2);
-        }
-        if (savedClick == 3){
-            background.setBackgroundResource(R.drawable.picture3);
-        }
-        if (savedClick == 4){
-            background.setBackgroundResource(R.drawable.picture4);
-        }
-        if (savedClick == 5){
-            background.setBackgroundResource(R.drawable.picture5);
-        }
-        if (savedClick == 6){
-            //background.setBackgroundResource(R.drawable.round_back_home);
-        }
-        if (savedClick == 7){
-            //background.setBackgroundResource(R.drawable.round_back_home);
-        }
-        if (savedClick == 8){
-            //background.setBackgroundResource(R.drawable.round_back_home);
-        }
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        loadClick();
     }
     boolean run = true;
     Handler mHandler = new Handler();
@@ -130,18 +86,19 @@ public class SleepActivity extends AppCompatActivity {
             public void run() {
                 while (run) {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(0000);
                         mHandler.post(new Runnable() {
 
                             @Override
                             public void run() {
                                 Calendar c = Calendar.getInstance();
                                 int min = c.get(Calendar.MINUTE);
-                                int hour = c.get(Calendar.HOUR);
+                                int hour = c.get(Calendar.HOUR_OF_DAY);
                                 textView.setText(String.valueOf(hour)+":"+String.valueOf(min));
                             }
                         });
                     } catch (Exception e) {
+                        Toast.makeText(SleepActivity.this, "Упс, что-то пошло нет так", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

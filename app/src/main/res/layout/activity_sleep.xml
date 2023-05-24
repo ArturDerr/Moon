@@ -20,12 +20,11 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonBackground"
-                android:layout_width="65dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="310dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="320dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/round_back_while_settings"
-                android:drawableStart="@drawable/ic_background"
+                android:background="@drawable/ic_background"
                 android:padding="17dp" />
         </RelativeLayout>
 
@@ -38,35 +37,6 @@
             android:textSize="55sp"
             tools:layout_editor_absoluteX="186dp"
             tools:layout_editor_absoluteY="146dp" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/textHourSleep"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="164dp"
-                android:layout_marginTop="80dp"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:layout_editor_absoluteX="186dp"
-                tools:layout_editor_absoluteY="146dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:text="Вы проснетесь в"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:layout_editor_absoluteX="186dp"
-                tools:layout_editor_absoluteY="146dp" />
-
-        </RelativeLayout>
 
     </LinearLayout>
 

@@ -4,39 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="@drawable/background_alarm"
     tools:context=".AlarmActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RelativeLayout
-            android:id="@+id/smileLayout"
-            android:layout_width="85dp"
-            android:layout_height="71dp"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/alarm_sleep_background_while"
-            android:gravity="center">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/smileButton"
-                android:layout_width="60dp"
-                android:layout_height="50dp"
-                android:background="@drawable/round_back_while"
-                android:drawableStart="@drawable/ic_smile"
-                android:paddingStart="15dp"
-                android:textColor="#CDE8E6E6"
-                android:textSize="17sp"
-                android:textStyle="italic" />
-        </RelativeLayout>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,7 +48,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="80dp"
             android:textColor="@color/white"
             android:textSize="55sp"
             tools:layout_editor_absoluteX="186dp"
@@ -93,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="60dp"
                 android:text="Доброе утро!"
                 android:textColor="@color/white"
                 android:textSize="36sp"

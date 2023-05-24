@@ -8,6 +8,6 @@
     </shape>
     <shape android:shape="rectangle">
         <corners android:radius="20dp" />
-        <solid android:color="#1EC700" />
+        <solid android:color="#C20000" />
     </shape>
 </inset>

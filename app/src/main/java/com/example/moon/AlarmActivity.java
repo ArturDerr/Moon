@@ -26,7 +26,6 @@ public class AlarmActivity extends AppCompatActivity {
     TextView textView;
     Context context = this;
     Button buttonWakeup;
-    RelativeLayout smileLayout, openSmileLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +38,6 @@ public class AlarmActivity extends AppCompatActivity {
         mp.setLooping(true);
         mp.start();
 
-        LayoutInflater layoutInflater = getLayoutInflater();
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) View layout = layoutInflater.inflate(R.layout.dialog, (ViewGroup)findViewById(R.id.layout_dialog));
-
-        final Toast toast = new Toast(getApplicationContext());
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        toast.setDuration(Toast.LENGTH_LONG);
-        toast.setView(layout);
-
         buttonWakeup = findViewById(R.id.buttonWakeup);
         textView = findViewById(R.id.textView);
 
@@ -54,7 +45,6 @@ public class AlarmActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlarmActivity.this, ExamplesActivity.class);
-                toast.show();
                 startActivity(intent);
             }
         });
@@ -68,7 +58,7 @@ public class AlarmActivity extends AppCompatActivity {
             public void run() {
                 while (run) {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(0000);
                         mHandler.post(new Runnable() {
 
                             @Override

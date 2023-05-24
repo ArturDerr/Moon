@@ -17,7 +17,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="115dp"
+                android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 android:background="@drawable/button_oval"
@@ -105,6 +105,7 @@
                     android:background="#00FFFFFF"
                     android:hint="Что вам снилось?"
                     android:inputType="text"
+                    android:textColor="#CDE8E6E6"
                     android:textColorHint="#CDE8E6E6"
                     android:textSize="19sp" />
 

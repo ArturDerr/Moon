@@ -19,18 +19,24 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class NotesActivity extends AppCompatActivity {
 
     private int selectedTab = 3;
 
+    Button add, deleteAll;
     DBMatches mDBConnector;
     Context mContext;
     ListView mListView;
@@ -52,6 +58,8 @@ public class NotesActivity extends AppCompatActivity {
         myAdapter = new myListAdapter(mContext, mDBConnector.selectAll());
         mListView.setAdapter(myAdapter);
         registerForContextMenu(mListView);
+        add = findViewById(R.id.add);
+        deleteAll = findViewById(R.id.deleteAll);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.bounce);
         Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.bounce);
@@ -181,29 +189,45 @@ public class NotesActivity extends AppCompatActivity {
                 }
             }
         });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                add.startAnimation(animation);
+                Intent i = new Intent(mContext, AddActivity.class);
+                startActivityForResult(i, ADD_ACTIVITY);
+                updateList();
+            }
+        });
+        deleteAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteAll.startAnimation(animation1);
+                mDBConnector.deleteAll();
+                updateList();
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.add:
-                Intent i = new Intent(mContext, AddActivity.class);
-                startActivityForResult(i, ADD_ACTIVITY);
-                updateList();
-                return true;
-            case R.id.deleteAll:
-                mDBConnector.deleteAll();
-                updateList();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+    //@Override
+    //public boolean onOptionsItemSelected(MenuItem item) {
+        //switch (item.getItemId()) {
+            //case R.id.add:
+                //Intent i = new Intent(mContext, AddActivity.class);
+                //startActivityForResult(i, ADD_ACTIVITY);
+                //updateList();
+                //return true;
+            //case R.id.deleteAll:
+                //mDBConnector.deleteAll();
+                //updateList();
+                //return true;
+            //default:
+                //return super.onOptionsItemSelected(item);
+        //}
+    //}
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -291,10 +315,17 @@ public class NotesActivity extends AppCompatActivity {
 
             TextView vName = (TextView)convertView.findViewById(R.id.name);
             TextView vNote = (TextView)convertView.findViewById(R.id.note);
+            TextView vDate = (TextView)convertView.findViewById(R.id.date);
+
+            Date currentDate = new Date();
+
+            DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+            String dateText = dateFormat.format(currentDate);
 
             Noteq md = arrayMyNote.get(position);
             vName.setText(md.getName());
             vNote.setText(md.getNote());
+            vDate.setText(dateText);
 
             return convertView;
         }

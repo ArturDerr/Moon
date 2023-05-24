@@ -14,25 +14,16 @@ public class AlarmSleepActivity extends AppCompatActivity {
 
     public static final int CLICK = 0;
     private Button recIntentButton, buttonSleep;
-    TextView musicTextView, defaultTextView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_sleep);
 
-        musicTextView = findViewById(R.id.musicTextView);
-        musicTextView.setVisibility(View.GONE);
-        defaultTextView = findViewById(R.id.defaultTextView);
         recIntentButton = findViewById(R.id.recIntentButton);
         buttonSleep = findViewById(R.id.buttonWakeup);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation2 = AnimationUtils.loadAnimation(this, R.anim.alpha);
-        String text = getIntent().getStringExtra("hour2");
-        String music = getIntent().getStringExtra("music1");
-        musicTextView.setText(music);
-
         recIntentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +36,6 @@ public class AlarmSleepActivity extends AppCompatActivity {
             public void onClick(View v) {
                 buttonSleep.startAnimation(animation2);
                 Intent intent1 = new Intent(AlarmSleepActivity.this, SleepActivity.class);
-                intent1.putExtra("hour", text);
                 startActivity(intent1);
 
             }

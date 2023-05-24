@@ -1,5 +1,6 @@
 package com.example.moon;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.Notification;
@@ -78,6 +79,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         createNotificationChannel();
+
+        Button buttonIntent = findViewById(R.id.buttonIntent);
+        Button buttonIntent2 = findViewById(R.id.buttonIntent);
+
+        buttonIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AlarmActivity.class);
+                startActivity(intent);
+            }
+        });
+        buttonIntent2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(MainActivity.this, SleepActivity.class);
+                startActivity(intent2);
+            }
+        });
 
         upButton = findViewById(R.id.upButton);
         closeButton = findViewById(R.id.closeButton);
@@ -214,6 +233,17 @@ public class MainActivity extends AppCompatActivity {
         Animation animation17 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation18 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         Animation animation19 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation20 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation21 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation22 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation23 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation24 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation25 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation26 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation27 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation28 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation29 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation30 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
         hour = findViewById(R.id.hour);
 
@@ -238,6 +268,7 @@ public class MainActivity extends AppCompatActivity {
         upButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                upButton.startAnimation(animation18);
                 openLayout.setVisibility(View.VISIBLE);
                 upButton.setClickable(false);
                 closeButton.setClickable(true);
@@ -246,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                closeButton.startAnimation(animation19);
                 openLayout.setVisibility(View.GONE);
                 upButton.setClickable(true);
                 closeButton.setClickable(false);

@@ -65,21 +65,22 @@
                 <RelativeLayout
                     android:layout_width="173dp"
                     android:layout_height="231dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="158dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/picture1"/>
 
                 </RelativeLayout>
 
@@ -87,21 +88,22 @@
                     android:layout_width="173dp"
                     android:layout_height="231dp"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="155dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/picture2"/>
 
                 </RelativeLayout>
 
@@ -117,21 +119,22 @@
                 <RelativeLayout
                     android:layout_width="173dp"
                     android:layout_height="231dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="148dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/picture3"/>
 
                 </RelativeLayout>
 
@@ -139,21 +142,22 @@
                     android:layout_width="173dp"
                     android:layout_height="231dp"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="158dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/picture4"/>
 
                 </RelativeLayout>
 
@@ -169,21 +173,22 @@
                 <RelativeLayout
                     android:layout_width="173dp"
                     android:layout_height="231dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="158dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image5"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/picture5"/>
 
                 </RelativeLayout>
 
@@ -191,21 +196,21 @@
                     android:layout_width="173dp"
                     android:layout_height="231dp"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="158dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image6"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </RelativeLayout>
 
@@ -221,21 +226,21 @@
                 <RelativeLayout
                     android:layout_width="173dp"
                     android:layout_height="231dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="158dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image7"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </RelativeLayout>
 
@@ -243,21 +248,21 @@
                     android:layout_width="173dp"
                     android:layout_height="231dp"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/round_back_while"
+                    android:background="@drawable/round_back_while2"
                     android:orientation="horizontal"
                     android:padding="15dp"
                     tools:ignore="MissingConstraints">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/non_background"/>
+                        android:layout_width="158dp"
+                        android:layout_height="216dp"
+                        android:background="@color/non_background" />
 
                     <ImageView
                         android:id="@+id/image8"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </RelativeLayout>
 

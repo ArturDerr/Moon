@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -33,12 +35,15 @@ public class AddActivity extends AppCompatActivity {
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
         String dateText = dateFormat.format(currentDate);
 
-        date = (TextView) findViewById(R.id.textView);
+        date = findViewById(R.id.date);
         date.setText(dateText);
         editTextName = (EditText) findViewById(R.id.name);
         editTextNote = (EditText) findViewById(R.id.note);
         buttonSave = (Button) findViewById(R.id.buttonSave);
         buttonCancel = (Button) findViewById(R.id.buttonCancel);
+
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        Animation animation3 = AnimationUtils.loadAnimation(this, R.anim.alpha);
 
         if (getIntent().hasExtra("Note")) {
             Noteq notes = (Noteq) getIntent().getSerializableExtra("Note");
@@ -53,6 +58,7 @@ public class AddActivity extends AppCompatActivity {
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonSave.startAnimation(animation);
                 Noteq notes = new Noteq(notesID,editTextName.getText().toString(), editTextNote.getText().toString());
                 Intent intent = getIntent();
                 intent.putExtra ("Note", notes);
@@ -64,6 +70,7 @@ public class AddActivity extends AppCompatActivity {
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonCancel.startAnimation(animation3);
                 finish();
             }
         });
